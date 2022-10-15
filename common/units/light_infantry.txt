@@ -1,0 +1,63 @@
+sub_units = {
+	
+	light_infantry = {
+		abbreviation = "LIF"
+		sprite = infantry
+		map_icon_category = infantry
+		
+		priority = 300
+		ai_priority = 100
+		active = no
+		defense = -0.15
+		hard_attack = -0.15
+		breakthrough = -0.15
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 20
+		max_organisation = 60
+		default_morale = 0.3
+		maximum_speed = 0.25
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 80
+		suppression = 1
+		weight = 0.45
+		
+		supply_consumption = 0.04
+	
+		need = {
+			infantry_equipment = 80
+		}
+		
+		forest = {
+			movement = 0.1
+		}
+		
+		hills = {
+			movement = 0.1
+		}
+		
+		mountain = {
+			movement = 0.1
+		}
+		
+		desert = {
+			movement = 0.1
+		}
+	}
+}

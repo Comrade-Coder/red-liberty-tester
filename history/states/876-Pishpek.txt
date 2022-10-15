@@ -1,0 +1,22 @@
+state={
+	id=876
+	name="STATE_876"
+	
+	history={
+		add_core_of = TKS
+		owner = TKS
+		victory_points = {
+			12583 1 
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	
+	provinces={
+		1675 1825 4316 5062 12370 12511 12583 
+	}
+	manpower=100000
+	buildings_max_level_factor=1.000
+	state_category = pastoral
+}

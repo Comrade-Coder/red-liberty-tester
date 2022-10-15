@@ -1,0 +1,12 @@
+GUD_battle_for_guangdong = {
+
+	allowed = {
+		original_tag = GUD
+	}
+
+	visible = {
+		
+	}
+
+	visible_when_empty = yes
+}

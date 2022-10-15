@@ -1,0 +1,47 @@
+﻿capital = 312
+
+oob = "HON_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+set_country_flag = monroe_doctrine
+set_war_support = 0.1
+set_convoys = 10
+
+set_politics = {
+	ruling_party = social_democracy
+	last_election = "1932.11.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	insurrectionary_anarchism = 0
+	revolutionary_autocracy = 0
+	proletarian_dictatorship = 0
+	libertarian_socialism = 0
+	social_democracy = 26
+	progressive_liberalism = 6
+	market_libertarianism = 0
+	national_conservatism = 20
+	far_right_authoritarianism = 0
+	authoritarian_democracy = 14
+	autocratic_despotism = 32
+	fascism = 2
+}
+
+add_ideas = {
+	CEN_federation_of_central_america
+}
+
+create_country_leader = {
+	name = "Froylán Turcios"
+	desc = ""
+	picture = "gfx/leaders/HON/Portrait_HON_Froylan_Turcios.png"
+	expire = "1965.1.1"
+	ideology = social_democracy_subtype
+	traits = {
+		#
+	}
+}

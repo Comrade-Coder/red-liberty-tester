@@ -1,0 +1,49 @@
+﻿capital = 302
+
+oob = "BOL_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	early_fighter = 1
+	fuel_silos = 1
+}
+
+set_politics = {
+	ruling_party = market_libertarianism
+	last_election = "1932.11.8"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	insurrectionary_anarchism = 0
+	revolutionary_autocracy = 0
+	proletarian_dictatorship = 0
+	libertarian_socialism = 8
+	social_democracy = 6
+	progressive_liberalism = 3
+	market_libertarianism = 29
+	national_conservatism = 31
+	authoritarian_democracy = 17
+	autocratic_despotism = 6
+	far_right_authoritarianism = 0
+	fascism = 0
+}
+
+add_ideas = {
+	BOL_chaco_generation
+	BOL_legion_of_veterans
+}
+
+create_country_leader = {
+	name = "José Luis Tejada Sorzano"
+	desc = ""
+	picture = "gfx/leaders/BOL/Portrait_BOL_Jose_Luis_Tejada_Sorzano.png"
+	expire = "1965.1.1"
+	ideology = liberal_conservatism_subtype
+	traits = {
+		#
+	}
+}

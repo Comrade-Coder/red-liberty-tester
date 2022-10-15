@@ -1,0 +1,27 @@
+
+state={
+	id=944
+	name="STATE_944" # Pashtunistan
+	manpower = 2000000
+	
+	state_category = pastoral
+
+	history={
+		owner = AFG
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			5064 1
+		}
+		victory_points = {
+			12831 1
+		}
+		add_core_of = AFG
+	}
+
+	provinces={
+		12769 10789 12831 5082 8090 5064
+	}
+}

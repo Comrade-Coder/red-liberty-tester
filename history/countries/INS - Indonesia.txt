@@ -1,0 +1,97 @@
+﻿capital = 335 #Jakarta
+
+oob = "INS_1936"
+
+set_research_slots = 2
+
+# Starting tech
+# clone of Holland
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_recon = 1
+	early_fighter = 1
+	early_bomber = 1
+	
+	transport = 1
+	fuel_silos = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		basic_destroyer = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		basic_battery = 1
+	}
+}
+
+set_convoys = 25
+set_politics = {
+	ruling_party = authoritarian_democracy
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	insurrectionary_anarchism = 0
+	revolutionary_autocracy = 0
+	proletarian_dictatorship = 26
+	libertarian_socialism = 15
+	social_democracy = 0
+	progressive_liberalism = 0
+	market_libertarianism = 0
+	national_conservatism = 10
+	authoritarian_democracy = 34
+	autocratic_despotism = 7
+	far_right_authoritarianism = 3
+	fascism = 5
+}
+
+set_cosmetic_tag = INS_HOL # Netherlands East Indies
+
+create_country_leader = {
+	name = "Bonifacius Cornelis de Jonge"
+	desc = ""
+	picture = "gfx/leaders/INS/Portrait_INS_Bonifacius_de_Jonge.png"
+	expire = "1953.3.1"
+	ideology = authoritarian_democracy_subtype 
+	traits = {
+		
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	create_field_marshal = {
+		name = "Hein ter Poorten"
+		gfx = "GFX_portrait_hol_hein_ter_poorten"
+		traits = { inspirational_leader logistics_wizard }
+		skill = 3
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 3
+	}
+}

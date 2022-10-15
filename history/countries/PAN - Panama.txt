@@ -1,0 +1,43 @@
+﻿capital = 304
+
+oob = "PAN_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+set_country_flag = monroe_doctrine
+set_war_support = 0.1
+set_convoys = 10
+
+set_politics = {
+	ruling_party = authoritarian_democracy
+	last_election = "1932.11.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	insurrectionary_anarchism = 0
+	revolutionary_autocracy = 0
+	proletarian_dictatorship = 0
+	libertarian_socialism = 14
+	social_democracy = 10
+	progressive_liberalism = 26
+	market_libertarianism = 6
+	national_conservatism = 13
+	far_right_authoritarianism = 0
+	authoritarian_democracy = 28
+	autocratic_despotism = 3
+	fascism = 0
+}
+
+create_country_leader = {
+	name = "Arnulfo Arias Madrid"
+	desc = ""
+	picture = "gfx/leaders/PAN/Portrait_PAN_Arnulfo_Arias_Madrid.png"
+	expire = "1965.1.1"
+	ideology = authoritarian_democracy_subtype
+	traits = {
+		#
+	}
+}

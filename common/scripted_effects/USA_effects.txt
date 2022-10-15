@@ -1,0 +1,613 @@
+USA_lister_pres_setup = {
+	USA = {
+		set_politics = {
+			ruling_party = national_conservatism
+			last_election = "1936.11.6"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		
+		clear_all_coalitions = yes
+		clear_all_opposition = yes
+		add_proglib_coalition = yes
+		add_natcon_coalition = yes
+		
+		load_focus_tree = USA_lister_tree
+	}
+}
+
+USA_calc_congress_control = {
+	
+	### SENATE ###
+	set_temp_variable = { temp_communist_senators = senators_communist }
+	set_temp_variable = { temp_socialist_senators = senators_socialist }
+	set_temp_variable = { temp_republican_senators = senators_republican }
+	set_temp_variable = { temp_democrat_senators = senators_democrat }
+	set_temp_variable = { temp_fascist_senators = senators_fascist }
+	
+	set_temp_variable = { temp_total_senators = senators_communist }
+	add_to_temp_variable = { temp_total_senators = senators_socialist }
+	add_to_temp_variable = { temp_total_senators = senators_republican }
+	add_to_temp_variable = { temp_total_senators = senators_democrat }
+	add_to_temp_variable = { temp_total_senators = senators_fascist }
+	
+	divide_temp_variable = { temp_communist_senators = temp_total_senators }
+	divide_temp_variable = { temp_socialist_senators = temp_total_senators }
+	divide_temp_variable = { temp_republican_senators = temp_total_senators }
+	divide_temp_variable = { temp_democrat_senators = temp_total_senators }
+	divide_temp_variable = { temp_fascist_senators = temp_total_senators }
+	
+	if = {
+		limit = {
+			OR = {
+				has_government = proletarian_dictatorship
+				has_government = libertarian_socialism
+				has_government = social_democracy
+			}
+		}
+		set_variable = { USA_senate_control = temp_socialist_senators }
+	}
+	
+	multiply_variable = { USA_senate_control = 0.5 }
+	
+	### HOUSE ###
+	set_temp_variable = { temp_communist_reps = representatives_communist }
+	set_temp_variable = { temp_socialist_representatives = representatives_socialist }
+	set_temp_variable = { temp_republican_representatives = representatives_republican }
+	set_temp_variable = { temp_democrat_representatives = representatives_democrat }
+	set_temp_variable = { temp_fascist_representatives = representatives_fascist }
+	
+	set_temp_variable = { temp_total_representatives = representatives_communist }
+	add_to_temp_variable = { temp_total_representatives = representatives_socialist }
+	add_to_temp_variable = { temp_total_representatives = representatives_republican }
+	add_to_temp_variable = { temp_total_representatives = representatives_democrat }
+	add_to_temp_variable = { temp_total_representatives = representatives_fascist }
+	
+	divide_temp_variable = { temp_communist_representatives = temp_total_representatives }
+	divide_temp_variable = { temp_socialist_representatives = temp_total_representatives }
+	divide_temp_variable = { temp_republican_representatives = temp_total_representatives }
+	divide_temp_variable = { temp_democrat_representatives = temp_total_representatives }
+	divide_temp_variable = { temp_fascist_representatives = temp_total_representatives }
+	
+	if = {
+		limit = {
+			OR = {
+				has_government = proletarian_dictatorship
+				has_government = libertarian_socialism
+				has_government = social_democracy
+			}
+		}
+		set_variable = { USA_house_control = temp_socialist_representatives }
+	}
+	
+	multiply_variable = { USA_house_control = 0.5 }
+}
+
+improve_safety_net = {
+	if = {
+		swap_ideas = {
+			remove_idea = USA_safety_net_barebones
+			add_idea = USA_safety_net_small
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_safety_net_small
+		}
+		swap_ideas = {
+			remove_idea = USA_safety_net_small
+			add_idea = USA_safety_net_acceptable
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_safety_net_acceptable
+		}
+		swap_ideas = {
+			remove_idea = USA_safety_net_acceptable
+			add_idea = USA_safety_net_large
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_safety_net_large
+		}
+		swap_ideas = {
+			remove_idea = USA_safety_net_large
+			add_idea = USA_safety_net_welfare_state
+		}
+	}
+	else = {
+		add_political_power = 25
+	}
+}
+
+improve_great_depression = {
+	if = {
+		limit = {
+			has_idea = USA_the_great_depression_10
+		}
+		remove_ideas = {
+			USA_the_great_depression_10
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_the_great_depression_9
+		}
+		swap_ideas = {
+			remove_idea = USA_the_great_depression_9
+			add_idea = USA_the_great_depression_10
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_the_great_depression_8
+		}
+		swap_ideas = {
+			remove_idea = USA_the_great_depression_8
+			add_idea = USA_the_great_depression_9
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_the_great_depression_7
+		}
+		swap_ideas = {
+			remove_idea = USA_the_great_depression_7
+			add_idea = USA_the_great_depression_8
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_the_great_depression_6
+		}
+		swap_ideas = {
+			remove_idea = USA_the_great_depression_6
+			add_idea = USA_the_great_depression_7
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_the_great_depression_5
+		}
+		swap_ideas = {
+			remove_idea = USA_the_great_depression_5
+			add_idea = USA_the_great_depression_6
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_the_great_depression_4
+		}
+		swap_ideas = {
+			remove_idea = USA_the_great_depression_4
+			add_idea = USA_the_great_depression_5
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_the_great_depression_3
+		}
+		swap_ideas = {
+			remove_idea = USA_the_great_depression_3
+			add_idea = USA_the_great_depression_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_the_great_depression_2
+		}
+		swap_ideas = {
+			remove_idea = USA_the_great_depression_2
+			add_idea = USA_the_great_depression_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_the_great_depression_1
+		}
+		swap_ideas = {
+			remove_idea = USA_the_great_depression_1
+			add_idea = USA_the_great_depression_2
+		}
+	}
+	else = {
+		add_political_power = 50
+	}
+}
+
+worsen_great_depression = {
+	if = {
+		limit = {
+			has_idea = USA_the_great_depression_1
+		}
+		add_political_power = -100
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_the_great_depression_2
+		}
+		swap_ideas = {
+			remove_idea = USA_the_great_depression_2
+			add_idea = USA_the_great_depression_1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_the_great_depression_3
+		}
+		swap_ideas = {
+			remove_idea = USA_the_great_depression_3
+			add_idea = USA_the_great_depression_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_the_great_depression_4
+		}
+		swap_ideas = {
+			remove_idea = USA_the_great_depression_4
+			add_idea = USA_the_great_depression_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_the_great_depression_5
+		}
+		swap_ideas = {
+			remove_idea = USA_the_great_depression_5
+			add_idea = USA_the_great_depression_4
+		}
+	}
+}
+
+improve_dust_bowl = {
+	if = {
+		limit = {
+			has_idea = USA_the_dust_bowl_2
+		}
+		swap_ideas = {
+			remove_idea = USA_the_dust_bowl_2
+			add_idea = USA_the_dust_bowl_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = USA_the_dust_bowl_1
+		}
+		swap_ideas = {
+			remove_idea = USA_the_dust_bowl_1
+			add_idea = USA_the_dust_bowl_2
+		}
+	}
+}
+
+clear_state_name_and_desc = {
+	clr_country_flag = USA_states_gui_AL_selected
+	clr_country_flag = USA_states_gui_AR_selected
+	clr_country_flag = USA_states_gui_AZ_selected
+	clr_country_flag = USA_states_gui_CA_selected
+	clr_country_flag = USA_states_gui_CO_selected
+	clr_country_flag = USA_states_gui_FL_selected
+	clr_country_flag = USA_states_gui_GA_selected
+	clr_country_flag = USA_states_gui_IA_selected
+	clr_country_flag = USA_states_gui_KY_selected
+	clr_country_flag = USA_states_gui_LA_selected
+	clr_country_flag = USA_states_gui_MD_selected
+	clr_country_flag = USA_states_gui_MS_selected
+	clr_country_flag = USA_states_gui_MO_selected
+	clr_country_flag = USA_states_gui_MT_selected
+	clr_country_flag = USA_states_gui_NC_selected
+	clr_country_flag = USA_states_gui_OR_selected
+	clr_country_flag = USA_states_gui_OK_selected
+	clr_country_flag = USA_states_gui_RI_selected
+	clr_country_flag = USA_states_gui_RI_selected_alt
+	clr_country_flag = USA_states_gui_SC_selected
+	clr_country_flag = USA_states_gui_TN_selected
+	clr_country_flag = USA_states_gui_TX_selected
+	clr_country_flag = USA_states_gui_VA_selected
+	clr_country_flag = USA_states_gui_WV_selected
+}
+
+USA_calc_poverty_goal = {
+	set_variable = { USA_poverty_goal = 0 }
+	
+	if = {
+		limit = { # unemployment going down
+			check_variable = { USA_unemployment_change < 0 }
+		}
+		set_variable = { USA_poverty_goal = USA_poverty }
+		subtract_from_variable = { USA_poverty_goal = 3 }
+	}
+	else_if = {
+		limit = { # unemployment going down quickly
+			check_variable = { USA_unemployment_change < -0.5 }
+		}
+		set_variable = { USA_poverty_goal = USA_poverty }
+		subtract_from_variable = { USA_poverty_goal = 5 }
+	}
+	if = {
+		limit = { # unemployment going up
+			check_variable = { USA_unemployment_change > 0 }
+		}
+		set_variable = { USA_poverty_goal = USA_poverty }
+		add_to_variable = { USA_poverty_goal = 3 }
+	}
+	else_if = {
+		limit = { # unemployment going up quickly
+			check_variable = { USA_unemployment_change > 0.5 }
+		}
+		set_variable = { USA_poverty_goal = USA_poverty }
+		add_to_variable = { USA_poverty_goal = 5 }
+	}
+	
+	if = {
+		limit = { # unemployment is low
+			check_variable = { USA_unemployment < 10 }
+		}
+		subtract_from_variable = { USA_poverty_goal = 0.5 }
+	}
+	else_if = {
+		limit = { # unemployment is high
+			check_variable = { USA_unemployment > 10 }
+		}
+		add_to_variable = { USA_poverty_goal = 0.5 }
+	}
+	
+	if = {
+		limit = {
+			AND = {
+				check_variable = { USA_inflation < -4 }
+			}
+		}
+		add_to_variable = { USA_poverty_goal = 5 }
+	}
+	if = {
+		limit = {
+			AND = {
+				check_variable = { USA_inflation < -3 }
+			}
+		}
+		add_to_variable = { USA_poverty_goal = 3 }
+	}
+	if = {
+		limit = {
+			AND = {
+				check_variable = { USA_inflation < -1 }
+			}
+		}
+		add_to_variable = { USA_poverty_goal = 2.5 }
+	}
+	if = {
+		limit = {
+			AND = {
+				check_variable = { USA_inflation < 0 }
+			}
+		}
+		add_to_variable = { USA_poverty_goal = 2 }
+	}
+	if = {
+		limit = {
+			AND = {
+				check_variable = { USA_inflation > 0 }
+				check_variable = { USA_inflation < 2.5 }
+			}
+		}
+		add_to_variable = { USA_poverty_goal = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { USA_inflation > 2.5 }
+		}
+		add_to_variable = { USA_poverty_goal = 2 }
+	}
+	if = {
+		limit = {
+			check_variable = { USA_inflation > 3 }
+		}
+		add_to_variable = { USA_poverty_goal = 3 }
+	}
+	if = {
+		limit = {
+			check_variable = { USA_inflation > 4 }
+		}
+		add_to_variable = { USA_poverty_goal = 5 }
+	}
+	
+	# keeps unemployment from reaching ridiculous levels
+	if = {
+		limit = {
+			check_variable = { USA_unemployment > 80 }
+		}
+		subtract_from_variable = { USA_unemployment_change = 0.5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_unemployment > 70 }
+		}
+		subtract_from_variable = { USA_unemployment_change = 0.35 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_unemployment > 60 }
+		}
+		subtract_from_variable = { USA_unemployment_change = 0.2 }
+	}
+	
+	# get the difference between poverty and target poverty
+	# positive means the goal is lower than current poverty, and that poverty should go down
+	# negative means the opposite
+	set_variable = { USA_poverty_diff = USA_poverty }
+	subtract_from_variable = { USA_poverty_diff = USA_poverty_goal }
+	
+	if = {
+		limit = {
+			check_variable = { USA_poverty_diff > 6.99 }
+		}
+		set_variable = { USA_poverty_change = -0.5 }
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = { USA_poverty_diff < 7 }
+				check_variable = { USA_poverty_diff > 4.99 }
+			}
+		}
+		set_variable = { USA_poverty_change = -0.35 }
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = { USA_poverty_diff < 5 }
+				check_variable = { USA_poverty_diff > 0.99 }
+			}
+		}
+		set_variable = { USA_poverty_change = -0.25 }
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = { USA_poverty_diff < 1 }
+				check_variable = { USA_poverty_diff > 0 }
+			}
+		}
+		set_variable = { USA_poverty_change = -0.1 }
+	}
+	# if its negative
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = { USA_poverty_diff > -1 }
+				check_variable = { USA_poverty_diff < 0 }
+			}
+		}
+		set_variable = { USA_poverty_change = 0.1 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_poverty_diff = 0 }
+		}
+		set_variable = { USA_poverty_change = 0 }
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = { USA_poverty_diff > -5 }
+				check_variable = { USA_poverty_diff < -0.99 }
+			}
+		}
+		set_variable = { USA_poverty_change = 0.25 }
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = { USA_poverty_diff > -7 }
+				check_variable = { USA_poverty_diff < -4.99 }
+			}
+		}
+		set_variable = { USA_poverty_change = 0.35 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_poverty_diff < -6.99 }
+		}
+		set_variable = { USA_poverty_change = 0.5 }
+	}
+	
+	log = "[This.GetName] USA_poverty_diff = [?USA.USA_poverty_diff]"
+	
+	# inflation/deflation effect on unemployment
+	if = {
+		limit = {
+			AND = {
+				check_variable = { USA_inflation_change < -0.5 }
+				check_variable = { USA_inflation < 0 }
+			}
+		}
+		add_to_variable = { USA_unemployment_change = 0.1 }
+	}
+	if = {
+		limit = {
+			AND = {
+				check_variable = { USA_inflation_change > 0.5 }
+				check_variable = { USA_inflation > 2.5 }
+			}
+		}
+		add_to_variable = { USA_unemployment_change = 0.1 }
+	}
+	
+	# clamp variables
+	clamp_variable = {
+		var = USA_poverty
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = USA_poverty_goal
+		min = 3
+		max = 95
+	}
+	clamp_variable = {
+		var = USA_unemployment
+		min = 0
+		max = 95
+	}
+}
+
+USA_add_social_security = {
+	if = {
+		limit = {
+			check_variable = { USA_bill_strength > 20 }
+		}
+		add_ideas = {
+			USA_safety_net_acceptable
+		}
+		hidden_effect = {
+			every_owned_state = {
+				limit = {
+					can_have_elections_in_state = yes
+				}
+				add_to_variable = { socialist_popularity = 0.05 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_bill_strength > 10 }
+		}
+		add_ideas = {
+			USA_safety_net_small
+		}
+		hidden_effect = {
+			every_owned_state = {
+				limit = {
+					can_have_elections_in_state = yes
+				}
+				add_to_variable = { socialist_popularity = 0.03 }
+			}
+		}
+	}
+	else = {
+		add_ideas = {
+			USA_safety_net_barebones
+		}
+		hidden_effect = {
+			every_owned_state = {
+				limit = {
+					can_have_elections_in_state = yes
+				}
+				add_to_variable = { socialist_popularity = 0.01 }
+			}
+		}
+	}
+}
+
+USA_contract_three_months = {
+	hidden_effect = {
+		country_event = {
+			id = united_states_designer.1
+			days = 180
+		}
+	}
+}

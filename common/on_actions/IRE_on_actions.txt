@@ -1,0 +1,13 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			IRE = {
+				country_event = {
+					id = ireland.3
+					days = 660 # around october 1937
+					days_random = 5
+				}
+			}
+		}
+	}
+}

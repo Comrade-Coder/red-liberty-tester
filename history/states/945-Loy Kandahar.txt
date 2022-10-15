@@ -1,0 +1,23 @@
+
+state={
+	id=945
+	name="STATE_945" # Kandahar
+	manpower = 608750
+	
+	state_category = wasteland
+
+	history={
+		owner = AFG
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			2062 1
+		}
+		add_core_of = AFG
+	}
+
+	provinces={
+		2062 2017 2078 1948 2101 4949 5020
+	}
+}

@@ -1,0 +1,36 @@
+
+state={
+	id=679
+	name="STATE_679"
+
+	history={
+		owner = HEZ
+		victory_points = { # Medina
+			7934 3
+		}
+		victory_points = { # Jeddah
+			12883 5
+		}
+		victory_points = { # Mecca
+			5037 3
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			12883 = {
+				naval_base = 5
+
+			}
+
+		}
+		add_core_of = HEZ
+
+	}
+
+	provinces={
+		1033 2027 2033 2095 4115 4981 5037 7934 8092 10835 11976 12101 12883 13254 
+	}
+	manpower=1211000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

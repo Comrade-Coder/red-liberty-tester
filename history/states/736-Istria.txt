@@ -1,0 +1,30 @@
+
+state={
+	id=736
+	name="STATE_736"
+
+	history={
+		victory_points = {
+			6626 1 
+		}
+		owner = AHE
+		add_core_of = AHE
+		add_claim_by = ITA
+		buildings = {
+			infrastructure = 5
+			dockyard = 2
+			6626 = {
+				naval_base = 5
+
+			}
+		}
+
+	}
+
+	provinces={
+		599 6626 11595 13234 
+	}
+	manpower=1053159
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,31 @@
+
+state={
+	id=405
+	name="STATE_405"
+	resources={
+		steel=10.000
+	}
+
+	history={
+		owner = TKS
+		add_core_of = TKS
+		victory_points = {
+			1459 3 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 3
+			air_base = 1
+			arms_factory = 2
+
+		}
+
+	}
+
+	provinces={
+		1459 10187 10601 
+	}
+	manpower=3275820
+	buildings_max_level_factor=1.000
+	state_category=city
+}

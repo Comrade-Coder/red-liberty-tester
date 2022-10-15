@@ -1,0 +1,243 @@
+ENG_recalc_parliament = { # this will recalculate the number of members of parliament based on party popularity, with a bias towards labour and the tories
+	
+	#Sets variable to check for discrepencies
+	set_variable = {
+		ENG_old_mps_total = ENG_mps_total
+	}
+	
+	set_variable = {
+		communist_mps = party_popularity@revolutionary_autocracy
+	}
+	multiply_variable = {
+		communist_mps = 0.25
+	}
+	
+	set_variable = {
+		independent_labour_mps = party_popularity@proletarian_dictatorship
+	}
+	multiply_variable = {
+		independent_labour_mps = 0.25
+	}
+	
+	set_variable = {
+		labour_mps = party_popularity@libertarian_socialism
+	}
+	
+	set_variable = {
+		national_labour_mps = party_popularity@social_democracy
+	}
+	multiply_variable = {
+		national_labour_mps = 0.25
+	}
+	
+	set_variable = {
+		liberal_mps = party_popularity@progressive_liberalism
+	}
+	multiply_variable = {
+		liberal_mps = 0.75
+	}
+	
+	set_variable = {
+		national_liberal_mps = party_popularity@market_libertarianism
+	}
+	multiply_variable = {
+		national_liberal_mps = 0.5
+	}
+	
+	set_variable = {
+		conservative_mps = party_popularity@national_conservatism
+	}
+	add_to_variable = {
+		conservative_mps = party_popularity@authoritarian_democracy
+	}
+	add_to_variable = {
+		conservative_mps = party_popularity@autocratic_despotism
+	}
+	
+	set_variable = {
+		fascist_mps = party_popularity@fascism
+	}
+	multiply_variable = {
+		fascist_mps = 0.25
+	}
+	
+	#Gets seats
+	multiply_variable = {
+		communist_mps = ENG_mps_total
+	}
+	multiply_variable = {
+		independent_labour_mps = ENG_mps_total
+	}
+	multiply_variable = {
+		labour_mps = ENG_mps_total
+	}
+	multiply_variable = {
+		national_labour_mps = ENG_mps_total
+	}
+	multiply_variable = {
+		liberal_mps = ENG_mps_total
+	}
+	multiply_variable = {
+		national_liberal_mps = ENG_mps_total
+	}
+	multiply_variable = {
+		conservative_mps = ENG_mps_total
+	}
+	multiply_variable = {
+		fascist_mps = ENG_mps_total
+	}
+	
+	#rounds
+	round_variable = communist_mps
+	round_variable = independent_labour_mps
+	round_variable = labour_mps
+	round_variable = national_labour_mps
+	round_variable = liberal_mps
+	round_variable = national_liberal_mps
+	round_variable = conservative_mps
+	round_variable = fascist_mps
+	
+	#Gets new total seat value
+	ENG_get_total_seats = yes
+	
+	# gets discrepency
+	subtract_from_variable = {
+		ENG_old_mps_total = ENG_mps_total
+	}
+	
+	# deals with discrepency, if needed
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					ENG_old_mps_total = 0
+				}
+			}
+		}
+		
+		set_variable = {
+			ENG_partial_discrepency = ENG_old_mps_total
+		}
+		multiply_variable = {
+			ENG_partial_discrepency = 0.6
+		}
+		round_variable = ENG_partial_discrepency
+		
+		if = { # positive discrepency, too few seats
+			limit = {
+				check_variable = {
+					ENG_partial_discrepency > 0 #positive
+				}
+			}
+			
+			#log = "[THIS.GetName]: positive ENG_partial_discrepency: [?ENG_partial_discrepency]"
+			
+			subtract_from_variable = {
+				ENG_old_mps_total = ENG_partial_discrepency
+			}
+			add_to_variable = {
+				conservative_mps = ENG_partial_discrepency
+			}
+			add_to_variable = {
+				labour_mps = ENG_old_mps_total
+			}
+		}
+		else = { # negative discrepency, too many seats
+			#log = "[THIS.GetName]: negative ENG_partial_discrepency: [?ENG_partial_discrepency]"
+		
+			subtract_from_variable = {
+				ENG_old_mps_total = ENG_partial_discrepency #remainder will be taken from tories
+			}
+			add_to_variable = {
+				conservative_mps = ENG_old_mps_total
+			}
+			add_to_variable = {
+				labour_mps = ENG_partial_discrepency
+			}
+		}
+	}
+	
+	ENG_get_total_seats = yes
+	ENG_calc_coalition_seats = yes
+}
+
+ENG_get_total_seats = {
+	
+	set_variable = {
+		ENG_mps_total = 0
+	}
+	add_to_variable = {
+		ENG_mps_total = communist_mps
+	}
+	add_to_variable = {
+		ENG_mps_total = independent_labour_mps
+	}
+	add_to_variable = {
+		ENG_mps_total = labour_mps
+	}
+	add_to_variable = {
+		ENG_mps_total = national_labour_mps
+	}
+	add_to_variable = {
+		ENG_mps_total = liberal_mps
+	}
+	add_to_variable = {
+		ENG_mps_total = national_liberal_mps
+	}
+	add_to_variable = {
+		ENG_mps_total = conservative_mps
+	}
+	add_to_variable = {
+		ENG_mps_total = fascist_mps
+	}
+}
+
+ENG_calc_coalition_seats = {
+	
+	set_variable = { coalition_seats = 0 }
+
+	if = {
+		limit = {
+			has_country_flag = libertarian_socialism_coalition
+		}
+		add_to_variable = {
+			coalition_seats = labour_mps
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = social_democracy_coalition
+		}
+		add_to_variable = {
+			coalition_seats = national_labour_mps
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = progressive_coalition
+		}
+		add_to_variable = {
+			coalition_seats = liberal_mps
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = market_libertarian_coalition
+		}
+		add_to_variable = {
+			coalition_seats = national_liberal_mps
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = conservative_coalition
+				has_country_flag = authoritarian_coalition
+				has_country_flag = despotist_coalition
+			}
+		}
+		add_to_variable = {
+			coalition_seats = conservative_mps
+		}
+	}
+}

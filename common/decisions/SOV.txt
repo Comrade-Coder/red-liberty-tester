@@ -1,0 +1,178 @@
+SOV_revolution_category = {
+	
+	SOV_declare_soviet_union = {
+	
+		icon = ger_mefo_bills
+		
+		visible = {
+			always = yes
+		}
+		
+		available = {
+			OR = {
+				KAZ = {
+					exists = no
+				}
+				UKR = {
+					exists = no
+				}
+				BLR = {
+					exists = no
+				}
+			}
+		}
+		
+		cost = 15
+		
+		complete_effect = {
+			
+		}
+	}
+	
+	SOV_spread_revolution_asia = {
+	
+		icon = ger_mefo_bills
+		
+		visible = {
+			always = yes
+		}
+		
+		available = {
+			RUS = {
+				exists = no
+			}
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 30
+		
+		target_trigger = {
+            FROM = {
+                OR = {
+                    tag = KHV
+                    tag = KYR
+                    tag = TMS
+                }
+            }
+        }
+		
+		cost = 30
+		
+		remove_effect = {
+			SOV = {
+				declare_war_on = {
+					target = FROM
+					type = annex_everything
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+
+SOV_regional_autonomy_category = {
+	
+	SOV_azerbaijani_autonomy = {
+	
+		icon = ger_mefo_bills
+		
+		visible = {
+			SOV = { 
+					controls_state = 229
+					controls_state = 814
+					controls_state = 810
+					controls_state = 811
+					controls_state = 812
+				}
+		}
+		
+		available = {
+			OR = {
+				SOV = { 
+					controls_state = 229
+					controls_state = 814
+					controls_state = 810
+					controls_state = 811
+					controls_state = 812
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 15
+		
+		complete_effect = {
+			release_puppet = AZR
+		}
+	}
+	
+	SOV_finnish_autonomy = {
+	
+		icon = ger_mefo_bills
+		
+		visible = {
+			SOV = {
+				controls_state = 111
+				controls_state = 149
+				controls_state = 148
+				controls_state = 150
+			}
+		}
+		
+		available = {
+			OR = {
+				SOV = { 
+					controls_state = 111
+					controls_state = 149
+					controls_state = 148
+					controls_state = 150
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 15
+		
+		complete_effect = {
+			release_puppet = FIN
+			SOV = { transfer_state = 146 }
+			remove_ideas = FIN_bulwark_against_bolshevism
+			
+		}
+	}
+	
+	SOV_georgian_autonomy = {
+	
+		icon = ger_mefo_bills
+		
+		visible = {
+			SOV = {
+				controls_state = 231
+				controls_state = 890
+			}
+		}
+		
+		available = {
+			OR = {
+				SOV = { 
+					controls_state = 231
+					controls_state = 890
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 15
+		
+		complete_effect = {
+			release_puppet = GEO
+		}
+	}
+}

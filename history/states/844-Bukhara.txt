@@ -1,0 +1,28 @@
+
+state={
+	id=844
+	name="STATE_844"
+
+	history={
+		owner = TKS
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = TKS
+		
+		victory_points = {
+			12161 3
+		}
+		victory_points = {
+			7639 1 
+		}
+	}
+
+	provinces={
+		756 1573 1623 1632 7639 7775 9605 10470 12161 12722 
+	}
+	manpower=3000000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

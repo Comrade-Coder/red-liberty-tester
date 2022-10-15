@@ -1,0 +1,47 @@
+GUD_battle_for_guangdong = {
+	
+	GUD_boost_clique = {
+	
+		icon = ger_mefo_bills
+		
+		visible = {
+			debug = yes
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			
+		}
+	}
+	
+	GUD_boost_koumintang = {
+	
+		icon = ger_mefo_bills
+		
+		visible = {
+			debug = yes
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			
+		}
+	}
+	
+	GUD_boost_anarchists = {
+	
+		icon = ger_mefo_bills
+		
+		visible = {
+			debug = yes
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			
+		}
+	}
+}

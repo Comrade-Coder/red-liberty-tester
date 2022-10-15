@@ -1,0 +1,106 @@
+﻿capital = 571
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1 
+	transport = 1 
+	mtg_transport = 1
+	
+}
+
+oob = "RUS"
+
+set_research_slots = 2
+set_convoys = 50
+set_stability = 0.75 
+
+add_ideas = {  
+	RUS_eternal_transition
+	RUS_alone_in_the_cold
+	RUS_crippling_debt
+	RUS_new_years_strike
+	
+	limited_exports
+	limited_conscription
+	partial_economic_mobilisation
+	semi_industrial_economy
+}
+
+set_politics = {
+	ruling_party = autocratic_despotism 
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+
+}
+set_popularities = {
+	insurrectionary_anarchism = 0
+	revolutionary_autocracy = 0
+	proletarian_dictatorship = 0
+	libertarian_socialism = 0
+	social_democracy = 5
+	progressive_liberalism = 6
+	market_libertarianism = 2
+	national_conservatism = 10
+	authoritarian_democracy = 22
+	autocratic_despotism = 33
+	far_right_authoritarianism = 15
+	fascism = 7
+} 
+
+create_country_leader = {
+	name = "Alexander Kolchak"
+	desc = "POLITICS_ALEXANDER_KOLCHAK_DESC"
+	picture = "gfx/leaders/RUS/Portrait_RUS_Aleksandr_Kolchak.png"
+	expire = "1965.1.1"
+	ideology = military_government_subtype
+	traits = {
+		reluctant_dictator
+	}
+}
+
+create_country_leader = {
+	name = "Various Military Figures"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = far_right_authoritarianism_subtype
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Anastasy Vonsiatsky"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = clerical_fascism_subtype
+	traits = {
+		
+	}
+}
+
+ORE = {
+	give_military_access = RUS
+}
+URL = {
+	give_military_access = RUS
+}
+SCH = {
+	give_military_access = RUS
+}
+TRB = {
+	give_military_access = RUS
+}
+AMU = {
+	give_military_access = RUS
+}
+PRI = {
+	give_military_access = RUS
+}

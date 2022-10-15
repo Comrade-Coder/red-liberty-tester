@@ -1,0 +1,55 @@
+﻿capital = 784
+
+oob = "LIT"
+
+set_research_slots = 2
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	early_fighter = 1
+}
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = autocratic_despotism
+	last_election = "1932.11.8"
+	election_frequency = 0
+	elections_allowed = no
+}
+set_popularities = {
+	insurrectionary_anarchism = 0
+	revolutionary_autocracy = 10
+	proletarian_dictatorship = 5
+	libertarian_socialism = 0
+	social_democracy = 15
+	progressive_liberalism = 10
+	market_libertarianism = 0
+	national_conservatism = 15
+	far_right_authoritarianism = 0
+	authoritarian_democracy = 0
+	autocratic_despotism = 35
+	fascism = 10
+}
+
+set_cosmetic_tag = LIT_GER_occupied
+
+add_ideas = {
+	LIT_becks_personal_reich
+	LIT_shackled_to_berlin
+	
+	limited_conscription
+}
+
+create_country_leader = {
+	name = "Ludwig Beck"
+	desc = "POLITICS_LUDWIG_BECK_DESC"
+	picture = "gfx/leaders/LIT/Portrait_LIT_Ludwig_Beck.tga"
+	expire = "1965.1.1"
+	ideology = military_government_subtype
+	traits = {
+		#
+	}
+}
+

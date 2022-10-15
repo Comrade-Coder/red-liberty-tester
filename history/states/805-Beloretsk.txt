@@ -1,0 +1,22 @@
+
+state={
+	id=805
+	name="STATE_805"
+
+	history={
+		owner = RUS
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = RUS
+
+	}
+
+	provinces={
+		4311 4383 7373 10185 12200 
+	}
+	manpower=220000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

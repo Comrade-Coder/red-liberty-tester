@@ -1,0 +1,71 @@
+###INITIAL TREE
+focus_tree = {
+	id = JAP_initial_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = JAP
+		}
+	}
+	continuous_focus_position = {
+		x = -2000
+		y = 500
+	}
+	default = no
+	shared_focus = JAP_inukai_govt
+}
+
+focus_tree = {
+	id = JAP_showa_democracy_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = JAP
+		}
+	}
+	continuous_focus_position = {
+		x = -2000
+		y = 500
+	}
+	default = no
+	shared_focus = JAP_showa_democracy
+}
+
+focus_tree = {
+	id = JAP_taisho_democracy_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = JAP
+		}
+	}
+	continuous_focus_position = {
+		x = -2000
+		y = 500
+	}
+	default = no
+	shared_focus = JAP_taisho_lives
+}
+
+focus_tree = {
+	id = JAP_nationalist_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = JAP
+		}
+	}
+	continuous_focus_position = {
+		x = -2000
+		y = 500
+	}
+	default = no
+	shared_focus = JAP_spiders_web
+	shared_focus = JAP_the_carrot
+	shared_focus = JAP_the_stick
+	shared_focus = JAP_on_the_march
+}

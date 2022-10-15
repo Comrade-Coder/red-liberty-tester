@@ -1,0 +1,43 @@
+
+state={
+	id=358
+	name="STATE_358"
+	resources={
+		steel=13.000
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 4
+		}
+		add_core_of = USA
+		victory_points = {
+			11654 3 
+		}
+		victory_points = {
+			9693 10
+		}
+		victory_points = {
+			3733 3 
+		}
+		victory_points = {
+			3702 3
+		}
+		victory_points = {
+			6778 1
+		}
+		victory_points = {
+			11662 1
+		}
+	}
+
+	provinces={
+		706 1436 3806 3894 6911 9673 9693 9721 9774 11660 11665 11722 
+	}
+	manpower=3180000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

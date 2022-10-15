@@ -1,0 +1,166 @@
+spriteTypes = {
+
+	### STARTING IDEAS ###
+	
+	spriteType = {
+		name = "GFX_idea_USA_city_on_a_hill"
+		texturefile = "gfx/interface/ideas/USA/USA_city_upon_a_hill.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_the_great_depression_1"
+		texturefile = "gfx/interface/ideas/USA/USA_great_depression.png"
+	}
+	
+	
+	###
+	
+	spriteType = {
+		name = "GFX_idea_USA_bloated_federal_government"
+		texturefile = "gfx/interface/ideas/USA/USA_blooted_executive_branch.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_mexican_volunteers"
+		texturefile = "gfx/interface/ideas/USA/USA_tio_samuel.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_military_observers"
+		texturefile = "gfx/interface/ideas/USA/USA_tio_samuel.png"
+	} 
+	
+	### LEGISLATION ###
+	
+	spriteType = {
+		name = "GFX_idea_USA_reorg_act"
+		texturefile = "gfx/interface/ideas/USA/USA_reorganization_act.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_union_representation_act"
+		texturefile = "gfx/interface/ideas/USA/USA_union_representation_act.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_safety_net_barebones"
+		texturefile = "gfx/interface/ideas/USA/USA_american_safety_net_barebones.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_safety_net_small"
+		texturefile = "gfx/interface/ideas/USA/USA_american_safety_net_small.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_safety_net_acceptable"
+		texturefile = "gfx/interface/ideas/USA/USA_american_safety_net_acceptable.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_safety_net_large"
+		texturefile = "gfx/interface/ideas/USA/USA_american_safety_net_large.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_safety_net_welfare_state"
+		texturefile = "gfx/interface/ideas/USA/USA_american_safety_net_welfare_state.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_economic_equality_act"
+		texturefile = "gfx/interface/ideas/USA/USA_economic_equality_act.png"
+	}
+	
+	### MILITARY ###
+	
+	spriteType = {
+		name = "GFX_idea_USA_coastal_defense"
+		texturefile = "gfx/interface/ideas/USA/USA_coastal_defence.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_20_division_plan_a"
+		texturefile = "gfx/interface/ideas/USA/USA_20_division_plan.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_20_division_plan_ab"
+		texturefile = "gfx/interface/ideas/USA/USA_20_division_plan.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_20_division_plan_ad"
+		texturefile = "gfx/interface/ideas/USA/USA_20_division_plan.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_20_division_plan_abc"
+		texturefile = "gfx/interface/ideas/USA/USA_20_division_plan.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_20_division_plan_abd"
+		texturefile = "gfx/interface/ideas/USA/USA_20_division_plan.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_20_division_plan_abcd"
+		texturefile = "gfx/interface/ideas/USA/USA_20_division_plan.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_usaaf"
+		texturefile = "gfx/interface/ideas/USA/USA_united_states_army_air_forces.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_usaaf_2"
+		texturefile = "gfx/interface/ideas/USA/USA_united_states_army_air_forces.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_usaaf_3"
+		texturefile = "gfx/interface/ideas/USA/USA_united_states_army_air_forces.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_usac_a"
+		texturefile = "gfx/interface/ideas/USA/USA_air_corps.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_usac_ab"
+		texturefile = "gfx/interface/ideas/USA/USA_air_corps.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_usac_ac"
+		texturefile = "gfx/interface/ideas/USA/USA_air_corps.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_usac_abc"
+		texturefile = "gfx/interface/ideas/USA/USA_air_corps.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_usac_abcd"
+		texturefile = "gfx/interface/ideas/USA/USA_air_corps.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_streamlined_prod_cas"
+		texturefile = "gfx/interface/ideas/USA/USA_streamlined_production.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_streamlined_prod_bomber"
+		texturefile = "gfx/interface/ideas/USA/USA_streamlined_production.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_oss_natspirit"
+		texturefile = "gfx/interface/goals/USA/shared/USA_office_of_strategic_services.png"
+	}
+}

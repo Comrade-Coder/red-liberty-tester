@@ -1,0 +1,23 @@
+
+state={
+	id=585
+	name="STATE_585"
+
+	history={
+		owner = TMS
+		add_core_of = TMS
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			12465 1 
+		}
+	}
+
+	provinces={
+		10395 10435 10485 12324 12465 
+	}
+	manpower=833721
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

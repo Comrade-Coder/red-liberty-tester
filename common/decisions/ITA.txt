@@ -1,0 +1,1577 @@
+ITA_orders_of_the_black_shirts = {
+	
+	ITA_attack_anti_fascist_meetings = {
+	
+		icon = generic_political_discourse
+		
+		visible = {
+			always = yes
+		}
+		
+		cost = 100 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 120
+		
+		complete_effect = { 
+			add_timed_idea = {
+				days = 60 
+				idea = ITA_anti_fascists_attacked
+			}
+		}
+	}
+	
+	ITA_rome_parades = {
+	
+		icon = eng_propaganda_campaigns
+		
+		visible = {
+			always = yes
+		}
+		
+		cost = 100  
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 120
+		
+		complete_effect = { 
+			add_timed_idea = {
+				days = 60 
+				idea = ITA_rome_parades
+			}
+		}
+	} 
+
+	ITA_enforce_taxes = {
+	
+		icon = ger_mefo_bills
+		
+		visible = {
+			always = yes
+		}
+		
+		cost = 100 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 120
+		
+		complete_effect = { 
+			add_timed_idea = {
+				days = 60 
+				idea = ITA_enforcing_taxes
+			}
+		}
+	} 
+
+	ITA_train_malitia_forces = {
+	
+		icon = ger_military_buildup
+		
+		visible = {
+			always = yes
+		}
+		
+		cost = 100 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 120
+		
+		complete_effect = { 
+			add_timed_idea = {
+				days = 60 
+				idea = ITA_training_malitia_forces
+			}
+		}
+	}
+} 
+
+ITA_passing_new_laws = {
+	
+	ITA_pass_new_conscription_laws = {
+	
+		icon = ger_military_buildup
+		
+		visible = {
+			always = yes
+		}
+		
+		cost = 100 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 120
+		
+		complete_effect = { 
+			add_timed_idea = {
+				days = 60 
+				idea = ITA_passing_new_laws
+			}
+		}
+	} 
+
+	ITA_pass_new_economic_laws = {
+	
+		icon = ger_mefo_bills
+		
+		visible = {
+			always = yes
+		}
+		
+		cost = 50 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 120
+		
+		complete_effect = { 
+			add_timed_idea = {
+				days = 60 
+				idea = ITA_new_economic_groups
+			}
+		}
+	} 
+
+	ITA_increase_military_spending = {
+	
+		icon = ger_military_buildup
+		
+		visible = {
+			always = yes
+		}
+		
+		cost = 150 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 240
+		
+		complete_effect = { 
+			add_timed_idea = {
+				days = 120 
+				idea = ITA_increased_military_build_up
+			}
+		}
+	} 
+
+	ITA_fund_industrial_spending = {
+	
+		icon = generic_construction
+		
+		visible = {
+			always = yes
+		}
+		
+		cost = 150 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 240
+		
+		complete_effect = { 
+			add_timed_idea = {
+				days = 120 
+				idea = ITA_increased_industrilization_spending
+			}
+		}
+	}
+} 
+
+ITA_destabilizatiaon_missions = {
+	
+	ITA_spread_propaganda = {
+	
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			always = yes
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		cost = 60 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 55
+		
+		complete_effect = { 
+			GER = {
+				add_war_support = -0.12
+			}
+		}
+	} 
+
+	ITA_foster_decent = {
+	
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			always = yes
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		cost = 60 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 70
+		
+		complete_effect = { 
+			GER = {
+				add_stability = -0.12 
+				add_popularity = {
+    				ideology = empowered_nationalism
+    				popularity = 0.11
+				}
+			}
+		}
+	} 
+
+	ITA_infratrait_the_german_government = {
+	
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			always = yes
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		cost = 60 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 100
+		
+		complete_effect = { 
+			GER = {
+				add_political_power = -125
+			}
+		}
+	} 
+
+	ITA_help_out_fascists = {
+	
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			always = yes
+		} 
+
+		modifier = {
+			political_power_gain = -0.2
+		}
+		
+		cost = 60 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 100
+		
+		complete_effect = { 
+			GER = {
+				add_popularity = {
+    				ideology = empowered_nationalism
+    				popularity = 0.16
+				}
+			}
+		}
+	}
+} 
+
+ITA_spread_revolution_to_balkans = {
+
+	#Actions in Serbia
+	
+	ITA_communist_influence_serbia = {
+	
+		icon = decision_eng_propaganda_campaigns
+		
+		available = {
+			country_exists = SER
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		cost = 60 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 70
+		
+		complete_effect = { 
+			SER = {
+				add_popularity = {
+					ideology = revolutionary_autocracy
+					popularity = 0.1
+				}
+			}
+		}
+	} 
+
+	ITA_communist_rebellion_serbia = {
+	
+		icon = decision_generic_ignite_civil_war
+		
+		available = {
+			country_exists = SER
+			SER = {
+				revolutionary_autocracy > 0.5
+			}
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+			production_factory_efficiency_gain_factor = -0.15
+		}
+		
+		cost = 60 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 55
+		
+		complete_effect = { 
+			SER = {
+				start_civil_war = {
+					ideology = revolutionary_autocracy
+					size = 0.5
+					only_own_territory = yes
+					keep_political_leader = yes
+				}				
+			}
+		}
+	}
+	
+	#Actions in Greece
+
+	ITA_communist_influence_greece = {
+	
+		icon = decision_eng_propaganda_campaigns
+		
+		available = {
+			country_exists = GRE
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		cost = 60 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 70
+		
+		complete_effect = { 
+			GRE = {
+				add_popularity = {
+					ideology = revolutionary_autocracy
+					popularity = 0.1
+				}
+			}
+		}
+	} 
+
+	ITA_communist_rebellion_greece = {
+	
+		icon = decision_generic_ignite_civil_war
+		
+		available = {
+			country_exists = GRE
+			GRE = {
+				revolutionary_autocracy > 0.5
+			}
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+			production_factory_efficiency_gain_factor = -0.15
+		}
+		
+		cost = 60 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 55
+		
+		complete_effect = { 
+			GRE = {
+				start_civil_war = {
+					ideology = revolutionary_autocracy
+					size = 0.5
+					only_own_territory = yes
+					keep_political_leader = yes
+				}				
+			}
+		}
+	}
+
+	#Actions in Albania
+
+	ITA_communist_influence_albania = {
+	
+		icon = decision_eng_propaganda_campaigns
+		
+		available = {
+			country_exists = ALB
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		cost = 60 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 70
+		
+		complete_effect = { 
+			ALB = {
+				add_popularity = {
+					ideology = revolutionary_autocracy
+					popularity = 0.1
+				}
+			}
+		}
+	} 
+
+	ITA_communist_rebellion_albania = {
+	
+		icon = decision_generic_ignite_civil_war
+		
+		available = {
+			country_exists = ALB
+			ALB = {
+				revolutionary_autocracy > 0.5
+			}
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+			production_factory_efficiency_gain_factor = -0.15
+		}
+		
+		cost = 60 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 55
+		
+		complete_effect = { 
+			SER = {
+				start_civil_war = {
+					ideology = revolutionary_autocracy
+					size = 0.5
+					only_own_territory = yes
+					keep_political_leader = yes
+				}				
+			}
+		}
+	}
+
+	#Actions in Bulgaria
+
+	ITA_communist_influence_bulgaria = {
+	
+		icon = decision_eng_propaganda_campaigns
+		
+		available = {
+			country_exists = BUL
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		cost = 60 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 70
+		
+		complete_effect = { 
+			BUL = {
+				add_popularity = {
+					ideology = revolutionary_autocracy
+					popularity = 0.1
+				}
+			}
+		}
+	} 
+
+	ITA_communist_rebellion_bulgaria = {
+	
+		icon = decision_generic_ignite_civil_war
+		
+		available = {
+			country_exists = BUL
+			BUL = {
+				revolutionary_autocracy > 0.5
+			}
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+			production_factory_efficiency_gain_factor = -0.15
+		}
+		
+		cost = 60 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 55
+		
+		complete_effect = { 
+			BUL = {
+				start_civil_war = {
+					ideology = revolutionary_autocracy
+					size = 0.5
+					only_own_territory = yes
+					keep_political_leader = yes
+				}				
+			}
+		}
+	}
+
+	#Actions in Romania
+
+	ITA_communist_influence_romania = {
+	
+		icon = decision_eng_propaganda_campaigns
+		
+		available = {
+			country_exists = ROM
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		cost = 60 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 70
+		
+		complete_effect = { 
+			ROM = {
+				add_popularity = {
+					ideology = revolutionary_autocracy
+					popularity = 0.1
+				}
+			}
+		}
+	} 
+
+	ITA_communist_rebellion_romania = {
+	
+		icon = decision_generic_ignite_civil_war
+		
+		available = {
+			country_exists = ROM
+			ROM = {
+				revolutionary_autocracy > 0.5
+			}
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+			production_factory_efficiency_gain_factor = -0.15
+		}
+		
+		cost = 60 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 55
+		
+		complete_effect = { 
+			ROM = {
+				start_civil_war = {
+					ideology = revolutionary_autocracy
+					size = 0.5
+					only_own_territory = yes
+					keep_political_leader = yes
+				}				
+			}
+		}
+	}
+} 
+
+ITA_taxes_managment = {
+	ITA_increase_taxes = {
+	
+		icon = increase_taxes
+		
+		available = {
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+			production_factory_efficiency_gain_factor = -0.15
+		}
+		
+		cost = 10 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 25
+		
+		complete_effect = { 
+			IF = {
+				limit = {
+					has_idea = ITA_undecided_tax_policy
+				}
+				swap_ideas = {
+					remove_idea = ITA_undecided_tax_policy
+					add_idea = ITA_taxes_high
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_taxes_low
+				}
+				swap_ideas = {
+					remove_idea = ITA_taxes_low
+					add_idea = ITA_taxes_high
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_taxes_medium
+				}
+				swap_ideas = {
+					remove_idea = ITA_taxes_medium
+					add_idea = ITA_taxes_high
+				}
+			}
+		}
+	}
+
+	ITA_maintain_tax_levels = {
+	
+		icon = keep_tax_level
+		
+		available = {
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+			production_factory_efficiency_gain_factor = -0.15
+		}
+		
+		cost = 10 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 25
+		
+		complete_effect = { 
+			IF = {
+				limit = {
+					has_idea = ITA_undecided_tax_policy
+				}
+				swap_ideas = {
+					remove_idea = ITA_undecided_tax_policy
+					add_idea = ITA_taxes_medium
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_taxes_high
+				}
+				swap_ideas = {
+					remove_idea = ITA_taxes_high
+					add_idea = ITA_taxes_medium
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_taxes_low
+				}
+				swap_ideas = {
+					remove_idea = ITA_taxes_low
+					add_idea = ITA_taxes_medium
+				}
+			}
+		}
+	}
+
+	ITA_decrease_taxes = {
+	
+		icon = lower_taxes
+		
+		available = {
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+			production_factory_efficiency_gain_factor = -0.15
+		}
+		
+		cost = 10 
+
+		ai_will_do = {
+			base = 25
+		}
+
+		days_remove = 25
+		
+		complete_effect = {
+			IF = {
+				limit = {
+					has_idea = ITA_undecided_tax_policy
+				}
+				swap_ideas = {
+					remove_idea = ITA_undecided_tax_policy
+					add_idea = ITA_taxes_low
+				}
+			} 
+			IF = {
+				limit = {
+					has_idea = ITA_taxes_medium
+				}
+				swap_ideas = {
+					remove_idea = ITA_taxes_medium
+					add_idea = ITA_taxes_low
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_taxes_high
+				}
+				swap_ideas = {
+					remove_idea = ITA_taxes_high
+					add_idea = ITA_taxes_low
+				}
+			}
+		}
+	}
+}
+
+ITA_buget_managment = {
+	ITA_military_focused_buget = {
+	
+		icon = ITA_military_focused_buget_gfx
+		
+		available = {
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+			production_factory_efficiency_gain_factor = -0.15
+		}
+		
+		cost = 10 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 25
+		
+		complete_effect = { 
+			IF = {
+				limit = {
+					has_idea = ITA_undecided_buget
+				}
+				swap_ideas = {
+					remove_idea = ITA_undecided_buget
+					add_idea = ITA_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_civ_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_civ_mil_focused
+					add_idea = ITA_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_civ_focused
+					add_idea = ITA_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_nav_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_nav_focused
+					add_idea = ITA_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_nav_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_nav_civ_focused
+					add_idea = ITA_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_focused
+					add_idea = ITA_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_civ_focused
+					add_idea = ITA_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_mil_focused
+					add_idea = ITA_mil_focused
+				}
+			}
+		}
+	}
+
+	ITA_civ_mil_focus = {
+	
+		icon = ITA_civ_mil_focus_gfx
+		
+		available = {
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+			production_factory_efficiency_gain_factor = -0.15
+		}
+		
+		cost = 10 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 25
+		
+		complete_effect = { 
+			IF = {
+				limit = {
+					has_idea = ITA_undecided_buget
+				}
+				swap_ideas = {
+					remove_idea = ITA_undecided_buget
+					add_idea = ITA_civ_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_mil_focused
+					add_idea = ITA_civ_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_civ_focused
+					add_idea = ITA_civ_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_nav_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_nav_focused
+					add_idea = ITA_civ_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_nav_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_nav_civ_focused
+					add_idea = ITA_civ_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_focused
+					add_idea = ITA_civ_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_civ_focused
+					add_idea = ITA_civ_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_mil_focused
+					add_idea = ITA_civ_mil_focused
+				}
+			}
+		}
+	}
+
+	ITA_civ_focus = {
+	
+		icon = ITA_civ_gfx
+		
+		available = {
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+			production_factory_efficiency_gain_factor = -0.15
+		}
+		
+		cost = 10 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 25
+		
+		complete_effect = { 
+			IF = {
+				limit = {
+					has_idea = ITA_undecided_buget
+				}
+				swap_ideas = {
+					remove_idea = ITA_undecided_buget
+					add_idea = ITA_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_mil_focused
+					add_idea = ITA_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_nav_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_nav_focused
+					add_idea = ITA_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_nav_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_nav_civ_focused
+					add_idea = ITA_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_focused
+					add_idea = ITA_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_civ_focused
+					add_idea = ITA_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_mil_focused
+					add_idea = ITA_civ_focused
+				}
+			}
+		}
+	}
+
+	ITA_nav_civ_focus = {
+	
+		icon = ITA_nav_civ_gfx
+		
+		available = {
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+			production_factory_efficiency_gain_factor = -0.15
+		}
+		
+		cost = 10 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 25
+		
+		complete_effect = { 
+			IF = {
+				limit = {
+					has_idea = ITA_undecided_buget
+				}
+				swap_ideas = {
+					remove_idea = ITA_undecided_buget
+					add_idea = ITA_nav_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_mil_focused
+					add_idea = ITA_nav_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_civ_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_civ_mil_focused
+					add_idea = ITA_nav_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_civ_focused
+					add_idea = ITA_nav_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_nav_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_nav_focused
+					add_idea = ITA_nav_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_focused
+					add_idea = ITA_nav_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_civ_focused
+					add_idea = ITA_nav_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_mil_focused
+					add_idea = ITA_nav_civ_focused
+				}
+			}
+		}
+	}
+
+	ITA_nav_focus = {
+	
+		icon = ITA_nav_gfx
+		
+		available = {
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+			production_factory_efficiency_gain_factor = -0.15
+		}
+		
+		cost = 10 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 25
+		
+		complete_effect = { 
+			IF = {
+				limit = {
+					has_idea = ITA_undecided_buget
+				}
+				swap_ideas = {
+					remove_idea = ITA_undecided_buget
+					add_idea = ITA_nav_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_mil_focused
+					add_idea = ITA_nav_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_civ_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_civ_mil_focused
+					add_idea = ITA_nav_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_civ_focused
+					add_idea = ITA_nav_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_nav_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_nav_civ_focused
+					add_idea = ITA_nav_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_focused
+					add_idea = ITA_nav_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_civ_focused
+					add_idea = ITA_nav_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_mil_focused
+					add_idea = ITA_nav_focused
+				}
+			}
+		}
+	}
+
+	ITA_tech_focus = {
+	
+		icon = ITA_tech_gfx
+		
+		available = {
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+			production_factory_efficiency_gain_factor = -0.15
+		}
+		
+		cost = 10 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 25
+		
+		complete_effect = { 
+			IF = {
+				limit = {
+					has_idea = ITA_undecided_buget
+				}
+				swap_ideas = {
+					remove_idea = ITA_undecided_buget
+					add_idea = ITA_tech_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_mil_focused
+					add_idea = ITA_tech_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_civ_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_civ_mil_focused
+					add_idea = ITA_tech_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_civ_focused
+					add_idea = ITA_tech_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_nav_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_nav_civ_focused
+					add_idea = ITA_tech_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_nav_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_nav_focused
+					add_idea = ITA_tech_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_civ_focused
+					add_idea = ITA_tech_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_mil_focused
+					add_idea = ITA_tech_focused
+				}
+			}
+		}
+	}
+
+	ITA_tech_civ_focus = {
+	
+		icon = ITA_tech_civ_gfx
+		
+		available = {
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+			production_factory_efficiency_gain_factor = -0.15
+		}
+		
+		cost = 10 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 25
+		
+		complete_effect = { 
+			IF = {
+				limit = {
+					has_idea = ITA_undecided_buget
+				}
+				swap_ideas = {
+					remove_idea = ITA_mil_focused
+					add_idea = ITA_tech_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_mil_focused
+					add_idea = ITA_tech_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_civ_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_civ_mil_focused
+					add_idea = ITA_tech_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_civ_focused
+					add_idea = ITA_tech_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_nav_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_nav_civ_focused
+					add_idea = ITA_tech_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_nav_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_nav_focused
+					add_idea = ITA_tech_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_focused
+					add_idea = ITA_tech_civ_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_mil_focused
+					add_idea = ITA_tech_civ_focused
+				}
+			}
+		}
+	}
+
+	ITA_tech_mil_focus = {
+	
+		icon = ITA_tech_mil_gfx
+		
+		available = {
+		} 
+
+		modifier = {
+			political_power_gain = -0.1
+			production_factory_efficiency_gain_factor = -0.15
+		}
+		
+		cost = 10 
+
+		ai_will_do = {
+			base = 10
+		}
+
+		days_remove = 25
+		
+		complete_effect = {
+			IF = {
+				limit = {
+					has_idea = ITA_undecided_buget
+				}
+				swap_ideas = {
+					remove_idea = ITA_undecided_buget
+					add_idea = ITA_tech_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_mil_focused
+					add_idea = ITA_tech_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_civ_mil_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_civ_mil_focused
+					add_idea = ITA_tech_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_civ_focused
+					add_idea = ITA_tech_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_nav_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_nav_civ_focused
+					add_idea = ITA_tech_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_nav_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_nav_focused
+					add_idea = ITA_tech_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_focused
+					add_idea = ITA_tech_mil_focused
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = ITA_tech_civ_focused
+				}
+				swap_ideas = {
+					remove_idea = ITA_tech_civ_focused
+					add_idea = ITA_tech_mil_focused
+				}
+			}
+		}
+	}
+}
+
+
+

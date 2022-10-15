@@ -1,0 +1,22 @@
+state={
+	id=913
+	name="STATE_913"
+	
+	history={
+		owner = ITA
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 2
+			dockyard = 2
+		}
+		add_core_of = ITA
+	}
+	
+	provinces={
+		3772 6788 11891 
+	}
+	manpower=1200000
+	buildings_max_level_factor=1.000
+	state_category = large_city
+}

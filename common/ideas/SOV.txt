@@ -1,0 +1,81 @@
+ideas = {
+
+	country = {
+	
+		SOV_home_of_the_revolution = {
+			
+			removal_cost = -1 
+			
+			allowed_civil_war = {	 
+				always = yes	
+			}	
+			
+			allowed = {
+				original_tag = SOV
+			}
+				
+			modifier = {
+				subversive_activites_upkeep = -0.15
+				drift_defence_factor = 0.25
+				send_volunteer_size = 2
+			}
+		}
+		
+		SOV_political_turmoil = {
+			
+			removal_cost = -1 
+			
+			allowed_civil_war = {	 
+				always = yes	
+			}	
+			
+			allowed = {
+				original_tag = SOV
+			}
+				
+			modifier = {
+				political_power_gain = -0.5
+				consumer_goods_factor = 0.1
+				stability_factor = -0.1
+			}
+		}
+		
+		SOV_nep = {
+			
+			removal_cost = -1 
+			
+			allowed_civil_war = {	 
+				always = yes	
+			}	
+			
+			allowed = {
+				original_tag = SOV
+			}
+				
+			modifier = {
+				monthly_population = 0.25
+				consumer_goods_factor = 0.05
+				production_speed_industrial_complex_factor = -0.15
+				production_speed_arms_factory_factor = -0.15
+				poverty_monthly_rate = 0.03
+			}
+		}
+		
+		SOV_tsarist_captives = {
+			
+			removal_cost = -1 
+			
+			allowed_civil_war = {	 
+				always = yes	
+			}	
+			
+			allowed = {
+				original_tag = SOV
+			}
+				
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+	}
+}

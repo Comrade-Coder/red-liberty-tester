@@ -1,0 +1,244 @@
+shared_focus = {
+    id = USA_the_lister_admin
+	icon = GFX_USA_the_lister_admin
+	
+    x = 8
+	
+	cost = 1
+    completion_reward = {
+        country_event = {
+			id = united_states_lister.1
+			hours = 6
+		}
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = USA_an_unexpected_victory
+	icon = GFX_USA_an_unexpected_victory
+	
+    x = -1
+	y = 1
+	
+	cost = 1
+	relative_position_id = USA_the_lister_admin
+	prerequisite = { focus = USA_the_lister_admin }
+    completion_reward = {
+        country_event = {
+			id = united_states_lister.2
+			hours = 6
+		}
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = USA_clean_house
+	icon = GFX_USA_clean_house
+	
+    x = 1
+	y = 1
+	
+	cost = 1
+	relative_position_id = USA_the_lister_admin
+	prerequisite = { focus = USA_the_lister_admin }
+    completion_reward = {
+		country_event = {
+			id = united_states_lister.3
+			hours = 6
+		}
+        add_political_power = 25
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = USA_lister_mixed_cabinet
+	icon = GFX_USA_lister_mixed_cabinet
+	
+    x = -1
+	y = 1
+	
+	cost = 2
+	mutually_exclusive = {
+		focus = USA_lister_conservative_cabinet
+	}
+	relative_position_id = USA_an_unexpected_victory
+	prerequisite = { focus = USA_an_unexpected_victory }
+    completion_reward = {
+        country_event = {
+			id = united_states_lister.4
+			hours = 6
+		}
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = USA_lister_conservative_cabinet
+	icon = GFX_USA_lister_conservative_cabinet
+	
+    x = 1
+	y = 1
+	
+	cost = 2
+	mutually_exclusive = {
+		focus = USA_lister_mixed_cabinet
+	}
+	relative_position_id = USA_an_unexpected_victory
+	prerequisite = { focus = USA_an_unexpected_victory }
+    completion_reward = {
+        country_event = {
+			id = united_states_lister.5
+			hours = 6
+		}
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = USA_grumbling_acknowledgment
+	icon = GFX_USA_grumbling_acknowledgment
+	
+    x = -1
+	y = 1
+	
+	cost = 2
+	mutually_exclusive = {
+		focus = USA_repudiate_labor
+	}
+	relative_position_id = USA_lister_conservative_cabinet
+	prerequisite = {
+		focus = USA_lister_mixed_cabinet
+		focus = USA_lister_conservative_cabinet
+	}
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = USA_repudiate_labor
+	icon = GFX_USA_repudiate_labor
+	
+    x = 1
+	y = 1
+	
+	cost = 2
+	mutually_exclusive = {
+		focus = USA_grumbling_acknowledgment
+	}
+	relative_position_id = USA_lister_conservative_cabinet
+	prerequisite = { focus = USA_lister_conservative_cabinet }
+	prerequisite = { focus = USA_clean_house }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = USA_inject_stimulus
+	icon = GFX_USA_inject_stimulus
+	
+    x = -1
+	y = 1
+	
+	cost = 2
+	relative_position_id = USA_grumbling_acknowledgment
+	prerequisite = { focus = USA_grumbling_acknowledgment }
+    completion_reward = {
+        improve_great_depression = yes
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = USA_doctors_orders
+	icon = GFX_USA_doctors_orders
+	
+    x = 1
+	y = 1
+	
+	cost = 2
+	relative_position_id = USA_grumbling_acknowledgment
+	prerequisite = {
+		focus = USA_grumbling_acknowledgment
+		focus = USA_repudiate_labor
+	}
+    completion_reward = {
+        add_stability = 0.05
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = USA_amputate_regulation
+	icon = GFX_USA_amputate_regulation
+	
+    x = 1
+	y = 1
+	
+	cost = 2
+	relative_position_id = USA_repudiate_labor
+	prerequisite = { focus = USA_repudiate_labor }
+    completion_reward = {
+        improve_great_depression = yes
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = USA_back_to_normalcy
+	icon = GFX_USA_back_to_normalcy
+	
+    x = 0
+	y = 1
+	
+	cost = 2
+	relative_position_id = USA_doctors_orders
+	prerequisite = { focus = USA_doctors_orders }
+	prerequisite = {
+		focus = USA_inject_stimulus
+		focus = USA_amputate_regulation
+	}
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}

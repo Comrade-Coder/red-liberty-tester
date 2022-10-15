@@ -1,0 +1,142 @@
+﻿capital = 275
+
+oob = "SAF_1936"
+
+set_stability = 0.6
+set_war_support = 0.1
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	early_fighter = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	CAS1 = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+set_convoys = 25
+set_politics = {
+	ruling_party = authoritarian_democracy
+	last_election = "1933.5.17"
+	election_frequency = 60
+	elections_allowed = yes
+}
+set_popularities = {
+	insurrectionary_anarchism = 0
+	revolutionary_autocracy = 0
+	proletarian_dictatorship = 0
+	libertarian_socialism = 2
+	social_democracy = 4
+	progressive_liberalism = 8
+	market_libertarianism = 32
+	national_conservatism = 2
+	authoritarian_democracy = 32
+	autocratic_despotism = 0
+	far_right_authoritarianism = 16
+	fascism = 4
+}
+
+set_country_flag = authoritarian_coalition
+set_country_flag = far_right_coalition
+
+add_ideas = {
+	semi_industrial_economy
+}
+
+create_country_leader = {
+	name = "Jan Hendrik Hofmeyr"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = progressive_liberalism_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jan Christian Smuts"
+	desc = ""
+	picture = "gfx/leaders/SAF/Portrait_SAF_Jan_Smuts.png"
+	expire = "1965.1.1"
+	ideology = liberal_conservatism_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "James Barry Munnik Hertzog"
+	desc = "POLITICS_J_B_M_HERTZOG_DESC"
+	picture = "gfx/leaders/SAF/Portrait_SAF_J_B_M_Hertzog.png"
+	expire = "1965.1.1"
+	ideology = authoritarian_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Daniël François Malan"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = far_right_authoritarianism_subtype
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "George Edwin Brink"
+	gfx = "GFX_SAF_george_edwin_brink"
+	traits = { desert_fox  }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 1
+}
+
+create_navy_leader = {
+	name = "Guy Hallifax"
+	gfx = "GFX_SAF_guy_halifax"
+	traits = { battleship_adherent }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}

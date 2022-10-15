@@ -1,0 +1,478 @@
+USA_election_season_category = {
+	
+	USA_campaign_in_new_england = {
+	
+		icon = ger_mefo_bills
+		
+		available = {
+			NOT = { has_country_flag = currently_campaigning }
+		}
+		
+		visible = {
+			has_country_flag = USA_senate_elections
+			NOT = {
+				OR = {
+					has_country_flag = USA_senate_conclusion
+					has_country_flag = USA_presidential_conclusion
+				}
+			}
+		}
+		
+		cancel_if_not_visible = yes
+		
+		highlight_states = {
+			highlight_state_targets = { state = 357 }
+		}
+		
+		cost = 15
+		
+		days_remove = 30
+		days_re_enable = 35
+		
+		complete_effect = {
+			USA_campaign_area_new_england = yes
+			set_country_flag = currently_campaigning
+		}
+		
+		remove_effect = {
+			USA_campaigning_effect = yes
+			clr_country_flag = currently_campaigning
+		}
+
+		ai_will_do = {
+			factor = 10
+			
+			modifier = {
+				add = 100
+				has_country_flag = USA_campaigning_socialist
+			}
+		}
+	}
+	
+	USA_campaign_in_east_coast = {
+	
+		icon = ger_mefo_bills
+		
+		available = {
+			NOT = { has_country_flag = currently_campaigning }
+		}
+		
+		visible = {
+			has_country_flag = USA_senate_elections
+			NOT = {
+				OR = {
+					has_country_flag = USA_senate_conclusion
+					has_country_flag = USA_presidential_conclusion
+				}
+			}
+		}
+		
+		cancel_if_not_visible = yes
+		
+		highlight_states = {
+			highlight_state_targets = { state = 360 }
+		}
+		
+		cost = 15
+		
+		days_remove = 30
+		days_re_enable = 35
+		
+		complete_effect = {
+			USA_campaign_area_east_coast = yes
+			set_country_flag = currently_campaigning
+		}
+		
+		remove_effect = {
+			USA_campaigning_effect = yes
+			clr_country_flag = currently_campaigning
+		}
+		
+		ai_will_do = {
+			factor = 10
+			
+			modifier = {
+				add = 100
+				has_country_flag = USA_campaigning_socialist
+			}
+		}
+	}
+	
+	USA_campaign_in_upper_south = {
+	
+		icon = ger_mefo_bills
+		
+		available = {
+			NOT = { has_country_flag = currently_campaigning }
+		}
+		
+		visible = {
+			has_country_flag = USA_senate_elections
+			NOT = {
+				OR = {
+					has_country_flag = USA_senate_conclusion
+					has_country_flag = USA_presidential_conclusion
+				}
+			}
+		}
+		
+		cancel_if_not_visible = yes
+		
+		highlight_states = {
+			highlight_state_targets = { state = 363 }
+		}
+		
+		cost = 15
+		
+		days_remove = 30
+		days_re_enable = 35
+		
+		complete_effect = {
+			USA_campaign_area_upper_south = yes
+			set_country_flag = currently_campaigning
+		}
+		
+		remove_effect = {
+			USA_campaigning_effect = yes
+			clr_country_flag = currently_campaigning
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	USA_campaign_in_deep_south = {
+	
+		icon = ger_mefo_bills
+		
+		available = {
+			NOT = { has_country_flag = currently_campaigning }
+		}
+		
+		visible = {
+			has_country_flag = USA_senate_elections
+			NOT = {
+				OR = {
+					has_country_flag = USA_senate_conclusion
+					has_country_flag = USA_presidential_conclusion
+				}
+			}
+		}
+		
+		cancel_if_not_visible = yes
+		
+		highlight_states = {
+			highlight_state_targets = { state = 367 }
+		}
+		
+		cost = 15
+		
+		days_remove = 30
+		days_re_enable = 35
+		
+		complete_effect = {
+			USA_campaign_area_deep_south = yes
+			set_country_flag = currently_campaigning
+		}
+		
+		remove_effect = {
+			USA_campaigning_effect = yes
+			clr_country_flag = currently_campaigning
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	USA_campaign_in_great_lakes = {
+	
+		icon = ger_mefo_bills
+		
+		available = {
+			NOT = { has_country_flag = currently_campaigning }
+		}
+		
+		visible = {
+			has_country_flag = USA_senate_elections
+			NOT = {
+				OR = {
+					has_country_flag = USA_senate_conclusion
+					has_country_flag = USA_presidential_conclusion
+				}
+			}
+		}
+		
+		cancel_if_not_visible = yes
+		
+		highlight_states = {
+			highlight_state_targets = { state = 395 }
+		}
+		
+		cost = 15
+		
+		days_remove = 30
+		days_re_enable = 35
+		
+		complete_effect = {
+			USA_campaign_area_great_lakes = yes
+			set_country_flag = currently_campaigning
+		}
+		
+		remove_effect = {
+			USA_campaigning_effect = yes
+			clr_country_flag = currently_campaigning
+		}
+		
+		ai_will_do = {
+			factor = 10
+			
+			modifier = {
+				add = 150
+				has_country_flag = USA_campaigning_socialist
+			}
+		}
+	}
+	
+	USA_campaign_in_southwest = {
+	
+		icon = ger_mefo_bills
+		
+		available = {
+			NOT = { has_country_flag = currently_campaigning }
+		}
+		
+		visible = {
+			has_country_flag = USA_senate_elections
+			NOT = {
+				OR = {
+					has_country_flag = USA_senate_conclusion
+					has_country_flag = USA_presidential_conclusion
+				}
+			}
+		}
+		
+		cancel_if_not_visible = yes
+		
+		highlight_states = {
+			highlight_state_targets = { state = 375 }
+		}
+		
+		cost = 15
+		
+		days_remove = 30
+		days_re_enable = 35
+		
+		complete_effect = {
+			USA_campaign_area_southwest = yes
+			set_country_flag = currently_campaigning
+		}
+		
+		remove_effect = {
+			USA_campaigning_effect = yes
+			clr_country_flag = currently_campaigning
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	USA_campaign_in_upper_great_plains = {
+	
+		icon = ger_mefo_bills
+		
+		available = {
+			NOT = { has_country_flag = currently_campaigning }
+		}
+		
+		visible = {
+			has_country_flag = USA_senate_elections
+			NOT = {
+				OR = {
+					has_country_flag = USA_senate_conclusion
+					has_country_flag = USA_presidential_conclusion
+				}
+			}
+		}
+		
+		cancel_if_not_visible = yes
+		
+		highlight_states = {
+			highlight_state_targets = { state = 390 }
+		}
+		
+		cost = 15
+		
+		days_remove = 30
+		days_re_enable = 35
+		
+		complete_effect = {
+			USA_campaign_area_great_plains = yes
+			set_country_flag = currently_campaigning
+		}
+		
+		remove_effect = {
+			USA_campaigning_effect = yes
+			clr_country_flag = currently_campaigning
+		}
+		
+		ai_will_do = {
+			factor = 10
+			
+			modifier = {
+				add = 150
+				has_country_flag = USA_campaigning_socialist
+			}
+		}
+	}
+	
+	USA_campaign_in_rocky_mountains = {
+	
+		icon = ger_mefo_bills
+		
+		available = {
+			NOT = { has_country_flag = currently_campaigning }
+		}
+		
+		visible = {
+			has_country_flag = USA_senate_elections
+			NOT = {
+				OR = {
+					has_country_flag = USA_senate_conclusion
+					has_country_flag = USA_presidential_conclusion
+				}
+			}
+		}
+		
+		cancel_if_not_visible = yes
+		
+		highlight_states = {
+			highlight_state_targets = { state = 380 }
+		}
+		
+		cost = 15
+		
+		days_remove = 30
+		days_re_enable = 35
+		
+		complete_effect = {
+			USA_campaign_area_rocky_mountains = yes
+			set_country_flag = currently_campaigning
+		}
+		
+		remove_effect = {
+			USA_campaigning_effect = yes
+			clr_country_flag = currently_campaigning
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	USA_campaign_in_west_coast = {
+	
+		icon = ger_mefo_bills
+		
+		available = {
+			NOT = { has_country_flag = currently_campaigning }
+		}
+		
+		visible = {
+			has_country_flag = USA_senate_elections
+			NOT = {
+				OR = {
+					has_country_flag = USA_senate_conclusion
+					has_country_flag = USA_presidential_conclusion
+				}
+			}
+		}
+		
+		cancel_if_not_visible = yes
+		
+		highlight_states = {
+			highlight_state_targets = { state = 378 }
+		}
+		
+		cost = 15
+		
+		days_remove = 30
+		days_re_enable = 35
+		
+		complete_effect = {
+			USA_campaign_area_west_coast = yes
+			set_country_flag = currently_campaigning
+		}
+		
+		remove_effect = {
+			USA_campaigning_effect = yes
+			clr_country_flag = currently_campaigning
+		}
+		
+		ai_will_do = {
+			factor = 10
+			
+			modifier = {
+				add = 100
+				has_country_flag = USA_campaigning_socialist
+			}
+		}
+	}
+	
+	USA_opposition_campaign_democrat = {
+		
+		icon = ger_mefo_bills
+		
+		allowed = {
+			original_tag = USA
+		}
+		
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		
+		activation = {
+			has_country_flag = USA_senate_elections
+			NOT = {
+				has_country_flag = USA_campaigning_socialist
+			}
+		}
+		
+		visible = {
+			has_country_flag = USA_senate_elections
+			NOT = {
+				OR = {
+					has_country_flag = USA_senate_conclusion
+					has_country_flag = USA_presidential_conclusion
+				}
+			}
+		}
+		
+		is_good = yes
+		
+		fixed_random_seed = no
+		cancel_if_not_visible = yes
+		
+		days_mission_timeout = 30
+		days_remove = 5
+		days_re_enable = 5
+		
+		timeout_effect = {
+			USA_opposition_campaign = yes
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				USA_set_opposition_campaign_area = yes
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

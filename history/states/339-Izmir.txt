@@ -1,0 +1,31 @@
+
+state={
+	id=339
+	name="STATE_339"
+	resources={
+		chromium=50.000
+	}
+
+	history={
+		owner = TUR
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 2
+		}
+		add_core_of = TUR
+		victory_points = {
+			928 3 
+		}
+		
+		set_demilitarized_zone = yes
+	}
+
+	provinces={
+		928 6992 7130 11848 
+	}
+	manpower=801755
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

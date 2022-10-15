@@ -1,0 +1,678 @@
+@SENATE_TIEBREAKER = 0.05
+
+#Fire this every time you want the polls to update
+USA_recalculate_polls = {
+	every_owned_state = {
+		limit = {
+			can_have_elections_in_state = yes
+		}
+		USA_convert_party_pop_percentage = yes
+		USA_clamp_state_popularities = yes
+		USA_check_election_vs = yes
+	}
+	if = {
+		limit = {
+			has_country_flag = USA_senate_elections
+			NOT = {
+				has_country_flag = USA_block_poll_event
+			}
+		}
+		#country_event = {
+		#	id = us_election_trigger.9
+		#}
+	}
+}
+
+USA_class_1_senate_prepare = {
+	set_country_flag = USA_senate_elections
+	set_country_flag = USA_class_1_elections
+	#SENATOR 1
+	377 = { #Arizona
+		set_state_flag = elections_senator_1
+	}
+	378 = { #California
+		set_state_flag = elections_senator_1
+	}
+	830 = { #Connecticut
+		set_state_flag = elections_senator_1
+	}
+	833 = { #Delaware
+		set_state_flag = elections_senator_1
+	}
+	366 = { #Florida
+		set_state_flag = elections_senator_1
+	}
+	396 = { #Indiana
+		set_state_flag = elections_senator_1
+	}
+	827 = { #Maine
+		set_state_flag = elections_senator_1
+	}
+	361 = { #Maryland
+		set_state_flag = elections_senator_1
+	}
+	357 = { #Massachusetts
+		set_state_flag = elections_senator_1
+	}
+	393 = { #Michigan
+		set_state_flag = elections_senator_1
+	}
+	391 = { #Minnesota
+		set_state_flag = elections_senator_1
+	}
+	370 = { #Mississippi
+		set_state_flag = elections_senator_1
+	}
+	373 = { #Missouri
+		set_state_flag = elections_senator_1
+	}
+	388 = { #Montana
+		set_state_flag = elections_senator_1
+	}
+	384 = { #Nebraska
+		set_state_flag = elections_senator_1
+	}
+	379 = { #Nevada
+		set_state_flag = elections_senator_1
+	}
+	359 = { #New Jersey
+		set_state_flag = elections_senator_1
+	}
+	376 = { #New Mexico
+		set_state_flag = elections_senator_1
+	}
+	358 = { #New York
+		set_state_flag = elections_senator_1
+	}
+	389 = { #North Dakota
+		set_state_flag = elections_senator_1
+	}
+	261 = { #Ohio
+		set_state_flag = elections_senator_1
+	}
+	360 = { #Pennsylvania
+		set_state_flag = elections_senator_1
+	}
+	831 = { #Rhode Island
+		set_state_flag = elections_senator_1
+	}
+	368 = { #Tennessee
+		set_state_flag = elections_senator_1
+	}
+	375 = { #Texas
+		set_state_flag = elections_senator_1
+	}
+	380 = { #Utah
+		set_state_flag = elections_senator_1
+	}
+	829 = { #Vermont
+		set_state_flag = elections_senator_1
+	}
+	362 = { #Virginia
+		set_state_flag = elections_senator_1
+	}
+	386 = { #Washington
+		set_state_flag = elections_senator_1
+	}
+	832 = { #West Virginia
+		set_state_flag = elections_senator_1
+	}
+	394 = { #Wisconsin
+		set_state_flag = elections_senator_1
+	}
+	if = {
+		limit = {
+			686 = {
+				can_have_elections_in_state = yes
+			}
+		}
+		686 = { #Puerto Rico
+			set_state_flag = elections_senator_1
+		}
+	}
+	
+	USA_calculate_senators = yes
+}
+
+USA_class_2_senate_prepare = {
+	set_country_flag = USA_senate_elections
+	set_country_flag = USA_class_2_elections
+	#SENATOR 1
+	#Alabama
+	367 = {
+		set_state_flag = elections_senator_1
+	}
+	#Arkansas
+	372 = {
+		set_state_flag = elections_senator_1
+	}
+	#Colorado
+	382 = {
+		set_state_flag = elections_senator_1
+	}
+	#Georgia
+	365 = {
+		set_state_flag = elections_senator_1
+	}
+	#Idaho
+	387 = {
+		set_state_flag = elections_senator_1
+	}
+	#Illinois
+	395 = {
+		set_state_flag = elections_senator_1
+	}
+	#Iowa
+	392 = {
+		set_state_flag = elections_senator_1
+	}
+	#Kansas
+	383 = {
+		set_state_flag = elections_senator_1
+	}
+	#Kentucky
+	369 = {
+		set_state_flag = elections_senator_1
+	}
+	#Louisiana
+	371 = {
+		set_state_flag = elections_senator_1
+	}
+	#New Hampshire
+	828 = {
+		set_state_flag = elections_senator_1
+	}
+	#North Carolina
+	363 = {
+		set_state_flag = elections_senator_1
+	}
+	#Oklahoma
+	374 = {
+		set_state_flag = elections_senator_1
+	}
+	#Oregon
+	385 = {
+		set_state_flag = elections_senator_1
+	}
+	#South Carolina
+	364 = {
+		set_state_flag = elections_senator_1
+	}
+	#South Dakota
+	390 = {
+		set_state_flag = elections_senator_1
+	}
+	#Wyoming
+	381 = {
+		set_state_flag = elections_senator_1
+	}
+
+	#SENATOR 2
+	#Delaware
+	833 = {
+		set_state_flag = elections_senator_2
+	}
+	#Maine
+	827 = {
+		set_state_flag = elections_senator_2
+	}
+	#Massachusetts
+	357 = {
+		set_state_flag = elections_senator_2
+	}
+	#Michigan
+	393 = {
+		set_state_flag = elections_senator_2
+	}
+	#Minnesota
+	391 = {
+		set_state_flag = elections_senator_2
+	}
+	#Mississippi
+	370 = {
+		set_state_flag = elections_senator_2
+	}
+	#Montana
+	388 = {
+		set_state_flag = elections_senator_2
+	}
+	#Nebraska
+	384 = {
+		set_state_flag = elections_senator_2
+	}
+	#New Jersey
+	359 = {
+		set_state_flag = elections_senator_2
+	}
+	#New Mexico
+	376 = {
+		set_state_flag = elections_senator_2
+	}
+	#Rhode Island
+	831 = {
+		set_state_flag = elections_senator_2
+	}
+	#Tennessee
+	368 = {
+		set_state_flag = elections_senator_2
+	}
+	#Texas
+	375 = {
+		set_state_flag = elections_senator_2
+	}
+	#Virginia
+	362 = {
+		set_state_flag = elections_senator_2
+	}
+	#West Virginia
+	832 = {
+		set_state_flag = elections_senator_2
+	}
+	
+	USA_calculate_senators = yes
+}
+
+USA_class_3_senate_prepare = {
+	set_country_flag = USA_senate_elections
+	set_country_flag = USA_class_3_elections
+	#SENATOR 2
+	#Alabama
+	367 = {
+		set_state_flag = elections_senator_2
+	}
+	#Arizona
+	377 = {
+		set_state_flag = elections_senator_2
+	}
+	#Arkansas
+	372 = {
+		set_state_flag = elections_senator_2
+	}
+	#California
+	378 = {
+		set_state_flag = elections_senator_2
+	}
+	#Colorado
+	382 = {
+		set_state_flag = elections_senator_2
+	}
+	#Connecticut
+	830 = {
+		set_state_flag = elections_senator_2
+	}
+	#Florida
+	366 = {
+		set_state_flag = elections_senator_2
+	}
+	#Georgia
+	365 = {
+		set_state_flag = elections_senator_2
+	}
+	#Idaho
+	387 = {
+		set_state_flag = elections_senator_2
+	}
+	#Illinois
+	395 = {
+		set_state_flag = elections_senator_2
+	}
+	#Indiana
+	396 = {
+		set_state_flag = elections_senator_2
+	}
+	#Iowa
+	392 = {
+		set_state_flag = elections_senator_2
+	}
+	#Kansas
+	383 = {
+		set_state_flag = elections_senator_2
+	}
+	#Kentucky
+	369 = {
+		set_state_flag = elections_senator_2
+	}
+	#Louisiana
+	371 = {
+		set_state_flag = elections_senator_2
+	}
+	#Maryland
+	361 = {
+		set_state_flag = elections_senator_2
+	}
+	#Missouri
+	373 = {
+		set_state_flag = elections_senator_2
+	}
+	#Nevada
+	379 = {
+		set_state_flag = elections_senator_2
+	}
+	#New Hampshire
+	828 = {
+		set_state_flag = elections_senator_2
+	}
+	#New York
+	358 = {
+		set_state_flag = elections_senator_2
+	}
+	#North Carolina
+	363 = {
+		set_state_flag = elections_senator_2
+	}
+	#North Dakota
+	389 = {
+		set_state_flag = elections_senator_2
+	}
+	#Ohio
+	261 = {
+		set_state_flag = elections_senator_2
+	}
+	#Oklahoma
+	374 = {
+		set_state_flag = elections_senator_2
+	}
+	#Oregon
+	385 = {
+		set_state_flag = elections_senator_2
+	}
+	#Pennsylvania
+	360 = {
+		set_state_flag = elections_senator_2
+	}
+	#South Carolina
+	364 = {
+		set_state_flag = elections_senator_2
+	}
+	#South Dakota
+	390 = {
+		set_state_flag = elections_senator_2
+	}
+	#Utah
+	380 = {
+		set_state_flag = elections_senator_2
+	}
+	#Vermont
+	829 = {
+		set_state_flag = elections_senator_2
+	}
+	#Washington
+	386 = {
+		set_state_flag = elections_senator_2
+	}
+	#Wisconsin
+	394 = {
+		set_state_flag = elections_senator_2
+	}
+	#Wyoming
+	381 = {
+		set_state_flag = elections_senator_2
+	}
+	if = {
+		limit = {
+			686 = {
+				can_have_elections_in_state = yes
+			}
+		}
+		686 = { #Puerto Rico
+			set_state_flag = elections_senator_2
+		}
+	}
+	
+	USA_calculate_senators = yes
+}
+
+USA_hold_senate_election = {
+	set_variable = { communist_change = 0 }
+	set_variable = { socialist_change = 0 }
+	set_variable = { republican_change = 0 }
+	set_variable = { democrat_change = 0 }
+	set_variable = { afp_change = 0 }
+	
+	every_owned_state = {
+		limit = {
+			has_state_flag = elections_senator_1
+		}
+		set_variable = { prev_senator_1 = senator_1 }
+		
+		USA_clamp_state_popularities = yes
+		
+		#log = "pick senate 1 race"
+		USA_pick_senator_1_in_state = yes
+	}
+	every_owned_state = {
+		limit = {
+			has_state_flag = elections_senator_2
+		}
+		set_variable = { prev_senator_2 = senator_2 }
+		
+		USA_clamp_state_popularities = yes
+		
+		#log = "pick senate 1 race"
+		USA_pick_senator_2_in_state = yes
+	}
+	
+	USA_calculate_senators = yes
+	
+	set_country_flag = USA_senate_conclusion
+}
+
+USA_pick_senator_1_in_state = {
+	log = "[This.GetName]: senator_1 is [?senator_1] at start of pick senator"
+	if = {
+		limit = { check_variable = { senator_1 = 1 } }
+		ROOT = { add_to_variable = { socialist_change = -1 } }
+	}
+	else_if = {
+		limit = { check_variable = { senator_1 = 2 } }
+		ROOT = { add_to_variable = { republican_change = -1 } }
+	}
+	else_if = {
+		limit = { check_variable = { senator_1 = 3 } }
+		ROOT = { add_to_variable = { democrat_change = -1 } }
+	}
+	else_if = {
+		limit = { check_variable = { senator_1 = 4 } }
+		ROOT = { add_to_variable = { afp_change = -1 } }
+	}
+	else_if = {
+		limit = { check_variable = { senator_1 = 5 } }
+		ROOT = { add_to_variable = { communist_change = -1 } }
+	}
+	
+	if = {
+		limit = {
+			check_variable = { THIS.socialist_election_pop > THIS.democrat_election_pop }
+			check_variable = { THIS.socialist_election_pop > THIS.republican_election_pop }
+			check_variable = { THIS.socialist_election_pop > THIS.afp_election_pop }
+			check_variable = { THIS.socialist_election_pop > THIS.communist_election_pop }
+		}
+		set_variable = { senator_1 = 1 }
+		log = "[This.GetName] elected [?senator_1]"
+	}
+	else_if = {
+		limit = {
+			check_variable = { THIS.republican_election_pop > THIS.democrat_election_pop }
+			check_variable = { THIS.republican_election_pop > THIS.socialist_election_pop }
+			check_variable = { THIS.republican_election_pop > THIS.afp_election_pop }
+			check_variable = { THIS.republican_election_pop > THIS.communist_election_pop }
+		}
+		set_variable = { senator_1 = 2 }
+		log = "[This.GetName] elected [?senator_1]"
+	}
+	else_if = {
+		limit = {
+			check_variable = { THIS.democrat_election_pop > THIS.republican_election_pop }
+			check_variable = { THIS.democrat_election_pop > THIS.socialist_election_pop }
+			check_variable = { THIS.democrat_election_pop > THIS.afp_election_pop }
+			check_variable = { THIS.democrat_election_pop > THIS.communist_election_pop }
+		}
+		set_variable = { senator_1 = 3 }
+		log = "[This.GetName] elected [?senator_1]"
+	}
+	else_if = {
+		limit = {
+			check_variable = { THIS.afp_election_pop > THIS.republican_election_pop }
+			check_variable = { THIS.afp_election_pop > THIS.socialist_election_pop }
+			check_variable = { THIS.afp_election_pop > THIS.democrat_election_pop }
+			check_variable = { THIS.afp_election_pop > THIS.communist_election_pop }
+		}
+		set_variable = { senator_1 = 4 }
+		log = "[This.GetName] elected [?senator_1]"
+	}
+	else_if = {
+		limit = {
+			check_variable = { THIS.communist_election_pop > THIS.republican_election_pop }
+			check_variable = { THIS.communist_election_pop > THIS.socialist_election_pop }
+			check_variable = { THIS.communist_election_pop > THIS.democrat_election_pop }
+			check_variable = { THIS.communist_election_pop > THIS.afp_election_pop }
+		}
+		set_variable = { senator_1 = 5 }
+		log = "[This.GetName] elected [?senator_1]"
+	}
+	else = { #ties
+		set_variable = { senator_1 = prev_senator_1 }
+	}
+	
+	if = {
+		limit = { check_variable = { senator_1 = 1 } }
+		ROOT = { add_to_variable = { socialist_change = 1 } }
+	}
+	else_if = {
+		limit = { check_variable = { senator_1 = 2 } }
+		ROOT = { add_to_variable = { republican_change = 1 } }
+	}
+	else_if = {
+		limit = { check_variable = { senator_1 = 3 } }
+		ROOT = { add_to_variable = { democrat_change = 1 } }
+	}
+	else_if = {
+		limit = { check_variable = { senator_1 = 4 } }
+		ROOT = { add_to_variable = { afp_change = 1 } }
+	}
+	else_if = {
+		limit = { check_variable = { senator_1 = 5 } }
+		ROOT = { add_to_variable = { communist_change = 1 } }
+	}
+}
+
+USA_pick_senator_2_in_state = {
+	log = "[This.GetName]: senator_2 is [?senator_2] at start of pick senator"
+	if = {
+		limit = { check_variable = { senator_2 = 1 } }
+		ROOT = { add_to_variable = { socialist_change = -1 } }
+	}
+	else_if = {
+		limit = { check_variable = { senator_2 = 2 } }
+		ROOT = { add_to_variable = { republican_change = -1 } }
+	}
+	else_if = {
+		limit = { check_variable = { senator_2 = 3 } }
+		ROOT = { add_to_variable = { democrat_change = -1 } }
+	}
+	else_if = {
+		limit = { check_variable = { senator_2 = 4 } }
+		ROOT = { add_to_variable = { afp_change = -1 } }
+	}
+	else_if = {
+		limit = { check_variable = { senator_2 = 5 } }
+		ROOT = { add_to_variable = { communist_change = -1 } }
+	}
+	
+	if = {
+		limit = {
+			check_variable = { THIS.socialist_election_pop > THIS.democrat_election_pop }
+			check_variable = { THIS.socialist_election_pop > THIS.republican_election_pop }
+			check_variable = { THIS.socialist_election_pop > THIS.afp_election_pop }
+			check_variable = { THIS.socialist_election_pop > THIS.communist_election_pop }
+		}
+		set_variable = { senator_2 = 1 }
+		log = "[This.GetName] elected [?senator_2]"
+	}
+	else_if = {
+		limit = {
+			check_variable = { THIS.republican_election_pop > THIS.democrat_election_pop }
+			check_variable = { THIS.republican_election_pop > THIS.socialist_election_pop }
+			check_variable = { THIS.republican_election_pop > THIS.afp_election_pop }
+			check_variable = { THIS.republican_election_pop > THIS.communist_election_pop }
+		}
+		set_variable = { senator_2 = 2 }
+		log = "[This.GetName] elected [?senator_2]"
+	}
+	else_if = {
+		limit = {
+			check_variable = { THIS.democrat_election_pop > THIS.republican_election_pop }
+			check_variable = { THIS.democrat_election_pop > THIS.socialist_election_pop }
+			check_variable = { THIS.democrat_election_pop > THIS.afp_election_pop }
+			check_variable = { THIS.democrat_election_pop > THIS.communist_election_pop }
+		}
+		set_variable = { senator_2 = 3 }
+		log = "[This.GetName] elected [?senator_2]"
+	}
+	else_if = {
+		limit = {
+			check_variable = { THIS.afp_election_pop > THIS.republican_election_pop }
+			check_variable = { THIS.afp_election_pop > THIS.socialist_election_pop }
+			check_variable = { THIS.afp_election_pop > THIS.democrat_election_pop }
+			check_variable = { THIS.afp_election_pop > THIS.communist_election_pop }
+		}
+		set_variable = { senator_2 = 4 }
+		log = "[This.GetName] elected [?senator_2]"
+	}
+	else_if = {
+		limit = {
+			check_variable = { THIS.communist_election_pop > THIS.republican_election_pop }
+			check_variable = { THIS.communist_election_pop > THIS.socialist_election_pop }
+			check_variable = { THIS.communist_election_pop > THIS.democrat_election_pop }
+			check_variable = { THIS.communist_election_pop > THIS.afp_election_pop }
+		}
+		set_variable = { senator_2 = 5 }
+		log = "[This.GetName] elected [?senator_2]"
+	}
+	else = { #ties
+		set_variable = { senator_2 = prev_senator_2 }
+	}
+	
+	if = {
+		limit = { check_variable = { senator_2 = 1 } }
+		ROOT = { add_to_variable = { socialist_change = 1 } }
+	}
+	else_if = {
+		limit = { check_variable = { senator_2 = 2 } }
+		ROOT = { add_to_variable = { republican_change = 1 } }
+	}
+	else_if = {
+		limit = { check_variable = { senator_2 = 3 } }
+		ROOT = { add_to_variable = { democrat_change = 1 } }
+	}
+	else_if = {
+		limit = { check_variable = { senator_2 = 4 } }
+		ROOT = { add_to_variable = { afp_change = 1 } }
+	}
+	else_if = {
+		limit = { check_variable = { senator_2 = 5 } }
+		ROOT = { add_to_variable = { communist_change = 1 } }
+	}
+}
+
+USA_clear_senate_election_vars = {
+	clr_country_flag = USA_senate_elections
+	clr_country_flag = USA_senate_conclusion
+	clr_country_flag = USA_class_1_elections
+	clr_country_flag = USA_class_2_elections
+	clr_country_flag = USA_class_3_elections
+
+	every_owned_state = {
+		limit = { can_have_elections_in_state = yes }
+		clr_state_flag = elections_senator_1
+		clr_state_flag = elections_senator_2
+		clear_variable = prev_senator_1
+		clear_variable = prev_senator_2
+	}
+	
+	clear_variable = communist_change
+	clear_variable = socialist_change
+	clear_variable = republican_change
+	clear_variable = democrat_change
+	clear_variable = afp_change
+}

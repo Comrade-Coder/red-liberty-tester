@@ -1,0 +1,28 @@
+
+state={
+	id=230
+	name="STATE_230"
+
+	history={
+		owner = TUR
+		victory_points = {
+			12320 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			air_base = 2
+
+		}
+		add_core_of = TUR
+
+	}
+
+	provinces={
+		3564 12320 12441 13123 13289 
+	}
+	manpower=1007555
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

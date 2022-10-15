@@ -1,0 +1,678 @@
+shared_focus = {
+    id = TUR_the_great_speech
+	icon = GFX_TUR_the_great_speech
+	
+    x = 8
+	
+	cost = 1
+    completion_reward = {
+		country_event = {
+			id = anatolia.2
+			hours = 6
+		}
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = TUR_a_seemingly_warm_reception
+	icon = GFX_TUR_a_seemingly_warm_reception
+	
+    x = -2
+	y = 1
+	
+	cost = 2
+	relative_position_id = TUR_the_great_speech
+	prerequisite = { focus = TUR_the_great_speech }
+    completion_reward = {
+        country_event = {
+			id = anatolia.3
+			hours = 6
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_a_trick_of_the_light
+	icon = GFX_TUR_a_trick_of_the_light
+	
+    x = -1
+	y = 1
+	
+	cost = 2
+	relative_position_id = TUR_a_seemingly_warm_reception
+	prerequisite = { focus = TUR_a_seemingly_warm_reception }
+    completion_reward = {
+        swap_ideas = {
+			remove_idea = TUR_growing_opposition
+			add_idea = TUR_growing_opposition_2
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_kadro_scare
+	icon = GFX_TUR_kadro_scare
+	
+    x = 2
+	y = 1
+	
+	cost = 2
+	relative_position_id = TUR_a_seemingly_warm_reception
+	prerequisite = { focus = TUR_a_seemingly_warm_reception }
+    completion_reward = {
+        country_event = {
+			id = anatolia.5
+			hours = 6
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_discussing_with_parliament
+	icon = GFX_TUR_discussing_with_parliament
+	
+    x = 2
+	y = 1
+	
+	cost = 2
+	relative_position_id = TUR_the_great_speech
+	prerequisite = { focus = TUR_the_great_speech }
+    completion_reward = {
+        country_event = {
+			id = anatolia.4
+			hours = 6
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_discussing_with_military
+	icon = GFX_TUR_discussing_with_military
+	
+    x = 1
+	y = 1
+	
+	cost = 2
+	relative_position_id = TUR_discussing_with_parliament
+	prerequisite = { focus = TUR_discussing_with_parliament }
+    completion_reward = {
+        country_event = {
+			id = anatolia.6
+			hours = 6
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_a_seat_in_constantinople
+	icon = GFX_TUR_a_seat_in_constantinople
+	
+    x = -1
+	y = 1
+	
+	cost = 2
+	mutually_exclusive = {
+		focus = TUR_in_his_place
+	}
+	relative_position_id = TUR_a_trick_of_the_light
+	prerequisite = { focus = TUR_a_trick_of_the_light }
+	prerequisite = { focus = TUR_kadro_scare }
+    completion_reward = {
+		swap_ideas = {
+			remove_idea = TUR_growing_opposition_2
+			add_idea = TUR_growing_opposition_3b
+		}
+		add_popularity = {
+			ideology = national_conservatism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = autocratic_despotism
+			popularity = 0.05
+		}
+        add_to_variable = {
+			TUR_caliph_influence = 2
+			tooltip = TUR_caliph_influence_gain_tt
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_in_his_place
+	icon = GFX_TUR_in_his_place
+	
+    x = 1
+	y = 1
+	
+	cost = 2
+	mutually_exclusive = {
+		focus = TUR_a_seat_in_constantinople
+	}
+	relative_position_id = TUR_a_trick_of_the_light
+	prerequisite = { focus = TUR_a_trick_of_the_light }
+	prerequisite = { focus = TUR_kadro_scare }
+    completion_reward = {
+		swap_ideas = {
+			remove_idea = TUR_growing_opposition_2
+			add_idea = TUR_growing_opposition_3a
+		}
+        add_to_variable = {
+			TUR_vizier_influence = 1
+			tooltip = TUR_vizier_influence_gain_tt
+		}
+		add_to_variable = {
+			TUR_parliament_influence = 1
+			tooltip = TUR_parliament_influence_gain_tt
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_heed_the_militarists
+	icon = GFX_TUR_heed_the_militarists
+	
+    x = -1
+	y = 1
+	
+	cost = 2
+	mutually_exclusive = {
+		focus = TUR_reprimand_karabekir
+	}
+	relative_position_id = TUR_discussing_with_military
+	prerequisite = { focus = TUR_discussing_with_military }
+	prerequisite = { focus = TUR_kadro_scare }
+    completion_reward = {
+        add_ideas = {
+			TUR_military_wing_dominant
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_reprimand_karabekir
+	icon = GFX_TUR_reprimand_karabekir
+	
+    x = 3
+	y = 1
+	
+	cost = 2
+	mutually_exclusive = {
+		focus = TUR_heed_the_militarists
+	}
+	relative_position_id = TUR_discussing_with_military
+	prerequisite = { focus = TUR_discussing_with_military }
+	prerequisite = { focus = TUR_kadro_scare }
+    completion_reward = {
+        add_ideas = {
+			TUR_civilian_wing_dominant
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_question_of_an_heir
+	icon = GFX_TUR_question_of_an_heir
+	
+    x = 1
+	y = 1
+	
+	cost = 2
+	relative_position_id = TUR_a_seat_in_constantinople
+	prerequisite = {
+		focus = TUR_a_seat_in_constantinople
+		focus = TUR_in_his_place
+	}
+    completion_reward = {
+		country_event = {
+			id = anatolia.7
+			hours = 6
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_marginalize_radicals
+	icon = GFX_TUR_marginalize_radicals
+	
+    x = -1
+	y = 1
+	
+	cost = 2
+	relative_position_id = TUR_heed_the_militarists
+	prerequisite = { focus = TUR_heed_the_militarists }
+    completion_reward = {
+        add_popularity = {
+			ideology = revolutionary_autocracy
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = proletarian_dictatorship
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = libertarian_socialism
+			popularity = -0.01
+		}
+		add_popularity = {
+			ideology = social_democracy
+			popularity = -0.04
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_demand_commitments
+	icon = GFX_TUR_demand_commitments
+	
+    x = 1
+	y = 1
+	
+	cost = 2
+	relative_position_id = TUR_heed_the_militarists
+	prerequisite = { focus = TUR_heed_the_militarists }
+    completion_reward = {
+        country_event = {
+			id = anatolia.8
+			hours = 6
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_divide_the_military
+	icon = GFX_TUR_divide_the_military
+	
+    x = -1
+	y = 1
+	
+	cost = 2
+	relative_position_id = TUR_reprimand_karabekir
+	prerequisite = { focus = TUR_reprimand_karabekir }
+    completion_reward = {
+        add_ideas = {
+			TUR_divided_armed_forces
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_appoint_a_lackey
+	icon = GFX_TUR_appoint_a_lackey
+	
+    x = 1
+	y = 1
+	
+	cost = 2
+	relative_position_id = TUR_reprimand_karabekir
+	prerequisite = { focus = TUR_reprimand_karabekir }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_emancipate_the_exiles
+	icon = GFX_TUR_emancipate_the_exiles
+	
+    x = -4
+	y = 1
+	
+	cost = 2
+	mutually_exclusive = {
+		focus = TUR_indoctrinate_the_child
+	}
+	relative_position_id = TUR_question_of_an_heir
+	prerequisite = { focus = TUR_question_of_an_heir }
+    completion_reward = {
+        custom_effect_tooltip = TUR_emancipate_the_exiles_tt
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_indoctrinate_the_child
+	icon = GFX_TUR_indoctrinate_the_child
+	
+    x = -2
+	y = 1
+	
+	cost = 2
+	mutually_exclusive = {
+		focus = TUR_emancipate_the_exiles
+	}
+	relative_position_id = TUR_question_of_an_heir
+	prerequisite = { focus = TUR_question_of_an_heir }
+    completion_reward = {
+        custom_effect_tooltip = TUR_indoctrinate_the_child_tt
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_anyone_but_the_family
+	icon = GFX_TUR_anyone_but_the_family
+	
+    x = 0
+	y = 1
+	
+	cost = 2
+	mutually_exclusive = {
+		focus = TUR_prepare_his_brothers
+	}
+	relative_position_id = TUR_question_of_an_heir
+	prerequisite = { focus = TUR_question_of_an_heir }
+    completion_reward = {
+        custom_effect_tooltip = TUR_anyone_but_the_family_tt
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_prepare_his_brothers
+	icon = GFX_TUR_prepare_his_brothers
+	
+    x = 2
+	y = 1
+	
+	cost = 2
+	mutually_exclusive = {
+		focus = TUR_anyone_but_the_family
+	}
+	relative_position_id = TUR_question_of_an_heir
+	prerequisite = { focus = TUR_question_of_an_heir }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_list_the_names
+	icon = GFX_TUR_list_the_names
+	
+    x = 1
+	y = 1
+	
+	cost = 2
+	relative_position_id = TUR_marginalize_radicals
+	prerequisite = { focus = TUR_marginalize_radicals }
+	prerequisite = { focus = TUR_demand_commitments }
+    completion_reward = {
+        country_event = {
+			id = anatolia.9
+			hours = 6
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_mission_accomplished
+	icon = GFX_TUR_mission_accomplished
+	
+    x = 1
+	y = 1
+	
+	cost = 2
+	relative_position_id = TUR_divide_the_military
+	prerequisite = { focus = TUR_divide_the_military }
+	prerequisite = { focus = TUR_appoint_a_lackey }
+    completion_reward = {
+        swap_ideas = {
+			remove_idea = TUR_divided_armed_forces
+			add_idea = TUR_docile_armed_forces
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_allow_the_prentender
+	icon = GFX_TUR_allow_the_prentender
+	
+    x = -1
+	y = 1
+	
+	cost = 2
+	mutually_exclusive = {
+		focus = TUR_dont_trust_like_that
+	}
+	relative_position_id = TUR_emancipate_the_exiles
+	prerequisite = { focus = TUR_emancipate_the_exiles }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_dont_trust_like_that
+	icon = GFX_TUR_dont_trust_like_that
+	
+    x = 1
+	y = 1
+	
+	cost = 2
+	mutually_exclusive = {
+		focus = TUR_allow_the_prentender
+	}
+	relative_position_id = TUR_emancipate_the_exiles
+	prerequisite = { focus = TUR_emancipate_the_exiles }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_favor_the_admiral
+	icon = GFX_TUR_favor_the_admiral
+	
+    x = -1
+	y = 1
+	
+	cost = 2
+	mutually_exclusive = {
+		focus = TUR_the_rogue_jihadist
+	}
+	relative_position_id = TUR_prepare_his_brothers
+	prerequisite = { focus = TUR_prepare_his_brothers }
+    completion_reward = {
+        custom_effect_tooltip = TUR_favor_the_admiral_tt
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_the_rogue_jihadist
+	icon = GFX_TUR_the_rogue_jihadist
+	
+    x = 1
+	y = 1
+	
+	cost = 2
+	mutually_exclusive = {
+		focus = TUR_favor_the_admiral
+	}
+	relative_position_id = TUR_prepare_his_brothers
+	prerequisite = { focus = TUR_prepare_his_brothers }
+    completion_reward = {
+        custom_effect_tooltip = TUR_the_rogue_jihadist_tt
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_literary_purge
+	icon = GFX_TUR_literary_purge
+	
+    x = 0
+	y = 1
+	
+	cost = 2
+	relative_position_id = TUR_list_the_names
+	prerequisite = { focus = TUR_list_the_names }
+    completion_reward = {
+        remove_socdem_coalition = yes
+		add_ideas = {
+			TUR_literary_purge
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_at_what_cost
+	icon = GFX_TUR_at_what_cost
+	
+    x = 0
+	y = 1
+	
+	cost = 2
+	relative_position_id = TUR_mission_accomplished
+	prerequisite = { focus = TUR_mission_accomplished }
+    completion_reward = {
+		country_event = {
+			id = anatolia.10
+			hours = 6
+		}
+        swap_ideas = {
+			remove_idea = TUR_karakol_society
+			add_idea = TUR_karakol_society_2
+		}
+		add_popularity = {
+			ideology = revolutionary_autocracy
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = proletarian_dictatorship
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = libertarian_socialism
+			popularity = 0.05
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+    id = TUR_lets_get_to_work
+	icon = GFX_TUR_lets_get_to_work
+	
+    x = 2
+	y = 1
+	
+	cost = 2
+	relative_position_id = TUR_literary_purge
+	prerequisite = {
+		focus = TUR_literary_purge
+		focus = TUR_at_what_cost
+	}
+    completion_reward = {
+        country_event = {
+			id = anatolia.11
+			hours = 6
+		}
+    }
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

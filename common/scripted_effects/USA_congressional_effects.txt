@@ -1,0 +1,1581 @@
+USA_congress_quorum = {
+	set_variable = { quorum_medium = 48 }
+	set_variable = { quorum_high = 58 }
+	
+	set_variable = { rep_quorum_medium = 242 }
+	set_variable = { rep_quorum_high = 322 }
+}
+
+USA_debug_example_setup = { # example debug act, meant to be screwed with
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 1 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing # Sets up who you can negotiate with
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_farmer_labor_discussing
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	#set_country_flag = bill_enable_mission # Gives the President penalties if they drag their feet for too long doing this
+	#set_variable = { USA_bill_mission_deadline = 150 }
+	
+	set_variable = { USA_communist_bill_support = 0.2 } # percentage of congresspeople who will initially support the bill
+	set_variable = { USA_socialist_bill_support = 0.7 }
+	set_variable = { USA_farmer_labor_bill_support = 0.7 }
+	set_variable = { USA_republican_bill_support = 0.6 }
+	set_variable = { USA_democrat_bill_support = 0.2 }
+	set_variable = { USA_fascist_bill_support = 0 }
+	
+	#set_country_flag = USA_special_decisions_enabled # hides generic decisions in favor of special ones
+	
+	set_variable = { average_boost_communist = 0.2 } # this shows the percentage of politicians (who are not currently supportive) who would be on average would be flipped by a compromise
+	set_variable = { average_boost_socialist = 0.2 }
+	set_variable = { average_boost_farmer_labor = 0.2 }
+	set_variable = { average_boost_republican = 0.3 }
+	set_variable = { average_boost_democrat = 0.2 }
+	set_variable = { average_boost_fascist = 0.2 }
+	
+	set_variable = { communist_flip_cost = 20 } # how much pp negotiation decisions cost
+	set_variable = { socialist_flip_cost = 20 }
+	set_variable = { farmer_labor_flip_cost = 20 }
+	set_variable = { republican_flip_cost = 25 }
+	set_variable = { democrat_flip_cost = 40 }
+	set_variable = { fascist_flip_cost = 70 }
+	
+	set_country_flag = USA_bill_is_amendment # if the bill is an amendment, will increase required votes
+	USA_bill_setup = yes # always required
+}
+
+USA_social_security_act_setup = { # social security act
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 2 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	set_variable = { USA_communist_bill_support = 1 } # yes, more socialism
+	set_variable = { USA_socialist_bill_support = 1 } # i mean, its our bill so
+	set_variable = { USA_republican_bill_support = 0.15 } # free market reeeeeee
+	set_variable = { USA_democrat_bill_support = 0.35 } # liberals are supportive, conservatives not so much
+	set_variable = { USA_fascist_bill_support = 0.1 } # longists are supportive, others not so much
+	
+	set_variable = { average_boost_socialist = 1 }
+	set_variable = { average_boost_republican = 0.15 }
+	set_variable = { average_boost_democrat = 0.1 }
+	set_variable = { average_boost_fascist = 0.1 }
+	
+	set_variable = { communist_flip_cost = 20 }
+	set_variable = { socialist_flip_cost = 20 }
+	set_variable = { republican_flip_cost = 25 }
+	set_variable = { democrat_flip_cost = 40 }
+	set_variable = { fascist_flip_cost = 70 }
+	
+	if = {
+		limit = {
+			check_variable = { USA_bill_strength < 11 }
+		}
+		subtract_from_variable = { USA_socialist_bill_support = 0.05 }
+		subtract_from_variable = { USA_communist_bill_support = 0.05 }
+		add_to_variable = { communist_flip_cost = 10 }
+		add_to_variable = { socialist_flip_cost = 10 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_bill_strength < 21 }
+		}
+		subtract_from_variable = { USA_republican_bill_support = 0.05 }
+		subtract_from_variable = { USA_democrat_bill_support = 0.075 }
+		add_to_variable = { republican_flip_cost = 5 }
+		add_to_variable = { democrat_flip_cost = 10 }
+	}
+	else = {
+		subtract_from_variable = { USA_republican_bill_support = 0.1 }
+		subtract_from_variable = { USA_democrat_bill_support = 0.15 }
+		add_to_variable = { republican_flip_cost = 10 }
+		add_to_variable = { democrat_flip_cost = 20 }
+	}
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_farm_tenant_act_setup = { # farm tenant act
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 3 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_communist_discussing
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	#set_country_flag = bill_enable_mission
+	#set_variable = { USA_bill_mission_deadline = 60 }
+	
+	set_variable = { USA_communist_bill_support = 1 } # help the farmers
+	set_variable = { USA_socialist_bill_support = 1 } # help the farmers
+	set_variable = { USA_republican_bill_support = 0.3 } # help the farmers, but hnng more spending
+	set_variable = { USA_democrat_bill_support = 0.55 } # help the farmers
+	set_variable = { USA_fascist_bill_support = 0.1 }
+	
+	set_variable = { average_boost_republican = 0.15 }
+	set_variable = { average_boost_democrat = 0.1 }
+	
+	set_variable = { republican_flip_cost = 20 }
+	set_variable = { democrat_flip_cost = 30 }
+	set_variable = { communist_flip_cost = 20 }
+	set_variable = { socialist_flip_cost = 10 }
+	set_variable = { fascist_flip_cost = 100 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_judicial_reform_act_setup = { # court packing plan
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 4 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_republican_discussing
+	
+	set_variable = { USA_republican_bill_support = 0.1 } # GOVERNMENT OVERREACH
+	set_variable = { USA_democrat_bill_support = 0.15 } # DICTATORSHIP ALERT
+	set_variable = { USA_communist_bill_support = 1 } # DESTROY CAPITALIST INSTITUTIONS
+	set_variable = { USA_socialist_bill_support = 0.75 } # arent we going a bit far?
+	set_variable = { USA_fascist_bill_support = 0 } # FACKING COMMIES RUINING MURICA
+	
+	set_variable = { average_boost_democrat = 0.075 }
+	set_variable = { average_boost_socialist = 0.7 }
+	set_variable = { average_boost_republican = 0.075 }
+	
+	set_variable = { republican_flip_cost = 130 }
+	set_variable = { democrat_flip_cost = 100 }
+	set_variable = { socialist_flip_cost = 50 }
+	
+	if = {
+		limit = {
+			has_country_flag = USA_judicial_reform_consulting
+		}
+		add_to_variable = { USA_republican_bill_support = 0.05 }
+		add_to_variable = { USA_democrat_bill_support = 0.05 }
+	}
+	
+	if = {
+		limit = {
+			has_country_flag = USA_added_judicial_review_section_lite
+		}
+		subtract_from_variable = { USA_republican_bill_support = 0.02 }
+		subtract_from_variable = { USA_democrat_bill_support = 0.02 }
+	}
+	
+	if = {
+		limit = {
+			has_country_flag = USA_added_judicial_review_section
+		}
+		subtract_from_variable = { USA_republican_bill_support = 0.05 }
+		subtract_from_variable = { USA_democrat_bill_support = 0.05 }
+	}
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_reorganization_act_setup = { # reorganization act
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_communist_discussing
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	set_variable = { bill_id = 5 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	#set_country_flag = bill_enable_mission
+	#set_variable = { USA_bill_mission_deadline = 60 }
+	
+	set_variable = { USA_republican_bill_support = 0.25 }
+	set_variable = { USA_democrat_bill_support = 0.25 }
+	set_variable = { USA_communist_bill_support = 1 }
+	set_variable = { USA_socialist_bill_support = 0.9 }
+	set_variable = { USA_fascist_bill_support = 0.05 }
+	
+	set_variable = { average_boost_republican = 0.15 }
+	set_variable = { average_boost_democrat = 0.1 }
+	
+	if = {
+		limit = {
+			has_country_flag = USA_abandoned_court_packing_plan
+		}
+		add_to_variable = { USA_republican_bill_support = 0.1 }
+		add_to_variable = { USA_democrat_bill_support = 0.1 }
+	}
+	
+	set_variable = { republican_flip_cost = 50 }
+	set_variable = { democrat_flip_cost = 70 }
+	set_variable = { communist_flip_cost = 40 }
+	set_variable = { socialist_flip_cost = 35 }
+	set_variable = { fascist_flip_cost = 150 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_union_representation_act_setup = { # union rep act
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 6 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag - USA_republican_discussing
+	
+	set_variable = { USA_communist_bill_support = 1 }
+	set_variable = { USA_socialist_bill_support = 0.9 }
+	set_variable = { USA_republican_bill_support = 0.1 }
+	set_variable = { USA_democrat_bill_support = 0.2 }
+	set_variable = { USA_fascist_bill_support = 0 }
+	
+	set_variable = { average_boost_democrat = 0.1 }
+	set_variable = { average_boost_socialist = 1 }
+	set_variable = { average_boost_republican = 0.15 }
+	
+	set_variable = { republican_flip_cost = 100 }
+	set_variable = { democrat_flip_cost = 100 }
+	set_variable = { communist_flip_cost = 30 }
+	set_variable = { socialist_flip_cost = 50 }
+	set_variable = { fascist_flip_cost = 150 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_pension_act_setup = { # pension act
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 7 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_communist_discussing
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	#set_country_flag = bill_enable_mission
+	#set_variable = { USA_bill_mission_deadline = 60 }
+	
+	set_variable = { USA_republican_bill_support = 0.35 }
+	set_variable = { USA_democrat_bill_support = 0.45 }
+	set_variable = { USA_communist_bill_support = 1 }
+	set_variable = { USA_socialist_bill_support = 1 }
+	set_variable = { USA_fascist_bill_support = 0.1 }
+	
+	set_variable = { average_boost_republican = 0.15 }
+	set_variable = { average_boost_democrat = 0.1 }
+	set_variable = { average_boost_fascist = 0.1 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_housing_act_setup = { # housing act
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 8 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_communist_discussing
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	#set_country_flag = bill_enable_mission
+	#set_variable = { USA_bill_mission_deadline = 60 }
+	
+	set_variable = { USA_republican_bill_support = 0.15 }
+	set_variable = { USA_democrat_bill_support = 0.45 }
+	set_variable = { USA_communist_bill_support = 1 }
+	set_variable = { USA_socialist_bill_support = 1 }
+	set_variable = { USA_fascist_bill_support = 0.15 }
+	
+	set_variable = { average_boost_republican = 0.1 }
+	set_variable = { average_boost_democrat = 0.15 }
+	set_variable = { average_boost_fascist = 0.1 }
+	
+	set_variable = { republican_flip_cost = 40 }
+	set_variable = { democrat_flip_cost = 60 }
+	set_variable = { communist_flip_cost = 40 }
+	set_variable = { socialist_flip_cost = 20 }
+	set_variable = { fascist_flip_cost = 100 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_wealth_tax_act_setup = { # wealth tax act
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 9 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_communist_discussing
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	set_variable = { USA_communist_bill_support = 1 }
+	set_variable = { USA_socialist_bill_support = 1 }
+	set_variable = { USA_republican_bill_support = 0.05 }
+	set_variable = { USA_democrat_bill_support = 0.2 }
+	set_variable = { USA_fascist_bill_support = 0.1 } # longists like this idea
+	
+	set_variable = { average_boost_republican = 0.1 }
+	set_variable = { average_boost_democrat = 0.2 }
+	set_variable = { USA_fascist_bill_support = 0.075 }
+	
+	set_variable = { socialist_flip_cost = 20 }
+	set_variable = { republican_flip_cost = 60 }
+	set_variable = { democrat_flip_cost = 80 }
+	set_variable = { fascist_flip_cost = 130 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_enforcement_act_setup = { # ban the kkk
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 10 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_communist_discussing
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	set_variable = { USA_republican_bill_support = 0.3 }
+	set_variable = { USA_democrat_bill_support = 0.15 }
+	set_variable = { USA_communist_bill_support = 1 }
+	set_variable = { USA_socialist_bill_support = 1 }
+	set_variable = { USA_fascist_bill_support = 0 }
+	
+	set_variable = { average_boost_republican = 0.05 }
+	set_variable = { average_boost_democrat = 0.05 }
+	
+	set_variable = { farmer_labor_flip_cost = 30 }
+	set_variable = { republican_flip_cost = 40 }
+	set_variable = { democrat_flip_cost = 50 }
+	set_variable = { fascist_flip_cost = 80 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_voting_rights_act_setup = { # voting rights act
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 11 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_farmer_labor_discussing
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	
+	set_variable = { USA_communist_bill_support = 1 }
+	set_variable = { USA_socialist_bill_support = 1 }
+	set_variable = { USA_farmer_labor_bill_support = 1 }
+	set_variable = { USA_republican_bill_support = 0.2 }
+	set_variable = { USA_democrat_bill_support = 0.1 }
+	set_variable = { USA_fascist_bill_support = 0 }
+	
+	#set_country_flag = USA_special_decisions_enabled # hides generic decisions in favor of special ones
+	
+	set_variable = { average_boost_communist = 0.4 }
+	set_variable = { average_boost_socialist = 0.5 }
+	set_variable = { average_boost_farmer_labor = 0.5 }
+	set_variable = { average_boost_republican = 0.3 }
+	set_variable = { average_boost_democrat = 0.1 }
+	set_variable = { average_boost_fascist = 0 }
+	
+	set_variable = { communist_flip_cost = 20 } # how much pp negotiation decisions cost
+	set_variable = { socialist_flip_cost = 20 }
+	set_variable = { farmer_labor_flip_cost = 20 }
+	set_variable = { republican_flip_cost = 25 }
+	set_variable = { democrat_flip_cost = 50 }
+	set_variable = { fascist_flip_cost = 150 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_public_contracts_act_setup = { # public contracts act
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 12 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	
+	set_variable = { USA_communist_bill_support = 1 }
+	set_variable = { USA_socialist_bill_support = 1 }
+	set_variable = { USA_republican_bill_support = 0.1 }
+	set_variable = { USA_democrat_bill_support = 0.35 }
+	set_variable = { USA_fascist_bill_support = 0.05 }
+	
+	set_variable = { average_boost_communist = 0.4 }
+	set_variable = { average_boost_socialist = 0.5 }
+	set_variable = { average_boost_republican = 0.1 }
+	set_variable = { average_boost_democrat = 0.2 }
+	set_variable = { average_boost_fascist = 0 }
+	
+	set_variable = { communist_flip_cost = 20 }
+	set_variable = { socialist_flip_cost = 20 }
+	set_variable = { republican_flip_cost = 25 }
+	set_variable = { democrat_flip_cost = 50 }
+	set_variable = { fascist_flip_cost = 150 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_labor_standards_act_setup = { # fair labor standards act
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 13 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	set_variable = { USA_communist_bill_support = 1 }
+	set_variable = { USA_socialist_bill_support = 1 }
+	set_variable = { USA_republican_bill_support = 0.1 }
+	set_variable = { USA_democrat_bill_support = 0.45 }
+	set_variable = { USA_fascist_bill_support = 0.05 }
+	
+	set_variable = { average_boost_communist = 0.4 }
+	set_variable = { average_boost_socialist = 0.5 }
+	set_variable = { average_boost_republican = 0.3 }
+	set_variable = { average_boost_democrat = 0.15 }
+	set_variable = { average_boost_fascist = 0.1 }
+	
+	set_variable = { communist_flip_cost = 20 }
+	set_variable = { socialist_flip_cost = 20 }
+	set_variable = { republican_flip_cost = 25 }
+	set_variable = { democrat_flip_cost = 50 }
+	set_variable = { fascist_flip_cost = 150 }
+	
+	if = {
+		limit = {
+			check_variable = { USA_bill_strength < 11 }
+		}
+		subtract_from_variable = { USA_socialist_bill_support = 0.05 }
+		subtract_from_variable = { USA_communist_bill_support = 0.05 }
+		add_to_variable = { communist_flip_cost = 10 }
+		add_to_variable = { socialist_flip_cost = 10 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_bill_strength < 21 }
+		}
+		subtract_from_variable = { USA_republican_bill_support = 0.1 }
+		subtract_from_variable = { USA_democrat_bill_support = 0.1 }
+		add_to_variable = { republican_flip_cost = 15 }
+		add_to_variable = { democrat_flip_cost = 10 }
+	}
+	else = {
+		subtract_from_variable = { USA_republican_bill_support = 0.15 }
+		subtract_from_variable = { USA_democrat_bill_support = 0.15 }
+		add_to_variable = { republican_flip_cost = 30 }
+		add_to_variable = { democrat_flip_cost = 20 }
+	}
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_equal_education_act_setup = { # Equivalent Education Act
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 14 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing # Sets up who you can negotiate with
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_farmer_labor_discussing
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	#set_country_flag = bill_enable_mission # Gives the President penalties if they drag their feet for too long doing this
+	#set_variable = { USA_bill_mission_deadline = 150 }
+	
+	set_variable = { USA_communist_bill_support = 1 } # percentage of congresspeople who will initially support the bill
+	set_variable = { USA_socialist_bill_support = 0.9 }
+	set_variable = { USA_farmer_labor_bill_support = 0.9 }
+	set_variable = { USA_republican_bill_support = 0.4 }
+	set_variable = { USA_democrat_bill_support = 0.3 }
+	set_variable = { USA_fascist_bill_support = 0.1}
+	
+	#set_country_flag = USA_special_decisions_enabled # hides generic decisions in favor of special ones
+	
+	set_variable = { average_boost_communist = 0.2 } # this shows the percentage of politicians (who are not currently supportive) who would be on average would be flipped by a compromise
+	set_variable = { average_boost_socialist = 0.2 }
+	set_variable = { average_boost_farmer_labor = 0.2 }
+	set_variable = { average_boost_republican = 0.3 }
+	set_variable = { average_boost_democrat = 0.2 }
+	set_variable = { average_boost_fascist = 0.2 }
+	
+	set_variable = { communist_flip_cost = 20 } # how much pp negotiation decisions cost
+	set_variable = { socialist_flip_cost = 20 }
+	set_variable = { farmer_labor_flip_cost = 20 }
+	set_variable = { republican_flip_cost = 45 }
+	set_variable = { democrat_flip_cost = 45 }
+	set_variable = { fascist_flip_cost = 70 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_economic_equality_act_setup = { # economic equality act
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 15 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing # Sets up who you can negotiate with
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_farmer_labor_discussing
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	#set_country_flag = bill_enable_mission # Gives the President penalties if they drag their feet for too long doing this
+	#set_variable = { USA_bill_mission_deadline = 150 }
+	
+	set_variable = { USA_communist_bill_support = 1 } # percentage of congresspeople who will initially support the bill
+	set_variable = { USA_socialist_bill_support = 0.9 }
+	set_variable = { USA_farmer_labor_bill_support = 0.9 }
+	set_variable = { USA_republican_bill_support = 0.2 }
+	set_variable = { USA_democrat_bill_support = 0.2 }
+	set_variable = { USA_fascist_bill_support = 0.1}
+	
+	#set_country_flag = USA_special_decisions_enabled # hides generic decisions in favor of special ones
+	
+	set_variable = { average_boost_communist = 0.2 } # this shows the percentage of politicians (who are not currently supportive) who would be on average would be flipped by a compromise
+	set_variable = { average_boost_socialist = 0.2 }
+	set_variable = { average_boost_farmer_labor = 0.2 }
+	set_variable = { average_boost_republican = 0.1 }
+	set_variable = { average_boost_democrat = 0.1 }
+	set_variable = { average_boost_fascist = 0.1 }
+	
+	set_variable = { communist_flip_cost = 20 } # how much pp negotiation decisions cost
+	set_variable = { socialist_flip_cost = 20 }
+	set_variable = { farmer_labor_flip_cost = 20 }
+	set_variable = { republican_flip_cost = 65 }
+	set_variable = { democrat_flip_cost = 65 }
+	set_variable = { fascist_flip_cost = 70 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_national_healthcare_act_setup = { # national healthcare act
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 16 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing # Sets up who you can negotiate with
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_farmer_labor_discussing
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	#set_country_flag = bill_enable_mission # Gives the President penalties if they drag their feet for too long doing this
+	#set_variable = { USA_bill_mission_deadline = 150 }
+	
+	set_variable = { USA_communist_bill_support = 1 } # percentage of congresspeople who will initially support the bill
+	set_variable = { USA_socialist_bill_support = 0.9 }
+	set_variable = { USA_farmer_labor_bill_support = 0.9 }
+	set_variable = { USA_republican_bill_support = 0.4 }
+	set_variable = { USA_democrat_bill_support = 0.3 }
+	set_variable = { USA_fascist_bill_support = 0.2 }
+	
+	#set_country_flag = USA_special_decisions_enabled # hides generic decisions in favor of special ones
+	
+	set_variable = { average_boost_communist = 0.2 } # this shows the percentage of politicians (who are not currently supportive) who would be on average would be flipped by a compromise
+	set_variable = { average_boost_socialist = 0.2 }
+	set_variable = { average_boost_farmer_labor = 0.2 }
+	set_variable = { average_boost_republican = 0.3 }
+	set_variable = { average_boost_democrat = 0.2 }
+	set_variable = { average_boost_fascist = 0.2 }
+	
+	set_variable = { communist_flip_cost = 20 } # how much pp negotiation decisions cost
+	set_variable = { socialist_flip_cost = 20 }
+	set_variable = { farmer_labor_flip_cost = 20 }
+	set_variable = { republican_flip_cost = 35 }
+	set_variable = { democrat_flip_cost = 40 }
+	set_variable = { fascist_flip_cost = 55 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_second_bill_of_rights_setup = { # second bill of rights
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 17 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing # Sets up who you can negotiate with
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_farmer_labor_discussing
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	#set_country_flag = bill_enable_mission # Gives the President penalties if they drag their feet for too long doing this
+	#set_variable = { USA_bill_mission_deadline = 150 }
+	
+	set_variable = { USA_communist_bill_support = 1 } # percentage of congresspeople who will initially support the bill
+	set_variable = { USA_socialist_bill_support = 0.9 }
+	set_variable = { USA_farmer_labor_bill_support = 0.9 }
+	set_variable = { USA_republican_bill_support = 0.3 }
+	set_variable = { USA_democrat_bill_support = 0.3 }
+	set_variable = { USA_fascist_bill_support = 0.2 }
+	
+	#set_country_flag = USA_special_decisions_enabled # hides generic decisions in favor of special ones
+	
+	set_variable = { average_boost_communist = 0.2 } # this shows the percentage of politicians (who are not currently supportive) who would be on average would be flipped by a compromise
+	set_variable = { average_boost_socialist = 0.2 }
+	set_variable = { average_boost_farmer_labor = 0.2 }
+	set_variable = { average_boost_republican = 0.3 }
+	set_variable = { average_boost_democrat = 0.2 }
+	set_variable = { average_boost_fascist = 0.2 }
+	
+	set_variable = { communist_flip_cost = 20 } # how much pp negotiation decisions cost
+	set_variable = { socialist_flip_cost = 20 }
+	set_variable = { farmer_labor_flip_cost = 20 }
+	set_variable = { republican_flip_cost = 65 }
+	set_variable = { democrat_flip_cost = 75 }
+	set_variable = { fascist_flip_cost = 95 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_puerto_rico_statehood_setup = { # pr statehood
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 18 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing # Sets up who you can negotiate with
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	set_variable = { USA_communist_bill_support = 0.7 } # percentage of congresspeople who will initially support the bill
+	set_variable = { USA_socialist_bill_support = 0.85 }
+	set_variable = { USA_republican_bill_support = 0.3 }
+	set_variable = { USA_democrat_bill_support = 0.2 }
+	set_variable = { USA_fascist_bill_support = 0.1 }
+	
+	set_variable = { average_boost_communist = 0.2 }
+	set_variable = { average_boost_socialist = 0.2 }
+	set_variable = { average_boost_republican = 0.3 }
+	set_variable = { average_boost_democrat = 0.2 }
+	set_variable = { average_boost_fascist = 0.2 }
+	
+	set_variable = { communist_flip_cost = 20 }
+	set_variable = { socialist_flip_cost = 20 }
+	set_variable = { republican_flip_cost = 65 }
+	set_variable = { democrat_flip_cost = 75 }
+	set_variable = { fascist_flip_cost = 95 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_war_declaration_setup = { # joining ww2
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 19 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing # Sets up who you can negotiate with
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_farmer_labor_discussing
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	#set_country_flag = bill_enable_mission # Gives the President penalties if they drag their feet for too long doing this
+	#set_variable = { USA_bill_mission_deadline = 120 }
+	
+	set_variable = { USA_communist_bill_support = 0.4 } # percentage of congresspeople who will initially support the bill
+	set_variable = { USA_socialist_bill_support = 0.2 }
+	set_variable = { USA_farmer_labor_bill_support = 0.1 }
+	set_variable = { USA_republican_bill_support = 0.3 }
+	set_variable = { USA_democrat_bill_support = 0.5 }
+	set_variable = { USA_fascist_bill_support = 0.7 }
+	
+	#set_country_flag = USA_special_decisions_enabled # hides generic decisions in favor of special ones
+	
+	set_variable = { average_boost_communist = 0.4 } # this shows the percentage of politicians (who are not currently supportive) who would be on average would be flipped by a compromise
+	set_variable = { average_boost_socialist = 0.2 }
+	set_variable = { average_boost_farmer_labor = 0 }
+	set_variable = { average_boost_republican = 0.4 }
+	set_variable = { average_boost_democrat = 0.2 }
+	set_variable = { average_boost_fascist = 0.2 }
+	
+	set_variable = { communist_flip_cost = 35 } # how much pp negotiation decisions cost
+	set_variable = { socialist_flip_cost = 80 }
+	set_variable = { farmer_labor_flip_cost = 120 }
+	set_variable = { republican_flip_cost = 35 }
+	set_variable = { democrat_flip_cost = 35 }
+	set_variable = { fascist_flip_cost = 20 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_abolish_filibuster_setup = { # abolish filibuster
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 20 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	set_variable = { USA_communist_bill_support = 1 }
+	set_variable = { USA_socialist_bill_support = 1 }
+	set_variable = { USA_republican_bill_support = 0.1 }
+	set_variable = { USA_democrat_bill_support = 0.05 }
+	set_variable = { USA_fascist_bill_support = 0.05 }
+	
+	set_variable = { average_boost_republican = 0.15 }
+	set_variable = { average_boost_democrat = 0.1 }
+	set_variable = { average_boost_fascist = 0.05 }
+	
+	set_variable = { republican_flip_cost = 80 }
+	set_variable = { democrat_flip_cost = 80 }
+	set_variable = { fascist_flip_cost = 125 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_nationalize_defense_act_setup = { # nationalize defense industry
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 21 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_democrat_discussing
+	
+	set_variable = { USA_communist_bill_support = 1 }
+	set_variable = { USA_socialist_bill_support = 1 }
+	set_variable = { USA_republican_bill_support = 0 }
+	set_variable = { USA_democrat_bill_support = 0.05 }
+	set_variable = { USA_fascist_bill_support = 0 }
+	
+	set_variable = { average_boost_democrat = 0.1 }
+	
+	set_variable = { communist_flip_cost = 50 }
+	set_variable = { socialist_flip_cost = 50 }
+	set_variable = { democrat_flip_cost = 125 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_naval_act_setup = { # naval act
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 22 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	set_variable = { USA_communist_bill_support = 0.1 }
+	set_variable = { USA_socialist_bill_support = 0.7 }
+	set_variable = { USA_republican_bill_support = 0.3 }
+	set_variable = { USA_democrat_bill_support = 0.5 }
+	set_variable = { USA_fascist_bill_support = 0.25 }
+	
+	set_variable = { average_boost_communist = 0.2 }
+	set_variable = { average_boost_socialist = 0.25 }
+	set_variable = { average_boost_democrat = 0.8 }
+	set_variable = { average_boost_republican = 0.5 }
+	set_variable = { average_boost_fascist = 0.1 }
+	
+	set_variable = { communist_flip_cost = 50 }
+	set_variable = { socialist_flip_cost = 50 }
+	set_variable = { democrat_flip_cost = 50 }
+	set_variable = { republican_flip_cost = 70 }
+	set_variable = { fascist_flip_cost = 70 }
+	
+	USA_bill_setup = yes # always required
+}
+
+USA_ludlow_amendment_setup = { # ludlow amendment
+	log = "[GetDateText]: [Root.GetName]: bill setup active"
+	
+	set_variable = { bill_id = 23 } # EACH BILL MUST HAVE A UNIQUE ID
+	
+	set_country_flag = USA_communist_discussing
+	set_country_flag = USA_socialist_discussing
+	set_country_flag = USA_republican_discussing
+	set_country_flag = USA_democrat_discussing
+	set_country_flag = USA_fascist_discussing
+	
+	set_variable = { USA_communist_bill_support = 0.8 }
+	set_variable = { USA_socialist_bill_support = 0.55 }
+	set_variable = { USA_republican_bill_support = 0.3 }
+	set_variable = { USA_democrat_bill_support = 0.35 }
+	set_variable = { USA_fascist_bill_support = 0.05 }
+	
+	set_variable = { average_boost_communist = 1 }
+	set_variable = { average_boost_socialist = 0.25 }
+	set_variable = { average_boost_democrat = 0.45 }
+	set_variable = { average_boost_republican = 0.3 }
+	set_variable = { average_boost_fascist = 0.1 }
+	
+	set_variable = { communist_flip_cost = 50 }
+	set_variable = { socialist_flip_cost = 50 }
+	set_variable = { democrat_flip_cost = 50 }
+	set_variable = { republican_flip_cost = 70 }
+	set_variable = { fascist_flip_cost = 70 }
+	
+	set_country_flag = USA_bill_is_amendment
+	USA_bill_setup = yes # always required
+}
+
+USA_bill_setup = {
+	USA_calc_unity_bonus = yes
+
+	USA_clamp_support_vars = yes
+	USA_initialize_bill_support = yes
+	set_country_flag = USA_bill_house_phase
+}
+
+USA_clamp_support_vars = {
+
+	clamp_variable = {
+		var = communist_flip_cost
+		min = 10
+	}
+	clamp_variable = {
+		var = socialist_flip_cost
+		min = 10
+	}
+	clamp_variable = {
+		var = republican_flip_cost
+		min = 10
+	}
+	clamp_variable = {
+		var = democrat_flip_cost
+		min = 10
+	}
+	clamp_variable = {
+		var = fascist_flip_cost
+		min = 10
+	}
+	
+	clamp_variable = {
+		var = USA_communist_bill_support
+		min = 0
+		max = 1
+	}
+	clamp_variable = {
+		var = USA_socialist_bill_support
+		min = 0
+		max = 1
+	}
+	clamp_variable = {
+		var = USA_republican_bill_support
+		min = 0
+		max = 1
+	}
+	clamp_variable = {
+		var = USA_democrat_bill_support
+		min = 0
+		max = 1
+	}
+	clamp_variable = {
+		var = USA_fascist_bill_support
+		min = 0
+		max = 1
+	}
+	
+	clamp_variable = {
+		var = average_boost_communist
+		min = 0
+		max = 1
+	}
+	clamp_variable = {
+		var = average_boost_socialist
+		min = 0
+		max = 1
+	}
+	clamp_variable = {
+		var = average_boost_republican
+		min = 0
+		max = 1
+	}
+	clamp_variable = {
+		var = average_boost_democrat
+		min = 0
+		max = 1
+	}
+	clamp_variable = {
+		var = average_boost_fascist
+		min = 0
+		max = 1
+	}
+}
+
+USA_initialize_bill_support = {
+	set_country_flag = USA_discussing_bill
+	set_variable = { senators_support = 0 }
+	set_variable = { representatives_support = 0 }
+	
+	set_variable = { communist_supporting_senators = senators_communist }
+	set_variable = { socialist_supporting_senators = senators_socialist }
+	set_variable = { farmer_labor_supporting_senators = senators_farmer_labor }
+	set_variable = { republican_supporting_senators = senators_republican }
+	set_variable = { democrat_supporting_senators =  senators_democrat }
+	set_variable = { fascist_supporting_senators = senators_fascist }
+	
+	set_variable = { communist_supporting_reps = representatives_communist }
+	set_variable = { socialist_supporting_reps = representatives_socialist }
+	set_variable = { farmer_labor_supporting_reps = representatives_farmer_labor }
+	set_variable = { republican_supporting_reps = representatives_republican }
+	set_variable = { democrat_supporting_reps = representatives_democrat }
+	set_variable = { fascist_supporting_reps = representatives_fascist }
+	
+	multiply_variable = { communist_supporting_senators = USA_communist_bill_support }
+	multiply_variable = { socialist_supporting_senators = USA_socialist_bill_support }
+	multiply_variable = { farmer_labor_supporting_senators = USA_farmer_labor_bill_support }
+	multiply_variable = { republican_supporting_senators = USA_republican_bill_support }
+	multiply_variable = { democrat_supporting_senators = USA_democrat_bill_support }
+	multiply_variable = { fascist_supporting_senators = USA_fascist_bill_support }
+	
+	multiply_variable = { communist_supporting_reps = USA_communist_bill_support }
+	multiply_variable = { socialist_supporting_reps = USA_socialist_bill_support }
+	multiply_variable = { farmer_labor_supporting_reps = USA_farmer_labor_bill_support }
+	multiply_variable = { republican_supporting_reps = USA_republican_bill_support }
+	multiply_variable = { democrat_supporting_reps = USA_democrat_bill_support }
+	multiply_variable = { fascist_supporting_reps = USA_fascist_bill_support }
+	
+	round_variable = communist_supporting_senators
+	round_variable = socialist_supporting_senators
+	round_variable = farmer_labor_supporting_senators
+	round_variable = republican_supporting_senators 
+	round_variable = democrat_supporting_senators
+	round_variable = fascist_supporting_senators
+	
+	round_variable = communist_supporting_reps
+	round_variable = socialist_supporting_reps
+	round_variable = farmer_labor_supporting_reps
+	round_variable = republican_supporting_reps
+	round_variable = democrat_supporting_reps
+	round_variable = fascist_supporting_reps
+	
+	add_to_variable = { senators_support = communist_supporting_senators }
+	add_to_variable = { senators_support = socialist_supporting_senators }
+	add_to_variable = { senators_support = farmer_labor_supporting_senators }
+	add_to_variable = { senators_support = republican_supporting_senators } 
+	add_to_variable = { senators_support = democrat_supporting_senators }
+	add_to_variable = { senators_support = fascist_supporting_senators }
+	
+	add_to_variable = { representatives_support = communist_supporting_reps }
+	add_to_variable = { representatives_support = socialist_supporting_reps }
+	add_to_variable = { representatives_support = farmer_labor_supporting_reps }
+	add_to_variable = { representatives_support = republican_supporting_reps } 
+	add_to_variable = { representatives_support = democrat_supporting_reps }
+	add_to_variable = { representatives_support = fascist_supporting_reps }
+}
+
+USA_senate_phase = {
+	custom_effect_tooltip = USA_bill_go_to_senate
+
+	clr_country_flag = USA_bill_house_phase
+	set_country_flag = USA_bill_passed_house
+	
+	set_country_flag = USA_bill_senate_phase
+	
+	clr_country_flag = communists_negotiated
+	clr_country_flag = socialists_negotiated
+	clr_country_flag = republicans_negotiated
+	clr_country_flag = democrats_negotiated
+	clr_country_flag = fascists_negotiated
+}
+
+USA_activate_filibuster = {
+	set_country_flag = filibuster_active
+}
+
+USA_clear_filibuster = {
+	clr_country_flag = filibuster_active
+}
+
+check_if_bill_passed = {
+	set_variable = { percent_support = senators_support }
+	divide_variable = { percent_support = senators_total }
+	set_variable = { votes_needed = 0.5 }
+	if = {
+		limit = { has_country_flag = filibuster_active }
+		set_variable = { votes_needed = 0.6 }
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = percent_support
+				value = votes_needed
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = bill_passed
+	}
+}
+
+USA_bill_clear = {
+	clr_country_flag = USA_BILL_EVENTLESS_NEGOTIATION
+	clr_country_flag = USA_discussing_bill
+	
+	clr_country_flag = USA_special_decisions_enabled
+	
+	clr_country_flag = USA_bill_house_phase
+	clr_country_flag = USA_bill_passed_house
+	clr_country_flag = USA_bill_senate_phase
+	
+	clr_country_flag = USA_republican_discussing
+	clr_country_flag = USA_democrat_discussing
+	clr_country_flag = USA_communist_discussing
+	clr_country_flag = USA_socialist_discussing
+	clr_country_flag = USA_fascist_discussing
+	
+	set_variable = { bill_id = 0 }
+	
+	clear_variable = USA_bill_mission_deadline
+	
+	clear_variable = USA_republican_bill_support
+	clear_variable = USA_democrat_bill_support
+	clear_variable = USA_communist_bill_support
+	clear_variable = USA_socialist_bill_support
+	clear_variable = USA_fascist_bill_support
+	
+	clear_variable = average_boost_republican
+	clear_variable = average_boost_democrat
+	clear_variable = average_boost_communist
+	clear_variable = average_boost_socialist
+	clear_variable = average_boost_fascist
+	
+	clr_country_flag = republicans_negotiated
+	clr_country_flag = democrats_negotiated
+	clr_country_flag = communists_negotiated
+	clr_country_flag = socialists_negotiated
+	clr_country_flag = fascists_negotiated
+	
+	clear_variable = republican_supporting_senators
+	clear_variable = democrat_supporting_senators
+	clear_variable = communist_supporting_senators
+	clear_variable = socialist_supporting_senators
+	clear_variable = fascist_supporting_senators
+	
+	clear_variable = republican_supporting_reps
+	clear_variable = democrat_supporting_reps
+	clear_variable = communist_supporting_reps
+	clear_variable = socialist_supporting_reps
+	clear_variable = fascist_supporting_reps
+	
+	clear_variable = senators_support
+	clear_variable = representatives_support
+	
+	clr_country_flag = bill_passed
+	clr_country_flag = bill_enable_mission
+	
+	clr_country_flag = filibuster_active
+	clr_country_flag = USA_bill_is_amendment
+	
+	clear_variable = USA_bill_strength
+}
+
+USA_socialist_support_house_eventless = {
+	custom_effect_tooltip = negotiate_some_socialist_support
+	
+	hidden_effect = {
+		
+		### find how many reps are available to flip ###
+		set_temp_variable = { max_new_support = representatives_socialist }
+		subtract_from_temp_variable = { max_new_support = socialist_supporting_reps }
+		
+		log = "[GetDateText]: [Root.GetName]: max_new_support: [?max_new_support]"
+		
+		multiply_temp_variable = { max_new_support = average_boost_socialist }
+		round_temp_variable = max_new_support
+		
+		log = "[GetDateText]: [Root.GetName]: max_new_support*average_boost_socialist: [?max_new_support]"
+		
+		add_to_variable = { socialist_supporting_reps = max_new_support }
+		add_to_variable = { representatives_support = max_new_support }
+		
+		clamp_variable = {
+			var = socialist_supporting_reps
+			min = 0
+			max = representatives_socialist
+		}
+	}
+	
+	set_country_flag = socialists_negotiated
+}
+
+USA_socialist_support_senate_eventless = {
+	custom_effect_tooltip = negotiate_some_socialist_support
+	
+	hidden_effect = {
+		
+		### find how many senators are available to flip ###
+		set_temp_variable = { max_new_support = senators_socialist }
+		subtract_from_temp_variable = { max_new_support = socialist_supporting_senators }
+		
+		log = "[GetDateText]: [Root.GetName]: max_new_support: [?max_new_support]"
+		
+		multiply_temp_variable = { max_new_support = average_boost_socialist }
+		round_temp_variable = max_new_support
+		
+		log = "[GetDateText]: [Root.GetName]: max_new_support*average_boost_socialist: [?max_new_support]"
+		
+		if = {
+			limit = {
+				check_variable = { max_new_support < 1 }
+			}
+			set_temp_variable = { max_new_support = 1 }
+		}
+		
+		add_to_variable = { socialist_supporting_senators = max_new_support }
+		add_to_variable = { senators_support = max_new_support }
+		
+		clamp_variable = {
+			var = socialist_supporting_senators
+			min = 0
+			max = senators_socialist
+		}
+	}
+	
+	set_country_flag = socialists_negotiated
+}
+
+USA_republican_support_house_eventless = {
+	custom_effect_tooltip = negotiate_some_republican_support
+	
+	hidden_effect = {
+		
+		### find how many reps are available to flip ###
+		set_temp_variable = { max_new_support = representatives_republican }
+		subtract_from_temp_variable = { max_new_support = republican_supporting_reps }
+		
+		log = "[GetDateText]: [Root.GetName]: max_new_support: [?max_new_support]"
+		
+		multiply_temp_variable = { max_new_support = average_boost_republican }
+		round_temp_variable = max_new_support
+		
+		log = "[GetDateText]: [Root.GetName]: max_new_support*average_boost_republican: [?max_new_support]"
+		
+		add_to_variable = { republican_supporting_reps = max_new_support }
+		add_to_variable = { representatives_support = max_new_support }
+		
+		clamp_variable = {
+			var = republican_supporting_reps
+			min = 0
+			max = representatives_republican
+		}
+	}
+	
+	set_country_flag = republicans_negotiated
+}
+
+USA_republican_support_senate_eventless = {
+	custom_effect_tooltip = negotiate_some_republican_support
+	
+	hidden_effect = {
+		
+		### find how many senators are available to flip ###
+		set_temp_variable = { max_new_support = senators_republican }
+		subtract_from_temp_variable = { max_new_support = republican_supporting_senators }
+		
+		log = "[GetDateText]: [Root.GetName]: max_new_support: [?max_new_support]"
+		
+		multiply_temp_variable = { max_new_support = average_boost_republican }
+		round_temp_variable = max_new_support
+		
+		log = "[GetDateText]: [Root.GetName]: max_new_support*average_boost_republican: [?max_new_support]"
+		
+		if = {
+			limit = {
+				check_variable = { max_new_support < 1 }
+			}
+			set_temp_variable = { max_new_support = 1 }
+		}
+		
+		add_to_variable = { republican_supporting_senators = max_new_support }
+		add_to_variable = { senators_support = max_new_support }
+		
+		clamp_variable = {
+			var = republican_supporting_senators
+			min = 0
+			max = senators_republican
+		}
+	}
+	
+	set_country_flag = republicans_negotiated
+}
+
+USA_democrat_support_house_eventless = {
+	custom_effect_tooltip = negotiate_some_democrat_support
+	
+	hidden_effect = {
+		
+		### find how many reps are available to flip ###
+		set_temp_variable = { max_new_support = representatives_democrat }
+		subtract_from_temp_variable = { max_new_support = democrat_supporting_reps }
+		
+		log = "[GetDateText]: [Root.GetName]: max_new_support: [?max_new_support]"
+		
+		multiply_temp_variable = { max_new_support = average_boost_democrat }
+		round_temp_variable = max_new_support
+		
+		log = "[GetDateText]: [Root.GetName]: max_new_support*average_boost_democrat: [?max_new_support]"
+		
+		add_to_variable = { democrat_supporting_reps = max_new_support }
+		add_to_variable = { representatives_support = max_new_support }
+		
+		clamp_variable = {
+			var = democrat_supporting_reps
+			min = 0
+			max = representatives_democrat
+		}
+	}
+	
+	set_country_flag = democrats_negotiated
+}
+
+USA_democrat_support_senate_eventless = {
+	custom_effect_tooltip = negotiate_some_democrat_support
+	
+	hidden_effect = {
+		
+		### find how many senators are available to flip ###
+		set_temp_variable = { max_new_support = senators_democrat }
+		subtract_from_temp_variable = { max_new_support = democrat_supporting_senators }
+		
+		log = "[GetDateText]: [Root.GetName]: max_new_support: [?max_new_support]"
+		
+		multiply_temp_variable = { max_new_support = average_boost_democrat }
+		round_temp_variable = max_new_support
+		
+		log = "[GetDateText]: [Root.GetName]: max_new_support*average_boost_democrat: [?max_new_support]"
+		
+		if = {
+			limit = {
+				check_variable = { max_new_support < 1 }
+			}
+			set_temp_variable = { max_new_support = 1 }
+		}
+		
+		add_to_variable = { democrat_supporting_senators = max_new_support }
+		add_to_variable = { senators_support = max_new_support }
+		
+		clamp_variable = {
+			var = democrat_supporting_senators
+			min = 0
+			max = senators_democrat
+		}
+	}
+	
+	set_country_flag = democrats_negotiated
+}
+
+USA_fascist_support_house_eventless = {
+	custom_effect_tooltip = negotiate_some_fascist_support
+	
+	hidden_effect = {
+		
+		### find how many reps are available to flip ###
+		set_temp_variable = { max_new_support = representatives_fascist }
+		subtract_from_temp_variable = { max_new_support = fascist_supporting_reps }
+		
+		log = "[GetDateText]: [Root.GetName]: max_new_support: [?max_new_support]"
+		
+		multiply_temp_variable = { max_new_support = average_boost_fascist }
+		round_temp_variable = max_new_support
+		
+		log = "[GetDateText]: [Root.GetName]: max_new_support*average_boost_fascist: [?max_new_support]"
+		
+		add_to_variable = { fascist_supporting_reps = max_new_support }
+		add_to_variable = { representatives_support = max_new_support }
+		
+		clamp_variable = {
+			var = fascist_supporting_reps
+			min = 0
+			max = representatives_fascist
+		}
+	}
+	
+	set_country_flag = fascists_negotiated
+}
+
+USA_fascist_support_senate_eventless = {
+	custom_effect_tooltip = negotiate_some_fascist_support
+	
+	hidden_effect = {
+		
+		### find how many senators are available to flip ###
+		set_temp_variable = { max_new_support = senators_fascist }
+		subtract_from_temp_variable = { max_new_support = fascist_supporting_senators }
+		
+		log = "[GetDateText]: [Root.GetName]: max_new_support: [?max_new_support]"
+		
+		multiply_temp_variable = { max_new_support = average_boost_fascist }
+		round_temp_variable = max_new_support
+		
+		log = "[GetDateText]: [Root.GetName]: max_new_support*average_boost_fascist: [?max_new_support]"
+		
+		if = {
+			limit = {
+				check_variable = { max_new_support < 1 }
+			}
+			set_temp_variable = { max_new_support = 1 }
+		}
+		
+		add_to_variable = { fascist_supporting_senators = max_new_support }
+		add_to_variable = { senators_support = max_new_support }
+		
+		clamp_variable = {
+			var = fascist_supporting_senators
+			min = 0
+			max = senators_fascist
+		}
+	}
+	
+	set_country_flag = fascists_negotiated
+}
+
+USA_calc_unity_bonus = {
+	if = {
+		limit = {
+			OR = {
+				has_government = proletarian_dictatorship
+				has_government = libertarian_socialism
+				has_government = social_democracy
+			}
+		}
+		set_temp_variable = { temp_unity_bonus = USA_socialist_unity }
+		multiply_temp_variable = { temp_unity_bonus = 2 }
+		subtract_from_variable = { socialist_flip_cost = temp_unity_bonus }
+	}
+}
+
+USA_bill_vote = {
+	if = {
+		limit = {
+			check_variable = { bill_id = 1 } # debug act
+		}
+		country_event = {
+			id = us_bill.1
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 2 } # social security act
+		}
+		country_event = {
+			id = us_bill.2
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 3 } # farm tenant act
+		}
+		country_event = {
+			id = us_bill.3
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 4 } # 
+		}
+		country_event = {
+			id = us_bill.4
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 5 } # 
+		}
+		country_event = {
+			id = us_bill.5
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 6 } # 
+		}
+		country_event = {
+			id = us_bill.6
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 7 } # pension act
+		}
+		country_event = {
+			id = us_bill.7
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 8 } # housing act
+		}
+		country_event = {
+			id = us_bill.8
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 9 } # wealth tax act
+		}
+		country_event = {
+			id = us_bill.9
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 10 } # ban kkk act
+		}
+		country_event = {
+			id = us_bill.10
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 11 } # voting rights act
+		}
+		country_event = {
+			id = us_bill.11
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 12 } # public contracts act
+		}
+		country_event = {
+			id = us_bill.12
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 13 } # labor standards act
+		}
+		country_event = {
+			id = us_bill.13
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 14 } # equal education act
+		}
+		country_event = {
+			id = us_bill.14
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 15 } # economic equality act
+		}
+		country_event = {
+			id = us_bill.15
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 16 } # national healthcare act
+		}
+		country_event = {
+			id = us_bill.16
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 17 } # second bill of rights
+		}
+		country_event = {
+			id = us_bill.17
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 18 } # pr statehood
+		}
+		country_event = {
+			id = us_bill.18
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 19 } # usa joins ww2
+		}
+		country_event = {
+			id = us_bill.19
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 20 }
+		}
+		country_event = {
+			id = us_bill.20
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 21 }
+		}
+		country_event = {
+			id = us_bill.21
+			hours = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { bill_id = 22 }
+		}
+		country_event = {
+			id = us_bill.22
+			hours = 1
+		}
+	}
+}

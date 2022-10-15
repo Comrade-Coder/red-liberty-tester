@@ -1,0 +1,40 @@
+
+state={
+	id=498
+	name="STATE_498"
+
+	history={
+		owner = UOB
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 5
+			air_base = 2
+			5107 = {
+				naval_base = 3
+
+			}
+			5168 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = BRA
+		add_core_of = UOB
+		victory_points = {
+			5107 3 
+		}
+		victory_points = {
+			5168 5 
+		}
+
+	}
+
+	provinces={
+		1446 1524 2175 2227 5168 5182 7561 8227 10345 10933 10939 10967 10989 10998 12961 
+	}
+	manpower=4746000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

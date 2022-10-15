@@ -1,0 +1,21 @@
+
+state={
+	id=345
+	name="STATE_345"
+
+	history={
+		owner = SCM
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = SCM
+	}
+
+	provinces={
+		849 3879 6895 
+	}
+	manpower=100000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

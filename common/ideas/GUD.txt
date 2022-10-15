@@ -1,0 +1,42 @@
+ideas = {
+	country = { 
+		
+		GUD_widespread_corruption = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.1
+				army_org_factor = -0.05
+				political_power_gain = -0.1
+			}
+		}
+		
+		GUD_political_instability = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = -0.15
+				war_support_factor = 0.05
+			}
+		}
+	}
+}

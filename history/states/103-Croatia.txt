@@ -1,0 +1,31 @@
+
+state={
+	id=103
+	name="STATE_103"
+
+	resources={
+		steel = 2
+	}
+
+	history={
+		owner = AHE
+		victory_points = {
+			11901 1 
+		}
+		buildings = {
+			infrastructure = 5
+			dockyard = 1
+			industrial_complex = 3
+
+		}
+		add_core_of = AHE
+
+	}
+
+	provinces={
+		591 984 3601 6611 11564 
+	}
+	manpower=1431700
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

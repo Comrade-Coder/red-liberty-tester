@@ -1,0 +1,24 @@
+
+state={
+	id=449
+	name="STATE_449"
+
+	history={
+		owner = ITA
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = LBA
+		victory_points = {
+			4057 1
+		}
+	}
+
+	provinces={
+		1198 4057 7076 8069 12088 
+	}
+	manpower=40431
+	buildings_max_level_factor=1.000
+	state_category=enclave
+}

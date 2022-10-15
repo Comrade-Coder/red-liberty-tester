@@ -1,0 +1,22 @@
+spritetypes = {
+	
+	spriteType = {
+		name = "GFX_idea_SOV_home_of_the_revolution"
+		texturefile = "gfx/interface/ideas/SOV/SOV_home_of_the_revolution.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SOV_political_turmoil"
+		texturefile = "gfx/interface/ideas/SOV/SOV_political_turmoil.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SOV_nep"
+		texturefile = "gfx/interface/ideas/SOV/SOV_nep.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SOV_tsarist_captives"
+		texturefile = "gfx/interface/ideas/SOV/SOV_tsarist_captives.png"
+	}
+}

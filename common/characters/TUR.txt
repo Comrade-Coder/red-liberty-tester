@@ -1,0 +1,141 @@
+characters = {
+	
+	TUR_adnan_adivar = {
+		name = TUR_adnan_adivar
+		
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_TUR_adnan_adivar"
+			}
+		}
+		
+		country_leader = {
+			desc = "POLITICS_ADNAN_ADIVAR_DESC"
+			ideology = national_liberalism_subtype
+			traits = {  }
+			expire = "1965.1.1.1"
+			id=-1
+		}
+	}
+	
+	TUR_kazim_karabekir = {
+		name = TUR_kazim_karabekir
+		
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_TUR_kazim_karabekir"
+			}
+			army = {
+				large = ""
+				small = ""
+			}
+		}
+		
+		advisor = {
+			cost = 100
+			
+			slot = head_of_government
+			idea_token = TUR_kazim_karabekir_hog
+			ledger = civilian
+			
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = TUR
+			}
+			
+			available = {
+				
+			}
+			
+			traits = {
+				
+			}
+		}
+		
+		corps_commander = {
+			traits = {
+				
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	TUR_fethi_okyar = {
+		name = TUR_fethi_okyar
+		
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_TUR_fethi_okyar"
+			}
+		}
+		
+		advisor = {
+			cost = 100
+			
+			slot = head_of_government
+			idea_token = TUR_fethi_okyar_hog
+			ledger = civilian
+			
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = TUR
+			}
+			
+			available = {
+				
+			}
+			
+			traits = {
+				
+			}
+		}
+	}
+	
+	TUR_riza_tevfik = {
+		name = TUR_riza_tevfik
+		
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_TUR_riza_tevfik"
+			}
+		}
+		
+		advisor = {
+			cost = 100
+			
+			slot = head_of_government
+			idea_token = TUR_riza_tevfik_hog
+			ledger = civilian
+			
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = TUR
+			}
+			
+			available = {
+				
+			}
+			
+			traits = {
+				
+			}
+		}
+	}
+	
+	TUR_suat_dervis = {
+		name = TUR_suat_dervis
+		
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_TUR_suat_dervis"
+			}
+		}
+	}
+}

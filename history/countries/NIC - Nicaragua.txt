@@ -1,0 +1,51 @@
+﻿capital = 317
+
+oob = "NIC_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+	early_bomber = 1
+}
+
+set_country_flag = monroe_doctrine
+set_war_support = 0.1
+set_convoys = 10
+
+set_politics = {
+	ruling_party = libertarian_socialism
+	last_election = "1932.11.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	insurrectionary_anarchism = 0
+	revolutionary_autocracy = 0
+	proletarian_dictatorship = 0
+	libertarian_socialism = 25
+	social_democracy = 10
+	progressive_liberalism = 8
+	market_libertarianism = 17
+	national_conservatism = 23
+	far_right_authoritarianism = 0
+	authoritarian_democracy = 5
+	autocratic_despotism = 12
+	fascism = 0
+}
+
+add_ideas = {
+	CEN_federation_of_central_america
+}
+
+create_country_leader = {
+	name = "Augusto César Sandino"
+	#desc = ""
+	picture = "gfx/leaders/NIC/Portrait_NIC_Augusto_Sandino.png"
+	expire = "1965.1.1"
+	ideology = libertarian_socialism_subtype
+	traits = {
+		#
+	}
+}

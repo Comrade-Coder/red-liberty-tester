@@ -1,0 +1,1595 @@
+shared_focus = {
+    id = JAP_spiders_web
+	icon = GFX_JAP_spiders_web
+	
+    x = 6
+	y = 0
+	
+	cost = 0
+    completion_reward = {
+		set_variable = { JAP_pp_gain = -1 }
+		set_variable = { JAP_weekly_stability = -0.03 }
+		set_variable = { JAP_weekly_war_support = -0.03 }
+        add_dynamic_modifier = {
+			modifier = JAP_civil_opposition
+		}
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_send_troops
+	icon = GFX_JAP_send_troops
+	
+    x = -1
+	y = 1
+	
+	cost = 1
+	relative_position_id = JAP_spiders_web
+	prerequisite = { focus = JAP_spiders_web }
+    completion_reward = {
+		custom_effect_tooltip = JAP_civil_opposition_stability_tt
+        add_to_variable = { JAP_weekly_stability = 0.01 }
+		country_event = {
+			id = japan_konoe.1
+			days = 1
+		}
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_arrest_agitators
+	icon = GFX_goal_unknown
+	
+    x = 1
+	y = 1
+	
+	cost = 1
+	relative_position_id = JAP_spiders_web
+	prerequisite = { focus = JAP_spiders_web }
+    completion_reward = {
+		custom_effect_tooltip = JAP_civil_opposition_war_support_tt
+        add_to_variable = { JAP_weekly_war_support = 0.01 }
+		country_event = {
+			id = japan_konoe.2
+			days = 1
+		}
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_martial_law
+	icon = GFX_goal_unknown
+	
+    x = -2
+	y = 2
+	
+	cost = 1
+	relative_position_id = JAP_spiders_web
+	prerequisite = { focus = JAP_send_troops }
+	prerequisite = { focus = JAP_arrest_agitators }
+    completion_reward = {
+		custom_effect_tooltip = JAP_civil_opposition_stability_tt
+        add_to_variable = { JAP_weekly_stability = 0.01 }
+		country_event = {
+			id = japan_konoe.3
+			days = 1
+		}
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_national_unity
+	icon = GFX_goal_unknown
+	
+    x = 0
+	y = 2
+	
+	cost = 1
+	relative_position_id = JAP_spiders_web
+	prerequisite = { focus = JAP_send_troops }
+	prerequisite = { focus = JAP_arrest_agitators } 
+    completion_reward = {
+		custom_effect_tooltip = JAP_civil_opposition_pp_tt
+        add_to_variable = { JAP_pp_gain = 0.75 }
+		country_event = {
+			id = japan_konoe.5
+			days = 1
+		}
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_imperial_support
+	icon = GFX_goal_unknown
+	
+    x = 2
+	y = 2
+	
+	cost = 1
+	relative_position_id = JAP_spiders_web
+	prerequisite = { focus = JAP_arrest_agitators }
+	prerequisite = { focus = JAP_send_troops }
+    completion_reward = {
+		custom_effect_tooltip = JAP_civil_opposition_war_support_tt
+        add_to_variable = { JAP_weekly_war_support = 0.01 }
+		country_event = {
+			id = japan_konoe.4
+			days = 1
+		}
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_goverments_mandate
+	icon = GFX_goal_unknown
+	
+    x = 0
+	y = 3
+	
+	cost = 2
+	relative_position_id = JAP_spiders_web
+	prerequisite = { focus = JAP_national_unity } 
+	prerequisite = {focus = JAP_imperial_support }
+	prerequisite = {focus = JAP_martial_law }
+    completion_reward = {
+        remove_dynamic_modifier = {
+			modifier = JAP_civil_opposition
+		}
+		clear_variable = JAP_pp_gain
+		clear_variable = JAP_weekly_stability
+		clear_variable = JAP_weekly_war_support
+		country_event = {
+			id = japan_konoe.6
+			days = 1
+		}
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_our_agenda
+	icon = GFX_goal_unknown
+	
+    x = -3
+	y = 4
+	
+	cost = 4
+	relative_position_id = JAP_spiders_web
+	prerequisite = { focus = JAP_goverments_mandate } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_our_policy
+	icon = GFX_goal_unknown
+	
+    x = 3
+	y = 4
+	
+	cost = 4
+	relative_position_id = JAP_spiders_web
+	prerequisite = { focus = JAP_goverments_mandate } 
+    completion_reward = {
+        
+    }
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_subjugate_the_zaibatsu
+	icon = GFX_goal_unknown
+	
+    x = -2
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_our_policy
+	prerequisite = { focus = JAP_our_policy } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_bureaucratic_reforms
+	icon = GFX_goal_unknown
+	
+    x = 1
+	y = 6
+	
+	cost = 4
+	relative_position_id = JAP_spiders_web
+	prerequisite = { focus = JAP_subjugate_the_zaibatsu } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_bureaucratic_reforms
+	icon = GFX_goal_unknown
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_subjugate_the_zaibatsu
+	prerequisite = { focus = JAP_subjugate_the_zaibatsu } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_nationalization_programs
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_bureaucratic_reforms
+	prerequisite = { focus = JAP_bureaucratic_reforms } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_end_the_rivalry
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_expand_budget
+	prerequisite = { focus = JAP_expand_budget } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_true_showa_era
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_national_shinto
+	prerequisite = { focus = JAP_national_shinto } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_the_rising_sun
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_end_the_rivalry
+	prerequisite = { focus = JAP_nationalization_programs } 
+	prerequisite = { focus = JAP_end_the_rivalry } 
+	prerequisite = { focus = JAP_true_showa_era } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_night_of_drawn_swords
+	
+    x = 3
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_power_secured
+	prerequisite = { focus = JAP_the_rising_sun } 
+	prerequisite = { focus = JAP_power_secured } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_military_goverment
+	
+    x = -3
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_night_of_drawn_swords
+	prerequisite = { focus = JAP_night_of_drawn_swords }
+	mutually_exclusive = {
+		focus = JAP_the_showa_restoration
+	}
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_prime_minister_tojo
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_military_goverment
+	prerequisite = { focus = JAP_military_goverment } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_secure_the_emperor
+	
+    x = -1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_prime_minister_tojo
+	prerequisite = { focus = JAP_prime_minister_tojo } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_sideline_the_diet
+	
+    x = 1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_prime_minister_tojo
+	prerequisite = { focus = JAP_prime_minister_tojo } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_purge_the_privy_council
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_secure_the_emperor
+	prerequisite = { focus = JAP_secure_the_emperor } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_empower_supreme_war_council
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_sideline_the_diet
+	prerequisite = { focus = JAP_sideline_the_diet } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_military_with_a_state
+	
+    x = 1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_purge_the_privy_council
+	prerequisite = { focus = JAP_purge_the_privy_council } 
+	prerequisite = {focus = JAP_empower_supreme_war_council }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_bushido_spirt
+	
+    x = -2
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_military_with_a_state
+	prerequisite = { focus = JAP_military_with_a_state } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_permanent_war_footing
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_military_with_a_state
+	prerequisite = { focus = JAP_military_with_a_state } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_total_war_economy
+	
+    x = 2
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_military_with_a_state
+	prerequisite = { focus = JAP_military_with_a_state } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_the_divine_wind
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_bushido_spirt
+	prerequisite = { focus = JAP_bushido_spirt } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_abolish_civillans
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_permanent_war_footing
+	prerequisite = { focus = JAP_permanent_war_footing } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_war_industry_supremacy
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_total_war_economy
+	prerequisite = { focus = JAP_total_war_economy } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_the_national_defense_state
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_abolish_civillans
+	prerequisite = { focus = JAP_the_divine_wind } 
+	prerequisite = { focus = JAP_abolish_civillans }
+	prerequisite = { focus = JAP_war_industry_supremacy }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_the_showa_restoration
+	
+    x = 3
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_night_of_drawn_swords
+	prerequisite = { focus = JAP_night_of_drawn_swords }
+	mutually_exclusive = {
+		focus = JAP_military_goverment
+	}
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_second_coronation
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_the_showa_restoration
+	prerequisite = { focus = JAP_the_showa_restoration } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_purge_the_military
+	
+    x = -1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_second_coronation
+	prerequisite = { focus = JAP_second_coronation } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_abolish_the_diet
+	
+    x = 1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_second_coronation
+	prerequisite = { focus = JAP_second_coronation } 
+    completion_reward = {  
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_new_officers
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_purge_the_military
+	prerequisite = { focus = JAP_purge_the_military } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_expand_privy_council
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_abolish_the_diet
+	prerequisite = { focus = JAP_abolish_the_diet } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_his_majestys_prerogative
+	
+    x = 1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_new_officers
+	prerequisite = { focus = JAP_new_officers }
+	prerequisite = {focus = JAP_expand_privy_council } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_demand_loyalty
+	
+    x = -2
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_his_majestys_prerogative
+	prerequisite = { focus = JAP_his_majestys_prerogative } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_social_mobilization
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_his_majestys_prerogative
+	prerequisite = { focus = JAP_his_majestys_prerogative } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_imperial_corporations
+	
+    x = 2
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_his_majestys_prerogative
+	prerequisite = { focus = JAP_his_majestys_prerogative } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_the_ultimate_sacrifice
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_demand_loyalty
+	prerequisite = { focus = JAP_demand_loyalty } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_kokutai_above_all
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_social_mobilization
+	prerequisite = { focus = JAP_social_mobilization } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_end_the_zaibatsu
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_imperial_corporations
+	prerequisite = { focus = JAP_imperial_corporations } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_a_true_imperial_japan
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_kokutai_above_all
+	prerequisite = { focus = JAP_the_ultimate_sacrifice }
+	prerequisite = {focus = JAP_kokutai_above_all }
+	prerequisite = {focus = JAP_end_the_zaibatsu } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_empower_the_military
+	icon = GFX_goal_unknown
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_our_policy
+	prerequisite = { focus = JAP_our_policy } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_return_to_tradition
+	icon = GFX_goal_unknown
+	
+    x = 2
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_our_policy
+	prerequisite = { focus = JAP_our_policy } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_expand_budget
+	icon = GFX_goal_unknown
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_empower_the_military
+	prerequisite = { focus = JAP_empower_the_military } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_national_shinto
+	icon = GFX_goal_unknown
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_return_to_tradition
+	prerequisite = { focus = JAP_return_to_tradition } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_taisho_is_dead
+	icon = GFX_goal_unknown
+	
+    x = -1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_our_agenda
+	prerequisite = { focus = JAP_our_agenda } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_purge_the_diet
+	icon = GFX_goal_unknown
+	
+    x = 1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_our_agenda
+	prerequisite = { focus = JAP_our_agenda } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_defense_of_the_kokutai
+	icon = GFX_goal_unknown
+	
+    x = 1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_taisho_is_dead
+	prerequisite = { focus = JAP_taisho_is_dead } 
+	prerequisite = { focus = JAP_purge_the_diet }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_party_of_public_order
+	icon = GFX_goal_unknown
+	
+    x = 1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_purge_the_diet
+	prerequisite = { focus = JAP_purge_the_diet } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_democracy_failed
+	icon = GFX_goal_unknown
+	
+    x = -1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_taisho_is_dead
+	prerequisite = { focus = JAP_taisho_is_dead } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_imperial_rule_assistance_association 
+	icon = GFX_goal_unknown
+	
+    x = 1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_democracy_failed
+	prerequisite = { focus = JAP_democracy_failed }
+	prerequisite = { focus = JAP_defense_of_the_kokutai } 
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_house_of_peers_supremacy
+	icon = GFX_goal_unknown
+	
+    x = 1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_defense_of_the_kokutai
+	prerequisite = { focus = JAP_party_of_public_order } 
+	prerequisite = { focus = JAP_defense_of_the_kokutai } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_power_secured
+	icon = GFX_JAP_power_secured
+	
+    x = 1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_imperial_rule_assistance_association
+	prerequisite = { focus = JAP_imperial_rule_assistance_association } 
+	prerequisite = { focus = JAP_house_of_peers_supremacy } 
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_the_carrot
+	icon = GFX_JAP_the_carrot
+	
+    x = 19
+	y = 0
+	
+	available = {
+		date > 1940.1.1
+	}
+	
+	cost = 4
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_raises_for_high_command
+	icon = GFX_JAP_raises_for_high_command
+	
+    x = -1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_the_carrot
+	prerequisite = { focus = JAP_the_carrot }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_promotions_for_officers
+	icon = GFX_JAP_promotions_for_officers
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_raises_for_high_command
+	prerequisite = { focus = JAP_raises_for_high_command }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_lift_political_restrictions
+	icon = GFX_JAP_lift_political_restrictions
+	
+    x = 1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_the_carrot
+	prerequisite = { focus = JAP_the_carrot }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_loosen_civ_restrictions
+	icon = GFX_JAP_loosen_civ_restrictions
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_lift_political_restrictions
+	prerequisite = { focus = JAP_lift_political_restrictions }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_the_stick
+	icon = GFX_JAP_the_stick
+	
+    x = 4
+	y = 0
+	
+	available = {
+		date > 1940.1.1
+	}
+	
+	cost = 4
+	relative_position_id = JAP_the_carrot
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_retirements_for_disloyal
+	icon = GFX_JAP_retirements_for_disloyal
+	
+    x = -1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_the_stick
+	prerequisite = { focus = JAP_the_stick }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_bullets_for_outspoken
+	icon = GFX_JAP_bullets_for_outspoken
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_retirements_for_disloyal
+	prerequisite = { focus = JAP_retirements_for_disloyal }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_new_oath
+	icon = GFX_JAP_new_oath
+	
+    x = 1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_the_stick
+	prerequisite = { focus = JAP_the_stick }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_reassert_chain_of_command
+	icon = GFX_JAP_reassert_chain_of_command
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_new_oath
+	prerequisite = { focus = JAP_new_oath }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_realizing_our_potential
+	icon = GFX_JAP_realizing_our_potential
+	
+    x = 1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_loosen_civ_restrictions
+	prerequisite = {
+		focus = JAP_promotions_for_officers
+		focus = JAP_loosen_civ_restrictions
+		focus = JAP_bullets_for_outspoken
+		focus = JAP_reassert_chain_of_command
+	}
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_imperial_army
+	icon = GFX_JAP_imperial_army
+	
+    x = -5
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_realizing_our_potential
+	prerequisite = { focus = JAP_realizing_our_potential }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_review_manuals
+	icon = GFX_JAP_review_manuals
+	
+    x = -2
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_imperial_army
+	prerequisite = { focus = JAP_imperial_army }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_hokkaido_wargames
+	icon = GFX_JAP_hokkaido_wargames
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_imperial_army
+	prerequisite = { focus = JAP_imperial_army }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_new_tank_designs
+	icon = GFX_JAP_new_tank_designs
+	
+    x = 2
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_imperial_army
+	prerequisite = { focus = JAP_imperial_army }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_imperial_air
+	icon = GFX_JAP_realizing_our_potential
+	
+    x = 0
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_realizing_our_potential
+	prerequisite = { focus = JAP_realizing_our_potential }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_imperial_navy
+	icon = GFX_JAP_realizing_our_potential
+	
+    x = 5
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_realizing_our_potential
+	prerequisite = { focus = JAP_realizing_our_potential }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_on_the_march
+	icon = GFX_JAP_on_the_march
+	
+    x = 21
+	y = 8
+	
+	available = {
+		date > 1940.1.1
+	}
+	
+	cost = 4
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_declare_panasian_dream
+	icon = GFX_JAP_declare_panasian_dream
+	
+    x = -1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_on_the_march
+	mutually_exclusive = {
+		focus = JAP_declare_nihon_superiority
+	}
+	prerequisite = { focus = JAP_on_the_march }
+    completion_reward = {
+        create_faction = JAP_coprosperity_sphere
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_declare_nihon_superiority
+	icon = GFX_JAP_declare_nihon_superiority
+	
+    x = 1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_on_the_march
+	mutually_exclusive = {
+		focus = JAP_declare_panasian_dream
+	}
+	prerequisite = { focus = JAP_on_the_march }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_nanshin_ron
+	icon = GFX_JAP_nanshin_ron
+	
+    x = -2
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_declare_panasian_dream
+	mutually_exclusive = {
+		focus = JAP_hokushin_ron
+	}
+	prerequisite = {
+		focus = JAP_declare_panasian_dream
+		focus = JAP_declare_nihon_superiority
+	}
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_hokushin_ron
+	icon = GFX_JAP_hokushin_ron
+	
+    x = 2
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_declare_nihon_superiority
+	mutually_exclusive = {
+		focus = JAP_nanshin_ron
+	}
+	prerequisite = {
+		focus = JAP_declare_panasian_dream
+		focus = JAP_declare_nihon_superiority
+	}
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_invade_manchuria
+	icon = GFX_JAP_invade_manchuria
+	
+    x = -1
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_hokushin_ron
+	prerequisite = { focus = JAP_hokushin_ron }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = JAP_seek_asian_allies
+	icon = GFX_JAP_seek_asian_allies
+	
+    x = 3
+	y = 1
+	
+	cost = 4
+	relative_position_id = JAP_nanshin_ron
+	prerequisite = {
+		focus = JAP_nanshin_ron
+		focus = JAP_hokushin_ron
+	}
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}

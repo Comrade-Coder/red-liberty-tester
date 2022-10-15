@@ -1,0 +1,24 @@
+
+state={
+	id=742
+	name="STATE_742"
+
+	history={
+		owner = TKS
+		victory_points = {
+			1384 1 
+		}
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = TKS
+	}
+
+	provinces={
+		7224 8027 10205 10417 12218 12239 13237 
+	}
+	manpower=180600
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

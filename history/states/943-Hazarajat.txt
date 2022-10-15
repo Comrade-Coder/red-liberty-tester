@@ -1,0 +1,25 @@
+
+state={
+	id=943
+	name="STATE_943" # Hazarajat
+	manpower = 700000
+	
+	state_category = pastoral
+	
+	resources={
+		steel=10
+		tungsten=20
+	}
+	history={
+		owner = AFG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = AFG
+		set_demilitarized_zone = yes
+	}
+
+	provinces={
+		10852 7984 7916 1995
+	}
+}

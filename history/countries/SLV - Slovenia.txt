@@ -1,0 +1,57 @@
+﻿capital = 102
+
+set_research_slots = 3
+
+# Starting tech
+# clone of Yugoslavia
+set_technology = {
+	tech_support = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	early_fighter = 1
+	gwtank = 1
+	basic_light_tank = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_submarine = 1
+}
+
+set_politics = {
+	ruling_party = progressive_liberalism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	insurrectionary_anarchism = 0
+	revolutionary_autocracy = 0
+	proletarian_dictatorship = 0
+	libertarian_socialism = 7
+	social_democracy = 19
+	progressive_liberalism = 48
+	market_libertarianism = 17
+	national_conservatism = 9
+	authoritarian_democracy = 0
+	autocratic_despotism = 0
+	far_right_authoritarianism = 0
+	fascism = 0
+}
+
+add_ideas = {
+	SLV_slavic_progressivism
+	SLV_outlawed_radicalism
+}
+
+create_country_leader = {
+	name = "Etbin Kristan"
+	desc = ""
+	picture = "gfx/leaders/SLV/Portrait_SLV_Etbin_Kristan.png"
+	expire = "1965.1.1"
+	ideology = progressive_liberalism_subtype
+	traits = {
+		#
+	}
+}

@@ -1,0 +1,134 @@
+ideas = {
+	country = {
+
+		IRE_anglo_irish_trade_war = {
+			
+			removal_cost = -1 
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = { 
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.15
+				production_factory_max_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		
+		IRE_anglo_irish_trade_war_1 = {
+			
+			removal_cost = -1 
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = { 
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		
+		IRE_paramilitary_violence = {
+			
+			removal_cost = -1 
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = { 
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.05
+				conscription_factor = -0.15
+			}
+		}
+		
+		IRE_ireland_divided = {
+			
+			removal_cost = -1 
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = { 
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = 0.1
+			}
+		}
+		
+		### KOLCHAK MEME SPIRITS ###
+		
+		IRE_autocrat_of_celts = {
+			
+			removal_cost = -1 
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = { 
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = 0.1
+				conscription_factor = 0.25
+			}
+		}
+		
+		IRE_pot_of_gold = {
+			
+			removal_cost = -1 
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = { 
+				always = yes
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+		IRE_leprechuan_movie = {
+			
+			removal_cost = -1 
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = { 
+				always = yes
+			}
+			
+			modifier = {
+				
+			}
+		}
+	}
+}

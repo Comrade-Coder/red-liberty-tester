@@ -1,0 +1,64 @@
+﻿capital = 716
+
+oob = "empty"
+
+set_stability = 0.7
+set_war_support = 0.4
+
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_politics = {
+	ruling_party = autocratic_despotism
+	last_election = "1932.11.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	insurrectionary_anarchism = 0
+	revolutionary_autocracy = 0
+	proletarian_dictatorship = 8
+	libertarian_socialism = 0
+	social_democracy = 2
+	progressive_liberalism = 0
+	market_libertarianism = 14
+	national_conservatism = 16
+	authoritarian_democracy = 28
+	autocratic_despotism = 32
+	far_right_authoritarianism = 0
+	fascism = 0
+}
+
+add_ideas = {
+	FNG_rampant_banditry
+	FNG_kwantung_army
+	
+	warlord_conscription
+}
+
+give_military_access = JAP
+
+set_cosmetic_tag = CHI_empire_dongbei
+
+create_country_leader = {
+	name = "Zhang Xueliang"
+	desc = "POLITICS_ZHANG_XUELIANG_DESC"
+	picture = "gfx/leaders/FNG/Portrait_FNG_Zhang_Xueliang.png"
+	expire = "1965.1.1"
+	ideology = authoritarian_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Gou Songling"
+	desc = ""
+	picture = "gfx/leaders/FNG/Portrait_FNG_Guo_Songling.png"
+	expire = "1965.1.1"
+	ideology = warlordism_subtype
+	traits = {
+		#
+	}
+}

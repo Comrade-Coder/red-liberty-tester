@@ -1,0 +1,26 @@
+
+state={
+	id=839
+	name="STATE_839"
+
+	history={
+		owner = CHI
+		add_core_of = ZHI
+		add_core_of = CHI
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+
+		}
+		victory_points = {
+			10068 10
+		}
+	}
+
+	provinces={
+		4137 9969 10003 10068 10119 11944 11962 11980 11996 
+	}
+	manpower=8000000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

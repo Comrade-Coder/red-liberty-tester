@@ -1,0 +1,163 @@
+JAP_calc_house = { # this will recalculate the number of members of parliament based on party popularity, with a bias towards seiyukai and minseito
+	
+	#Sets variable to check for discrepencies
+	set_variable = {
+		JAP_old_mps_total = JAP_mps_total
+	}
+	
+	set_variable = {
+		kyosan_mps = party_popularity@revolutionary_autocracy
+	}
+	add_to_variable = {
+		kyosan_mps = party_popularity@insurrectionary_anarchism
+	}
+	add_to_variable = {
+		kyosan_mps = party_popularity@proletarian_dictatorship
+	}
+	multiply_variable = {
+		kyosan_mps = 0.5
+	}
+	
+	set_variable = {
+		ronoto_mps = party_popularity@libertarian_socialism
+	}
+	add_to_variable = {
+		ronoto_mps = party_popularity@social_democracy
+	}
+	multiply_variable = {
+		ronoto_mps = 0.9
+	}
+	
+	set_variable = {
+		minseito_mps = party_popularity@progressive_liberalism
+	}
+	add_to_variable = {
+		minseito_mps = party_popularity@market_libertarianism
+	}
+	
+	set_variable = {
+		seiyukai_mps = party_popularity@national_conservatism
+	}
+	
+	set_variable = {
+		tohokai_mps = party_popularity@authoritarian_democracy
+	}
+	add_to_variable = {
+		tohokai_mps = party_popularity@autocratic_despotism
+	}
+	add_to_variable = {
+		tohokai_mps = party_popularity@far_right_authoritarianism
+	}
+	add_to_variable = {
+		tohokai_mps = party_popularity@fascism
+	}
+	multiply_variable = {
+		tohokai_mps = 0.75
+	}
+	
+	#Gets seats
+	multiply_variable = {
+		kyosan_mps = JAP_mps_total
+	}
+	multiply_variable = {
+		ronoto_mps = JAP_mps_total
+	}
+	multiply_variable = {
+		minseito_mps = JAP_mps_total
+	}
+	multiply_variable = {
+		seiyukai_mps = JAP_mps_total
+	}
+	multiply_variable = {
+		tohokai_mps = JAP_mps_total
+	}
+	
+	#rounds
+	round_variable = kyosan_mps
+	round_variable = ronoto_mps
+	round_variable = minseito_mps
+	round_variable = seiyukai_mps
+	round_variable = tohokai_mps
+	
+	#Gets new total seat value
+	JAP_get_total_seats = yes
+	
+	#gets discrepency
+	subtract_from_variable = {
+		JAP_old_mps_total = JAP_mps_total
+	}
+	
+	#deals with discrepency, if needed
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					JAP_old_mps_total = 0
+				}
+			}
+		}
+		
+		set_variable = {
+			JAP_partial_discrepency = JAP_old_mps_total
+		}
+		
+		#log = "[THIS.GetName]: JAP_partial_discrepency: [?JAP_partial_discrepency]"
+		
+		multiply_variable = {
+			JAP_partial_discrepency = 0.6
+		}
+		round_variable = JAP_partial_discrepency
+		
+		if = { # positive discrepency, too few seats
+			limit = {
+				check_variable = {
+					JAP_partial_discrepency > 0 #positive
+				}
+			}
+			subtract_from_variable = {
+				JAP_old_mps_total = JAP_partial_discrepency
+			}
+			add_to_variable = {
+				seiyukai_mps = JAP_partial_discrepency
+			}
+			add_to_variable = {
+				minseito_mps = JAP_old_mps_total
+			}
+		}
+		else = { # negative discrepency, too many seats
+			subtract_from_variable = {
+				JAP_old_mps_total = JAP_partial_discrepency
+			}
+			add_to_variable = {
+				seiyukai_mps = JAP_old_mps_total
+			}
+			add_to_variable = {
+				minseito_mps = JAP_partial_discrepency
+			}
+		}
+	}
+	
+	JAP_get_total_seats = yes
+}
+
+JAP_get_total_seats = {
+	
+	set_variable = {
+		JAP_mps_total = 0
+	}
+	add_to_variable = {
+		JAP_mps_total = kyosan_mps
+	}
+	add_to_variable = {
+		JAP_mps_total = ronoto_mps
+	}
+	add_to_variable = {
+		JAP_mps_total = minseito_mps
+	}
+	add_to_variable = {
+		JAP_mps_total = seiyukai_mps
+	}
+	add_to_variable = {
+		JAP_mps_total = tohokai_mps
+	}
+}

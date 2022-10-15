@@ -1,0 +1,185 @@
+add_namespace = france
+add_namespace = france_far_right
+
+country_event = {
+	id = france.1
+	title = ""
+	desc = france.1.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = ""
+	}
+}
+
+### NATIONAL ASSEMBLY EVENT CHAIN ###
+
+country_event = { # choose a side
+	id = france.2
+	title = ""
+	desc = france.2.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = "A popular front is what is needed!"
+		set_country_flag = FRA_popular_front
+		country_event = {
+			id = france.3
+			days = 5
+		}
+	}
+	
+	option = {
+		name = "The people demand stability through a national union!"
+		set_country_flag = FRA_national_union
+		country_event = {
+			id = france.6
+			days = 5
+		}
+	}
+}
+
+country_event = { # popular front - parti radical
+	id = france.3
+	title = "The Radicals"
+	desc = france.3.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = "Natural partners."
+		country_event = {
+			id = france.4
+			days = 6
+		}
+	}
+}
+
+country_event = { # popular front - approaching the communists
+	id = france.4
+	title = ""
+	desc = france.4.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = "They need us, and we need them."
+		set_country_flag = FRA_popular_front_found_coalition_partner
+		add_political_power = -50
+	}
+	
+	option = {
+		name = "We don't need them!"
+		country_event = {
+			id = france.5
+			days = 13
+		}
+	}
+}
+
+country_event = { # popular front - grand coalition?
+	id = france.5
+	title = "Union Sacrée"
+	desc = france.5.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = "Yes!"
+		set_country_flag = FRA_popular_front_grand_coalition
+		add_political_power = -100
+	}
+	
+	option = {
+		name = "No!"
+	}
+}
+
+country_event = { # national union - democratic alliance
+	id = france.6
+	title = ""
+	desc = france.6.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = "Natural Allies!"
+		country_event = {
+			id = france.7
+			days = 6
+		}
+	}
+}
+
+country_event = { # national union - croix de feu
+	id = france.7
+	title = ""
+	desc = france.7.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = ""
+		set_country_flag = FRA_national_union_found_coalition_partner
+	}
+	
+	option = {
+		name = "We will not bend to extremists!"
+	}
+}
+
+country_event = {
+	id = france_far_right.1
+	title = "The Regency"
+	desc = france_far_right.1.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = "Montjoie Saint Denis!"
+		set_politics = {
+			ruling_party = autocratic_despotism
+			elections_allowed = no
+			last_election = "1932.11.8"
+			election_frequency = 48
+		}
+	}
+}
+
+country_event = {
+	id = france_far_right.2
+	title = "The Million Cross March"
+	desc = france_far_right.2.desc
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = "May God save the republic, for no one else will..."
+		set_politics = {
+			ruling_party = authoritarian_democracy
+			elections_allowed = no
+			last_election = "1932.11.8"
+			election_frequency = 48
+		}
+	}
+}

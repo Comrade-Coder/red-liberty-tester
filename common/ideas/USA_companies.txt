@@ -1,0 +1,324 @@
+ideas = {
+
+	tank_manufacturer = {
+		
+		USA_chrysler = {
+		
+			allowed = {
+				original_tag = USA
+			}
+		
+			available = {
+				OR = {
+					owns_state = 859
+					owns_state = 816
+				}
+				date > 1940.1.1
+			}
+			
+			on_add = {
+				custom_effect_tooltip = USA_hire_company_tt
+				USA_contract_three_months = yes
+			}
+			
+			removal_cost = 50
+				
+			traits = {
+				tank_designer_mass_production
+			}
+		}
+		
+		USA_marmon_herrington = {
+		
+			allowed = {
+				original_tag = USA
+			}
+		
+			available = {
+				owns_state = 369
+			}
+			
+			on_add = {
+				custom_effect_tooltip = USA_hire_company_tt
+				USA_contract_three_months = yes
+			}
+			
+			removal_cost = 50
+				
+			traits = {
+				tank_designer_light_tanks
+			}
+		}
+		
+		USA_general_motors = {
+		
+			allowed = {
+				original_tag = USA
+			}
+		
+			available = {
+				owns_state = 393
+			}
+			
+			on_add = {
+				custom_effect_tooltip = USA_hire_company_tt
+				USA_contract_three_months = yes
+			}
+			
+			removal_cost = 50
+				
+			traits = {
+				tank_designer_engines
+			}
+		}
+		
+		USA_ford_motor_company = {
+		
+			allowed = {
+				original_tag = USA
+			}
+		
+			available = {
+				owns_state = 393
+			}
+			
+			on_add = {
+				custom_effect_tooltip = USA_hire_company_tt
+				USA_contract_three_months = yes
+			}
+			
+			removal_cost = 50
+				
+			traits = {
+				
+			}
+		}
+	}
+	
+	naval_manufacturer {
+		
+		USA_norfolk_naval_yard = {
+		
+			allowed = {
+				original_tag = USA
+			}
+		
+			available = {
+				owns_state = 362
+			}
+			
+			on_add = {
+				custom_effect_tooltip = USA_hire_company_tt
+			}
+			
+			removal_cost = 50
+				
+			traits = {
+				ship_designer_govt_shipyard
+			}
+		}
+		
+		USA_brooklyn_naval_yard = {
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			available = {
+				owns_state = 816
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { 
+				ship_designer_govt_shipyard
+			}
+			
+			modifier = {
+				
+			}
+		}
+		
+		USA_bollinger_shipyards = {
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			available = {
+				owns_state = 816
+			}
+			
+			research_bonus = {
+				dd_tech = 0.1
+				cl_tech = 0.1
+			}
+			
+			traits = { 
+				
+			}
+			
+			modifier = {
+				
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+	
+		USA_springfield_armory = {
+		
+			allowed = {
+				original_tag = USA
+			}
+		
+			available = {
+				owns_state = 357
+			}
+			
+			on_add = {
+				custom_effect_tooltip = USA_hire_company_tt
+			}
+			
+			removal_cost = 50
+			
+			traits = {
+				material_designer_govt_armory
+			}
+		}
+		
+		USA_army_ordnance_department = {
+		
+			allowed = {
+				original_tag = USA
+			}
+		
+			available = {
+				owns_state = 362
+			}
+			
+			on_add = {
+				custom_effect_tooltip = USA_hire_company_tt
+			}
+			
+			removal_cost = 50
+			
+			traits = {
+				material_designer_govt_armory
+			}
+		}
+		
+		USA_rock_island_arsenal = {
+		
+			allowed = {
+				original_tag = USA
+			}
+		
+			available = {
+				owns_state = 395
+			}
+			
+			on_add = {
+				custom_effect_tooltip = USA_hire_company_tt
+			}
+			
+			removal_cost = 50
+			
+			traits = {
+				material_designer_govt_armory
+			}
+		}
+		
+		USA_rocky_mountain_arsenal = {
+		
+			allowed = {
+				original_tag = USA
+			}
+		
+			available = {
+				owns_state = 382
+			}
+			
+			on_add = {
+				custom_effect_tooltip = USA_hire_company_tt
+			}
+			
+			removal_cost = 50
+			
+			traits = {
+				material_designer_chemical_weapons
+			}
+		}
+	}
+	
+	industrial_concern = {
+		
+		USA_general_electric = {
+		
+			allowed = {
+				original_tag = USA
+			}
+		
+			available = {
+				
+			}
+			
+			on_add = {
+				custom_effect_tooltip = USA_hire_company_tt
+				USA_contract_three_months = yes
+			}
+			
+			removal_cost = 50
+			
+			traits = {
+				
+			}
+		}
+		
+		USA_standard_oil = {
+		
+			allowed = {
+				original_tag = USA
+			}
+		
+			available = {
+				
+			}
+			
+			on_add = {
+				custom_effect_tooltip = USA_hire_company_tt
+				USA_contract_three_months = yes
+			}
+			
+			removal_cost = 50
+			
+			traits = {
+				
+			}
+		}
+		
+		USA_national_railway_corp = {
+		
+			allowed = {
+				original_tag = USA
+			}
+		
+			available = {
+				has_completed_focus = USA_national_railways
+				owns_state = 361
+			}
+			
+			on_add = {
+				custom_effect_tooltip = USA_hire_company_tt
+			}
+			
+			removal_cost = 50
+			
+			traits = {
+				
+			}
+		}
+	}
+}

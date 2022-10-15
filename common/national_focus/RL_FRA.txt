@@ -1,0 +1,38 @@
+###INITIAL TREE
+focus_tree = {
+	id = FRA_initial_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 0
+			tag = FRA
+		}
+	}
+	continuous_focus_position = {
+		x = -2500
+		y = 125
+	}
+	default = no
+	shared_focus = FRA_convene_national_assembly
+}
+
+focus_tree = {
+	id = FRA_communist_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 0
+			tag = FRA
+		}
+		modifier = {
+			add = 5
+			has_country_flag = FRA_far_left_force_on
+		}
+	}
+	continuous_focus_position = {
+		x = -2500
+		y = 125
+	}
+	default = no
+	shared_focus = FRA_the_revolution_begins
+}

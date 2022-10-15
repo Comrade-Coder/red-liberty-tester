@@ -1,0 +1,53 @@
+shared_focus = {
+    id = USA_macarthur_ascendant
+	icon = GFX_USA_macarthur_ascendant
+	
+    x = 8
+	
+	cost = 0
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = USA_fight_the_left
+	icon = GFX_USA_fight_the_left
+	
+    x = -1
+	y = 1
+	
+	cost = 3
+	relative_position_id = USA_macarthur_ascendant
+	prerequisite = { focus = USA_macarthur_ascendant }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = USA_fight_the_right
+	icon = GFX_USA_fight_the_right
+	
+    x = 1
+	y = 1
+	
+	cost = 3
+	relative_position_id = USA_macarthur_ascendant
+	prerequisite = { focus = USA_macarthur_ascendant }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}

@@ -1,0 +1,19 @@
+state={
+	id=910
+	name="STATE_910"
+	
+	history={
+		owner = HEZ
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = HEZ
+	}
+	
+	provinces={
+		4932 
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}
