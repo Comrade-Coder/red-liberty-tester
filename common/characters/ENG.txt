@@ -1,0 +1,164 @@
+characters = {
+	
+	ENG_frank_leech = {
+		name = ENG_frank_leech
+		
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ENG_frank_leech"
+			}
+		}
+		
+		country_leader = {
+			desc = "POLITICS_FRANK_LEECH_DESC"
+			ideology = anarcho_socialism_subtype
+			traits = {
+				
+			}
+		}
+	}
+	
+	ENG_harry_pollitt = {
+		name = ENG_harry_pollitt
+		
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ENG_harry_pollitt"
+			}
+		}
+		
+		country_leader = {
+			desc = "POLITICS_HARRY_POLLITT_DESC"
+			ideology = authoritarian_socialism_subtype
+			traits = {
+				
+			}
+		}
+	}
+	
+	ENG_james_maxton = {
+		name = ENG_james_maxton
+		
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ENG_james_maxton"
+			}
+		}
+		
+		country_leader = {
+			desc = "POLITICS_JAMES_MAXTON_DESC"
+			ideology = revolutionary_socialism_subtype
+			traits = {
+				
+			}
+		}
+	}
+	
+	ENG_clement_attlee = {
+		name = ENG_clement_attlee
+		
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ENG_clement_attlee"
+			}
+		}
+		
+		country_leader = {
+			desc = "POLITICS_CLEMENT_ATTLEE_DESC"
+			ideology = democratic_socialism_subtype
+			traits = {
+				
+			}
+		}
+	}
+	
+	ENG_ramsay_macdonald = {
+		name = ENG_ramsay_macdonald
+		
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ENG_ramsay_macdonald"
+			}
+		}
+		
+		country_leader = {
+			desc = "POLITICS_RAMSAY_MACDONALD_DESC"
+			ideology = social_democracy_subtype
+			traits = {
+				ramshackle_mac
+			}
+		}
+	}
+	
+	ENG_archibald_sinclair = {
+		name = ENG_archibald_sinclair
+		
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ENG_archibald_sinclair"
+			}
+		}
+		
+		country_leader = {
+			desc = "POLITICS_ARCHIBALD_SINCLAIR_DESC"
+			ideology = progressive_liberalism_subtype
+			traits = {
+				
+			}
+		}
+	}
+	
+	ENG_john_allsebrook_simon = {
+		name = ENG_john_allsebrook_simon
+		
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ENG_john_allsebrook_simon"
+			}
+		}
+		
+		country_leader = {
+			desc = "POLITICS_JOHN_ALLSEBROOK_SIMON_DESC"
+			ideology = national_liberalism_subtype
+			traits = {
+				
+			}
+		}
+	}
+	
+	ENG_neville_chamberlain = {
+		name = ENG_neville_chamberlain
+		
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ENG_neville_chamberlain"
+			}
+		}
+		
+		country_leader = {
+			desc = "POLITICS_NEVILLE_CHAMBERLAIN_DESC"
+			ideology = paternalistic_conservatism_subtype
+			traits = {
+				
+			}
+		}
+	}
+	
+	ENG_john_charles_fuller = {
+		name = ENG_john_charles_fuller
+		
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ENG_john_charles_fuller"
+			}
+		}
+		
+		country_leader = {
+			desc = "POLITICS_JOHN_CHARLES_FULLER_DESC"
+			ideology = fascism_subtype
+			traits = {
+				
+			}
+		}
+	}
+}

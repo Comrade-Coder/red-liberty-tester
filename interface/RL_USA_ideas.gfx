@@ -27,8 +27,18 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_idea_USA_military_observers"
-		texturefile = "gfx/interface/ideas/USA/USA_tio_samuel.png"
-	} 
+		texturefile = "gfx/interface/ideas/USA/USA_military_observers.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_jim_crow"
+		texturefile = "gfx/interface/ideas/USA/USA_the_spectre.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_ongoing_insurgency"
+		texturefile = "gfx/interface/ideas/USA/USA_ongoing_insurgency.png"
+	}
 	
 	### LEGISLATION ###
 	
@@ -70,6 +80,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_USA_economic_equality_act"
 		texturefile = "gfx/interface/ideas/USA/USA_economic_equality_act.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_national_healthcare_act"
+		texturefile = "gfx/interface/ideas/USA/USA_national_healthcare_act.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_naval_act"
+		texturefile = "gfx/interface/ideas/USA/USA_naval_act.png"
 	}
 	
 	### MILITARY ###
@@ -161,6 +181,26 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_idea_USA_oss_natspirit"
-		texturefile = "gfx/interface/goals/USA/shared/USA_office_of_strategic_services.png"
+		texturefile = "gfx/interface/ideas/USA/USA_oss.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_bomber_command_natspirit"
+		texturefile = "gfx/interface/ideas/USA/USA_bomber_command.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_sharing_our_knowledge"
+		texturefile = "gfx/interface/ideas/USA/USA_sharing_our_knowledge.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_full_ww2_commitment"
+		texturefile = "gfx/interface/ideas/USA/USA_full_commitment.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_code_talkers"
+		texturefile = "gfx/interface/ideas/USA/USA_code_talkers.png"
 	}
 }

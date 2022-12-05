@@ -8,7 +8,7 @@ set_technology = {
 }
 
 set_politics = {
-	ruling_party = national_conservatism
+	ruling_party = market_libertarianism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -20,8 +20,8 @@ set_popularities = {
 	libertarian_socialism = 0
 	social_democracy = 14
 	progressive_liberalism = 17
-	market_libertarianism = 9
-	national_conservatism = 44
+	market_libertarianism = 34
+	national_conservatism = 19
 	authoritarian_democracy = 17
 	autocratic_despotism = 0
 	far_right_authoritarianism = 0
@@ -29,11 +29,11 @@ set_popularities = {
 }
 
 create_country_leader = {
-	name = "Alexandru Vaida-Voevod"
+	name = "Iuliu Maniu"
 	desc = ""
 	picture = ""
 	expire = "1953.3.1"
-	ideology = national_conservatism_subtype
+	ideology = market_libertarianism_subtype
 	traits = {
 		
 	}

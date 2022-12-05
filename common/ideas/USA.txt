@@ -19,7 +19,6 @@ ideas = {
 			}
 				
 			modifier = {
-				political_power_gain = -0.5
 				stability_factor = 0.15
 				army_core_defence_factor = 0.05
 			}
@@ -65,10 +64,8 @@ ideas = {
 			modifier = {
 				conscription_factor = 0.15
 				army_org_factor = 0.1
-				
 				planning_speed = 0.15
 				max_planning_factor = 0.15
-				
 				war_support_factor = 0.25
 			}
 	    }
@@ -845,6 +842,28 @@ ideas = {
 			}
 		}
 		
+		USA_stacked_supreme_court = {
+			
+			removal_cost = -1 
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			available = {
+				always = yes
+			}
+			
+			allowed = {
+				always = no
+			}
+				
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = 0.15
+			}
+		}
+		
 		USA_coastal_defense = {
 			
 			removal_cost = -1 
@@ -1407,10 +1426,7 @@ ideas = {
 			}
 				
 			modifier = {
-				air_air_superiority_agility_factor = 0.05
-				experience_gain_navy = 0.15 
-				naval_coordination = 0.15
-				experience_gain_air = 0.15
+				sortie_efficiency = 0.1
 			}
 		}
 		
@@ -1481,8 +1497,8 @@ ideas = {
 			}
 				
 			modifier = {
-				air_strategic_bomber_agility_factor = 0.25
-				air_strategic_bomber_attack_factor = 0.25
+				air_strategic_bomber_defence_factor = 0.1
+				air_strategic_bomber_attack_factor = 0.1
 			}
 		}
 		
@@ -1506,6 +1522,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.15
 				command_power_gain = 0.25
 				conscription_factor = 0.07
+				industrial_capacity_factory = 0.05
 			}
 		}
 	}

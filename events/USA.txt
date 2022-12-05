@@ -24,6 +24,7 @@ country_event = { # 1936 rnc
 	id = united_states.2
 	title = united_states.2.title
 	desc = united_states.2.desc
+	picture = GFX_report_event_republicans
 	
 	is_triggered_only = yes
 	
@@ -39,6 +40,7 @@ country_event = { # 1936 dnc
 	id = united_states.3
 	title = united_states.3.title
 	desc = united_states.3.desc
+	picture = GFX_report_event_lister_hill
 	
 	is_triggered_only = yes
 	
@@ -54,6 +56,7 @@ country_event = { # 1936 spa convention - choosing veep
 	id = united_states.4
 	title = united_states.4.title
 	desc = united_states.4.desc
+	picture = GFX_report_event_wallace_browder
 	
 	is_triggered_only = yes
 	
@@ -422,22 +425,6 @@ country_event = { # shit explodes
 		hidden_effect = {
 			set_variable = { USA_insurgency_public_opinion = 78 }
 			set_variable = { USA_insurgency_strength = 47 }
-			853 = {
-				force_enable_resistance = USA
-				start_resistance = yes
-				add_resistance_target = 10
-				add_resistance = 20
-			}
-			362 = {
-				force_enable_resistance = USA
-				start_resistance = yes
-				add_resistance = 5
-			}
-			363 = {
-				force_enable_resistance = USA
-				start_resistance = yes
-				add_resistance = 7
-			}
 			random_other_country = {
 				limit = { is_ai = yes }
 				news_event = { id = worldnews.7 hours = 6 }
@@ -470,22 +457,6 @@ country_event = { # dont tell mom im in detroit
 
 	option = {
 		name = united_states_insurgency.5.a
-		393 = {
-			force_enable_resistance = USA
-			start_resistance = yes
-			add_resistance_target = 10
-			add_resistance = 15
-		}
-		858 = {
-			force_enable_resistance = USA
-			start_resistance = yes
-			add_resistance = 5
-		}
-		859 = {
-			force_enable_resistance = USA
-			start_resistance = yes
-			add_resistance = 5
-		}
 		add_stability = -0.03
 	}
 }
@@ -507,6 +478,7 @@ country_event = { # pelly captured
 	id = united_states_insurgency.7
 	title = united_states_insurgency.7.title
 	desc = united_states_insurgency.7.desc
+	picture = GFX_report_event_pelley_captured
 	
 	is_triggered_only = yes
 	
@@ -532,6 +504,7 @@ country_event = { # meeting with southern governors
 	id = united_states_insurgency.8
 	title = united_states_insurgency.8.title
 	desc = united_states_insurgency.8.desc
+	picture = GFX_report_event_thomas_with_flag
 	
 	is_triggered_only = yes
 	
@@ -553,15 +526,6 @@ country_event = { # alex
 
 	option = {
 		name = united_states_insurgency.9.a
-		393 = {
-			add_resistance = -10
-		}
-		858 = {
-			add_resistance = -10
-		}
-		859 = {
-			add_resistance = -10
-		}
 	}
 }
 
@@ -659,6 +623,7 @@ country_event = { # USA, USA, USA!
 	id = united_states_flavor.4
 	title = "The Fourth of July"
 	desc = united_states_flavor.4.desc
+	picture = GFX_report_event_america_day
 	
 	is_triggered_only = yes
 	
@@ -790,19 +755,20 @@ country_event = { #
 
 	option = {
 		name = united_states_flavor.7.a
-		add_war_support = 0.05
+		add_war_support = 0.025
 	}
 	
 	option = {
 		name = united_states_flavor.7.b
-		add_stability = 0.05
+		add_stability = 0.025
 	}
 }
 
-country_event = { # 
+country_event = { # opening of the golden gate bridge
 	id = united_states_flavor.8
 	title = united_states_flavor.8.title
 	desc = united_states_flavor.8.desc
+	picture = GFX_report_event_golden_gate_bridge
 	
 	is_triggered_only = yes
 	
@@ -825,6 +791,7 @@ country_event = { # death of john clem
 	id = united_states_flavor.9
 	title = united_states_flavor.9.title
 	desc = united_states_flavor.9.desc
+	picture = GFX_report_event_john_clem
 	
 	is_triggered_only = yes
 	

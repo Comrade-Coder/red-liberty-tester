@@ -51,6 +51,7 @@ ideas = {
 			ledger = navy
 			available = { has_naval_academy = yes }
 			modifier = {
+				naval_accidents_chance = -0.05
 				custom_modifier_tooltip = signals_training_spirit_tt
 			}
 			ai_will_do = {
@@ -144,6 +145,9 @@ ideas = {
 		
 		traditionalism_naval_academy_spirit = {
 			ledger = navy
+			allowed = {
+				always = no
+			}
 			modifier = {
 				custom_modifier_tooltip = traditionalism_naval_academy_spirit_tt
 			}
@@ -155,7 +159,7 @@ ideas = {
 		political_appointments_naval_academy_spirit = {
 			ledger = navy
 			allowed = {
-				
+				always = no
 			}
 			modifier = {
 				political_power_gain = 0.05
@@ -169,7 +173,7 @@ ideas = {
 		political_connections_navy_spirit = {
 			ledger = navy
 			allowed = {
-				
+				always = no
 			}
 			modifier = {
 				
@@ -182,7 +186,7 @@ ideas = {
 		underfunded_naval_academy_spirit = {
 			ledger = navy
 			allowed = {
-				
+				always = no
 			}
 			modifier = {
 				navy_doctrine_cost_factor = 0.1
@@ -195,7 +199,7 @@ ideas = {
 		nepotism_naval_academy_spirit = {
 			ledger = navy
 			allowed = {
-				
+				always = no
 			}
 			modifier = {
 				custom_modifier_tooltip = nepotism_naval_academy_spirit_tt
@@ -224,11 +228,18 @@ ideas = {
 		#		ship_hull_heavy_design_cost_factor = -0.6
 		#	}
 		#}
-		#aviation_enthusiasts_spirit = {
-		#	modifier = {
-		#		ship_hull_carrier_design_cost_factor = -0.6
-		#	}
-		#}
+		aviation_enthusiasts_spirit = {
+			ledger = navy
+			research_bonus = {
+				cv_tech = 0.20
+			}
+			modifier = {
+				ship_hull_carrier_design_cost_factor = -0.6
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
 		#cruiser_warfare_spirit = {
 		#	modifier = {
 		#		ship_hull_cruiser_design_cost_factor = -0.6
@@ -243,7 +254,6 @@ ideas = {
 			ledger = navy
 			modifier = {
 				naval_manufacturer_cost_factor = -0.8
-				ship_hull_cruiser_design_cost_factor = -0.6
 			}
 			ai_will_do = {
 				factor = 1
@@ -254,7 +264,7 @@ ideas = {
 			visible = { has_dlc = "Man the Guns" }
 			research_bonus = {
 				ship_modules_tech = 0.20
-				naval_equipment = 0.20
+				naval_equipment = 0.05
 			}
 			ai_will_do = {
 				factor = 1
@@ -290,7 +300,7 @@ ideas = {
 				has_tech = fleet_in_being
 			}
 			available = {
-				has_tech = fleet_in_being
+				
 			}
 			research_bonus = {
 				bb_tech = 0.20
@@ -309,7 +319,7 @@ ideas = {
 				has_tech = trade_interdiction
 			}
 			available = {
-				has_tech = trade_interdiction
+				
 			}
 			research_bonus = {
 				ss_tech = 0.20
@@ -327,7 +337,7 @@ ideas = {
 				has_tech = base_strike
 			}
 			available = {
-				has_tech = base_strike
+				
 			}
 			research_bonus = {
 				cv_tech = 0.20
@@ -343,7 +353,7 @@ ideas = {
 		landlocked_spirit = {
 			ledger = navy
 			allowed = {
-				
+				always = no
 			}
 			visible = {
 				NOT = {
@@ -368,7 +378,7 @@ ideas = {
 		overbearing_army_spirit = {
 			ledger = navy
 			allowed = {
-				
+				always = no
 			}
 			modifier = {
 				shore_bombardment_bonus = 0.1
@@ -381,7 +391,7 @@ ideas = {
 		only_big_guns_spirit = {
 			ledger = navy
 			allowed = {
-				
+				always = no
 			}
 			modifier = {
 				
@@ -487,7 +497,7 @@ ideas = {
 				has_tech = trade_interdiction
 			}
 			available = {
-				has_tech = trade_interdiction
+				
 			}
 			modifier = {
 				screening_without_screens = 0.2
@@ -504,7 +514,7 @@ ideas = {
 				has_tech = fleet_in_being
 			}
 			available = {
-				has_tech = fleet_in_being
+				
 			}
 			modifier = {
 				naval_retreat_chance = -0.1
@@ -523,7 +533,7 @@ ideas = {
 				has_tech = base_strike
 			}
 			available = {
-				has_tech = base_strike
+				
 			}
 			modifier = {
 				naval_retreat_speed_after_initial_combat = 0.1
@@ -554,7 +564,7 @@ ideas = {
 		overbearing_admirality_spirit = {
 			ledger = navy
 			allowed = {
-				
+				always = no
 			}
 			modifier = {
 				
@@ -580,7 +590,7 @@ ideas = {
 		poor_damage_control_training_spirit = {
 			ledger = navy
 			allowed = {
-				
+				always = no
 			}
 			modifier = {
 				critical_receive_chance = 0.25
@@ -593,7 +603,7 @@ ideas = {
 		limited_sea_time_spirit = {
 			ledger = navy
 			allowed = {
-				
+				always = no
 			}
 			modifier = {
 				experience_gain_destroyer_training_factor = -0.1
@@ -610,7 +620,7 @@ ideas = {
 		cult_of_the_signal_flag_spirit = {
 			ledger = navy
 			allowed = {
-				
+				always = no
 			}
 			modifier = {
 				

@@ -207,12 +207,12 @@ ideas = {
 		professional_officer_corps_spirit = {
 			ledger = army
 			available = {
-				has_bad_army_spirit_army = no
+				
 			}
 			modifier = {
-				experience_gain_army_factor = 0.05
-				land_doctrine_cost_factor = -0.05
 				command_power_gain = 0.2
+				max_command_power = 50
+				army_advisor_cost_factor = -0.05
 			}
 			ai_will_do = {
 				factor = 1
@@ -222,7 +222,7 @@ ideas = {
 		elevated_engineering_corps_spirit = {
 			ledger = army
 			available = {
-				has_bad_army_spirit_army = no
+				
 			}
 			modifier = {
 				trait_engineer_xp_gain_factor = 0.25
@@ -238,7 +238,7 @@ ideas = {
 		proper_heritage_spirit = {
 			ledger = army
 			available = {
-				has_bad_army_spirit_army = no
+				
 			}
 			modifier = {
 				unit_cavalry_design_cost_factor = -1
@@ -253,12 +253,26 @@ ideas = {
 		quick_improvisation_spirit = {
 			ledger = army
 			available = {
-				has_bad_army_spirit_army = no
+				
 			}
 			modifier = {
 				command_abilities_cost_factor = -0.20
 				command_power_gain = 0.2
 				planning_speed = 0.2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		adaptable_modernizers_spirit = {
+			ledger = army
+			available = {
+				
+			}
+			modifier = {
+				experience_gain_army_factor = 0.05
+				land_doctrine_cost_factor = -0.1
 			}
 			ai_will_do = {
 				factor = 1

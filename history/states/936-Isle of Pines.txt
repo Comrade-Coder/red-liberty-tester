@@ -1,0 +1,24 @@
+
+state={
+	id=936
+	name="STATE_936"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+			13421 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = CUB
+	}
+
+	provinces={
+		13421 
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=small_island
+	local_supplies=0.000
+}

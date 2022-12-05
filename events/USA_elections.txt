@@ -6,7 +6,7 @@ country_event = { # 1936 election trigger
 	id = us_election.1
 	title = "Election Day"
 	desc = us_election.1.desc
-	picture = GFX_report_event_white_house
+	picture = GFX_report_event_ballot_box
 
 	is_triggered_only = yes
 	
@@ -30,6 +30,7 @@ country_event = {
 	id = us_election.2
 	title = "The Results"
 	desc = us_election.2.desc
+	picture = GFX_report_event_white_house
 
 	is_triggered_only = yes
 	
@@ -116,6 +117,7 @@ country_event = { # house of reps votes
 	id = us_election.4
 	title = "House of Representatives votes on the Presidency"
 	desc = us_election.4.desc
+	picture = GFX_report_event_congress
 
 	is_triggered_only = yes
 	
@@ -436,10 +438,10 @@ country_event = { #mark states for election
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 100
+				factor = 0
 				has_game_rule = {
 					rule = USA_ELECTION_OUTCOME
-					option = USA_ELECTION_OUTCOME_SOCIALIST
+					option = USA_ELECTION_OUTCOME_DEMOCRAT
 				}
 			}
 		}
@@ -461,10 +463,10 @@ country_event = { #mark states for election
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 100
+				factor = 0
 				has_game_rule = {
 					rule = USA_ELECTION_OUTCOME
-					option = USA_ELECTION_OUTCOME_DEMOCRAT
+					option = USA_ELECTION_OUTCOME_SOCIALIST
 				}
 			}
 		}
@@ -514,7 +516,7 @@ country_event = { #Prep Class II election
  	option = {
  		name = us_election_trigger.3.a
  		custom_effect_tooltip = USA_senate_elections_visible_tt
-		set_country_flag = USA_campaigning_socialist
+		set_country_flag = USA_campaigning_for_socialists
 		if = {
 			limit = {
 				is_presidential_election_year = yes
@@ -526,7 +528,7 @@ country_event = { #Prep Class II election
 	option = {
  		name = us_election_trigger.3.b
  		custom_effect_tooltip = USA_senate_elections_visible_tt
-		set_country_flag = USA_campaigning_democrat
+		set_country_flag = USA_campaigning_for_democrats
 		if = {
 			limit = {
 				is_presidential_election_year = yes
@@ -579,7 +581,7 @@ country_event = { #Prep for Class III election
  	option = {
  		name = us_election_trigger.6.a
  		custom_effect_tooltip = USA_senate_elections_visible_tt
-		set_country_flag = USA_campaigning_socialist
+		set_country_flag = USA_campaigning_for_socialists
 		if = {
 			limit = {
 				is_presidential_election_year = yes
@@ -591,7 +593,7 @@ country_event = { #Prep for Class III election
 	option = {
  		name = us_election_trigger.6.b
  		custom_effect_tooltip = USA_senate_elections_visible_tt
-		set_country_flag = USA_campaigning_democrat
+		set_country_flag = USA_campaigning_for_democrats
 		if = {
 			limit = {
 				is_presidential_election_year = yes
@@ -631,8 +633,8 @@ country_event = { # clear variables a month after election
 	immediate = {
  		hidden_effect = {
  			USA_clear_senate_election_vars = yes
-			clr_country_flag = USA_campaigning_democrat
-			clr_country_flag = USA_campaigning_socialist
+			clr_country_flag = USA_campaigning_for_democrats
+			clr_country_flag = USA_campaigning_for_socialists
 			clr_country_flag = currently_campaigning
  		}
 	}

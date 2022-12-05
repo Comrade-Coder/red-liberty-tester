@@ -132,6 +132,9 @@ ideas = {
 						#}
 					}					
 				}
+				NOT = {
+					has_country_flag = conscription_banned
+				}
 				has_war_support > 0.2
 				#Special rules AST in TFV
 			}
@@ -176,7 +179,6 @@ ideas = {
 		
 		service_by_requirement = {
 			
-			
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.1 group = mobilization_laws }
 				OR = {
@@ -190,6 +192,9 @@ ideas = {
 						#	}
 						#}
 					}
+				}
+				NOT = {
+					has_country_flag = conscription_banned
 				}
 				OR = {
 					has_war_support > 0.6
@@ -265,7 +270,6 @@ ideas = {
 		
 		all_adults_serve = {
 			
-			
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.2 group = mobilization_laws }
 				has_war = yes
@@ -280,6 +284,9 @@ ideas = {
 				#		ratio > 0.75
 				#	}
 				#}
+				NOT = {
+					has_country_flag = conscription_banned
+				}
 			}
 			
 			visible = {
@@ -342,7 +349,6 @@ ideas = {
 		
 		scraping_the_barrel = {
 			
-			
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.25 group = mobilization_laws }
 				has_war = yes
@@ -357,6 +363,9 @@ ideas = {
 				#		ratio > 1
 				#	}
 				#}
+				NOT = {
+					has_country_flag = conscription_banned
+				}
 			}
 			
 			visible = {
@@ -428,8 +437,6 @@ ideas = {
 				production_speed_buildings_factor = -0.05
 			}
 
-			default = yes
-
 			cancel_if_invalid = no
 		}
 		
@@ -458,8 +465,6 @@ ideas = {
 				industrial_capacity_dockyard = 0.05
 				production_speed_buildings_factor = 0.05
 			}
-
-			default = yes
 
 			cancel_if_invalid = no
 		}

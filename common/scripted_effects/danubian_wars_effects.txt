@@ -85,10 +85,10 @@ AHE_setup_CZE = {
 	hidden_effect {
 		CZE = {
 			add_state_core = 9
-			#add_state_core = 69
+			add_state_core = 69
 			add_state_core = 74
 			add_state_core = 75
-			#add_state_core = 815
+			add_state_core = 815
 			
 			AHE = {
 				every_owned_state = {
@@ -114,6 +114,11 @@ AHE_setup_CZE = {
 		}
 		815 = {
 			set_demilitarized_zone = no
+		}
+		
+		add_to_array = {
+			array = austrian_breakaways
+			value = CZE
 		}
 	}
 }
@@ -213,6 +218,11 @@ AHE_setup_CRO = {
 			load_oob = CRO_danubian_war
 			AHE_remove_templates = yes
 		}
+		
+		add_to_array = {
+			array = austrian_breakaways
+			value = CRO
+		}
 	}
 }
 
@@ -274,8 +284,44 @@ AHE_setup_SLV = {
 			load_oob = SLV_danubian_war
 			AHE_remove_templates = yes
 		}
+		
+		add_to_array = {
+			array = austrian_breakaways
+			value = SLV
+		}
 	}
 }
+
+AHE_setup_PNB = {
+	hidden_effect {
+		PNB = {
+			add_state_core = 882
+			
+			AHE = {
+				every_owned_state = {
+					limit = { is_core_of = PNB }
+					
+					set_demilitarized_zone = no
+					remove_core_of = AHE
+					PNB = { transfer_state = PREV }
+					
+					teleport_armies = {
+						limit = { tag = AHE }
+						to_state_array = owned_controlled_states
+					}
+				}
+				
+				transfer_navy = {
+					target = PNB
+				}
+			}
+			
+			load_oob = PNB_danubian_war
+			AHE_remove_templates = yes
+		}
+	}
+}
+
 
 AHE_setup_SLO = {
 	hidden_effect {

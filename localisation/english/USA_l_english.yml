@@ -36,14 +36,14 @@
  POLITICS_NORMAN_THOMAS_DESC:0 "A Princeton graduate and Presbyterian minister, Norman Thomas made his first impression in politics with his pacifist, anti-war activism during the Great War, a position that drew him to the Socialist Party of America, who had delivered on their promises to keep America out of it. He gained popularity as an SPA journalist and was elected governor of New York in 1924. When Eugene V. Debs died in 1926, Thomas became the new head of the party as its leading non-immigrant member. He lost his first bid for president to Herbert Hoover in 1928, but after the Stock Market crash in 1929, Hoover’s popularity plummeted, and in 1932 President Norman Thomas and the SPA won the Presidency in a landslide. For all of his term, Norman Thomas has set about fixing the Great Depression with large amounts of government spending, public works projects, bureaucratic expansion, and worker-led recovery efforts. His recovery policies have been hindered and watered down by political resistance from the center and right wing, but where they have been enacted, have been both successful and popular."
 
  USA_james_maurer:0 "James Hudson Maurer"
- POLITICS_JAMES_MAURER_DESC:0 "James Hudson Maurer is perhaps one of the most remarkable men in the socialist party, being the epitomy of a rags to riches story. Born into a poor Pennsylvanian family of German emigres, the young James started working in a factory at age of 10, having to support the family once his father died of small pox. This experience would almost immediately begin to shape his political views, as he established connections with the Knights of Labor, a populist labor organisation, where he would bury his head deep in books on the economy and the plights of the working class.\n\nAfter a brief split within the socialist camp beginning in the 20th century over the role of the unions, James would promptly take the union side of the argument, successfully running as a working class champion for the house in the subsequent 1910, 12, and 14 elections, before briefly losing the elections of 16', still, this remarkable streak of victories would catch the eye of leading socialist Norman Thomas at the time, earning him the position of Speaker of the House.\n\nHaving climbed to such great heights, there is only one question left in the minds of both his admirers and his enemies: will he be the next in line after Thomas, or remain content in his position as an ardent knight of labor?"
+ POLITICS_JAMES_MAURER_DESC:0 "James Hudson Maurer is perhaps one of the most remarkable men in the socialist party, being the epitomy of a rags to riches story. Born into a poor Pennsylvanian family of German emigres, the young James started working in a factory at age of 10, having to support the family once his father died of smallpox. This experience would almost immediately begin to shape his political views, as he established connections with the Knights of Labor, a populist labor organisation, where he would bury his head deep in books on the economy and the plights of the working class.\n\nAfter a brief split within the socialist camp beginning in the 20th century over the role of the unions, James would promptly take the union side of the argument, successfully running as a working class champion for the house in the subsequent 1910, 12, and 14 elections, before briefly losing the elections of 16', still, this remarkable streak of victories would catch the eye of leading socialist Norman Thomas at the time, earning him the position of Speaker of the House.\n\nHaving climbed to such great heights, there is only one question left in the minds of both his admirers and his enemies: will he be the next in line after Thomas, or remain content in his position as an ardent knight of labor?"
 
  USA_earl_russell_browder:0 "Earl Russell Browder"
  POLITICS_EARL_BROWDER_DESC:0 ""
  USA_earl_browder_hog_desc:0 "§YVice President\nRevolutionary Socialism§!\n"
 
  USA_jack_reed:0 "John Silas Reed"
- POLITICS_JACK_REED_DESC:0 "John Silas Reed, simply known as "Jack" to his comrades, is not what you would typically expect from a hard-core socialist. Having grown in a privileged business oriented family background in Portland, Oregon, Reed was always the rather rebellious type, causing him to have a falling out with both his parents and the potential connections with business magnates, who viewed his writings for various newspapers such as the American Magazine as irrevocably heinous, causing a great deal of mental stress on the young pioneer in his youth.\n\nNonetheless, Reed has established a reputation as an adventurous and flamboyant character, for after arriving in New York, his career in journalism would quickly take off, through his coverage of the Paterson Strike, which no other reporter at the time would dare lay on their portfolio. He travelled to Mexico during the Mexican civil war, and relayed the bloody carnage of the European theatre of war in the Great War, as well as the Russian front being one of the few pacifist reporters to report on the war in such vivid, yet uncompromising detail. His book, "100 Days That Shook the World", a recollection of the first 100 days of the Debs presidency, has become quite possibly one of the most famous peices of literature of the early 20th century.\n\nNow after many years of involvement in the SPA, here he stands, Vice President. His brand of socialism is closely linked to Bukharin's, having become acquainted friends from his adventures in the Russian civil war, with him even going so far as to establish a Bukharinist wing within the party. A controversial man, his actions and writings have made him many friends, but many more enemies, making him the definitive picture of an idealistic, yet courageous man in a sea of political tepidness."
+ POLITICS_JACK_REED_DESC:0 "John Silas Reed, simply known as "Jack" to his comrades, is not what you would typically expect from a hard-core socialist. Born a child of privilege, in his grandparents' mansion to a business-oriented family from Portland, Oregon, from a young age Reed was the rather rebellious type. Ultimately culminating in a falling out with both his parents and the potential connections with business magnates, who viewed his writings for various newspapers such as the American Magazine as irrevocably heinous, causing a great deal of mental stress on the young pioneer in his youth.\n\nNonetheless, Reed has established a reputation as an adventurous and flamboyant character, willing to put himself into dangerous situations for a story. After arriving in New York, his career in journalism would quickly take off through his coverage of the Paterson Strike, which no other reporter at the time would dare lay on their portfolio. He traveled to Mexico during the Mexican Civil War, and relayed the bloody carnage of the European theatre during the Great War, as well as the Russian front, being one of the few pacifist reporters to report on the war in such vivid, yet uncompromising detail. His book, "100 Days That Shook the World", a recollection of the first 100 days of the Debs presidency, has become quite possibly one of the most famous pieces of literature of the early 20th century.\n\nNow, after many years of involvement in the SPA, here he stands, as Vice President. His brand of socialism is closely linked to Bukharin's, having become acquainted during his adventures in the Russian Civil War, with him even going so far as to establish a Bukharinist wing within the party. A controversial man, his actions and writings have made him many friends, but many more enemies, making him the definitive picture of an idealistic, yet courageous man in a sea of political tepidness."
  USA_jack_reed_hog_desc:0 "§YVice President\nRevolutionary Socialism§!\n"
 
  USA_henry_wallace:0 "Henry Agard Wallace"
@@ -53,6 +53,8 @@
  USA_charles_ruthenberg:0 "Charles Emil Ruthenberg"
 
  USA_william_foster:0 "Willam Zebulon Foster"
+ 
+ USA_alben_william_barkley:0 "Alben William Barkley"
 
  USA_joseph_lister_hill:0 "Joseph Lister Hill"
  POLITICS_LISTER_HILL_DESC:0 ""
@@ -62,7 +64,10 @@
  USA_gerald_lyman_smith:0 "Gerald Lyman Kenneth Smith"
 
  USA_william_dudley_pelley:0 "Willam Dudley Pelley"
-
+ 
+ USA_john_nance_garner:0 "John Nance Garner"
+ USA_john_nance_garner_desc:0 "§YVice President\nPopulist Conservatism§!\n"
+ 
  USA_max_shachtman:0 "Max Shachtman"
 
  USA_eugene_dennis:0 "Eugene Dennis"
@@ -104,7 +109,12 @@
  USA_martin_abern:0 "Martin Abern"
 
  USA_john_edgar_hoover:0 "John Edgar Hoover"
-
+ 
+ USA_john_dewey:0 "John Dewey"
+ USA_john_dewey_edu_desc:0 "§YSecretary of Education\nProgressive Liberalism§!\n"
+ 
+ USA_julius_robert_oppenheimer:0 "Julius Robert Oppenheimer"
+ 
  ### NATIONAL SPIRITS ###
  ### STARTING IDEAS ###
  USA_city_on_a_hill:0 "A City Upon A Hill"
@@ -174,14 +184,22 @@
  USA_safety_net_large:0 "American Safety Net - Large"
  USA_safety_net_large_desc:0 "Under Socialist Administrations, the State has begun building up a Safety Net for the American People. A large bureaucracy has been built up just around healthcare and insurance within our nation, a great and booming industry with immense profit margins from Government subsidies & dollars. Our opponents liken this to Communism, but these insults will do little to dissuade our social crusade."
  USA_safety_net_welfare_state:0 "The American Welfare State"
- USA_safety_net_welfare_state_desc:0 "Our goals have been completed, and the United States of America with the support of the Socialist Party of America has finally become a "Welfare State '', the benefits provided by our government to the people are wide-ranging and with immense inclusions for little to no cost towards your everyday American. Any form of free-market associated with insurance, healthcare, or benefits as a whole has been eradicated for the betterment of the workers."
-
+ USA_safety_net_welfare_state_desc:0 "Our goals have been completed, and the United States of America with the support of the Socialist Party of America has finally become a "Welfare State", the benefits provided by our government to the people are wide-ranging and with immense inclusions for little to no cost towards your everyday American. Any form of free-market associated with insurance, healthcare, or benefits as a whole has been eradicated for the betterment of the workers."
+ 
+ USA_stacked_supreme_court:0 "Stacked Supreme Court"
+ 
  USA_mexican_volunteers:0 "Mexican Volunteer Groups"
  USA_mexican_volunteers_lost_tt:0 "§RThis National Spirit will be removed after the war's conclusion!§!"
 
  USA_naval_act:0 "Naval Act"
  USA_naval_act_desc:0 "The threat of foreign powers grows larger every day - with the Japanese Empire to the East and the Imperialists to the West; there are few we can look at as friends in this day and age. The United States of America has long remained isolated largely due to our vast distance from the enemies that would seek to destroy us, our strength is the ocean and our command of it. There will never be a threat to our people if our ships keep their troops from our shores."
  USA_two_ocean_navy_act:0 "Two-Ocean Navy Act"
+ 
+ USA_the_pacific_war:0 "A Pacific War"
+ 
+ USA_sharing_our_knowledge:0 "Intel Exchanges"
+ USA_bomber_command_natspirit:0 "Bomber Command"
+ USA_full_ww2_commitment:0 "All for Democracy"
 
  ### MODIFIERS ###
  USA_dust_bowl_modifier:0 "The Dust Bowl"
@@ -331,12 +349,12 @@
 
  ### PHILIPPINES TREE ###
  USA_the_philippine_question:0 "The Philippine Question"
- USA_the_philippine_question_desc:0 ""
+ USA_the_philippine_question_desc:0 "For decades, American boots marched Philippine soil. Since we liberated them from Spain, we used it as a strategic point in the Pacific. Now, there are cries for independence, both here and there. We shouldn’t be hypocritical imperialists, we shouldn’t be the bourgeoisie over the archipelago, we should give them true freedom! We will focus on preparing the region for independence from America, turning it into a beacon in Asia.\n\nWe shall start with withdrawing our troops, and then we will build up infrastructure. From there, we shall supply the Philippines with more food, and once they can be at least semi-self sufficient, we will grant them the freedoms all of their citizens want."
  USA_the_philippine_question_tt:0 "Boys, we're pulling out of the Philippines."
  USA_indep_mission:0 "The Independence Mission"
- USA_indep_mission_desc:0 ""
+ USA_indep_mission_desc:0 "We have been informing the people of the Philippines of their upcoming independence. We have just started removing our troops. Several soldiers and sailors have been returning home. Small teams of advisors and engineers are remaining to support the construction of infrastructure and train Filipino citizens in taking up this task when the time comes.\n\nMore civilian engineers and social workers are traveling to the archipelago to assist with this task as well, and encouraging Filipinos to embrace social democratic ideas, all the while teaching them other democratic ideals are good too. Political advisors are helping set up political parties, and businessmen are helping set up local businesses before leaving what they called home for several years."
  USA_nation_building:0 "Nation Building"
- USA_nation_building_desc:0 ""
+ USA_nation_building_desc:0 "Small teams alone cannot do the job. Back home, we are encouraging our citizens to leave for the Philippines and volunteer in any way they can. We will develop clean water supplies, deliver fresh food, and build schools and workplaces. This influx will help the Philippines become ready for independence faster. Already, posters for political parties are being put up, and the last American soldier stepped off Filipino soil.\n\nMeanwhile, in the halls of Congress, representatives and senators are developing a new bill that will give the islands their freedom. Several politicians are eager about this new development, but there are a few who believe the Philippines should continue getting exploited. We will have to convince them that we are doing this for the good of all."
  USA_philippines_indep_act:0 "Philippines Independence Act"
  USA_philippines_indep_act_desc:0 ""
  USA_philippines_indep_act_tt:0 "We shall pass the §YPhilippines Independence Act§!."
@@ -449,11 +467,13 @@
  USA_spa_unity_large_gain_tt:0 "The£GFX_spa_texticon §RSocialists§! grow §Gsignificantly more united§!.\n"
  USA_spa_unity_lose_tt:0 "The£GFX_spa_texticon §RSocialists§! grow a §Rlittle less united§!.\n"
 
- USA_spa_militant_influence_gain_tt:0 "The §rMarxist Caucus§! grows a §Ylittle more influential§!.\n"
- USA_spa_unionist_influence_gain_tt:0 "The §RNew York Caucus§! grows a §Ylittle more influential§!.\n"
- USA_spa_progressive_influence_gain_tt:0 "The §PMilwaukee Caucus§! grows a §Ylittle more influential§!.\n"
+ USA_spa_militant_influence_gain_tt:0 "The §rCommittee§! grows a §Ylittle more influential§!.\n"
+ USA_spa_unionist_influence_gain_tt:0 "The §REastern Caucus§! grows a §Ylittle more influential§!.\n"
+ USA_spa_progressive_influence_gain_tt:0 "The §PWestern Caucus§! grows a §Ylittle more influential§!.\n"
 
- USA_spa_militant_approval_gain_tt:0 "The §rMarxist Caucus§!' approval of our administration §Gincreases§!.\n"
+ USA_spa_militant_approval_gain_tt:0 "The §rCommittee's§! approval of our administration §Gincreases§!.\n"
+ USA_spa_unionist_approval_gain_tt:0 "The §REastern Caucus'§! approval of our administration §Gincreases§!.\n"
+ USA_spa_progressive_approval_gain_tt:0 "The §PWestern Caucus'§! approval of our administration §Gincreases§!.\n"
 
  USA_party_dominant:0 "§Ydominant§!"
  USA_party_high_influence:0 "§Yhighly influential§!"
@@ -475,8 +495,11 @@
 
  USA_increase_unity:0 "Call a Party Conference"
  USA_socialists_fully_united:0 "The£GFX_spa_texticon §RSocialists§! are not fully united"
- USA_increase_militant_influence:0 "Placate the Marxists"
- USA_increase_moderate_influence:0 "Meet with the Progressives"
+ USA_expand_party_newspaper:0 "Expand the Party Newspaper"
+ USA_stand_against_imperialism:0 "Stand Against Imperialism"
+ USA_meet_with_nec:0 "Meet with the National Executive Committee"
+ USA_promote_law_and_order:0 "Promote Law and Order"
+ USA_maintain_social_spending:0 "Maintain Social Spending"
 
  USA_amendments_category:0 "To Make Amends"
  USA_amendments_category_desc:0 "The authority to amend the Constitution of the United States is derived from §YArticle V§! of the Constitution. The Constitution provides that an amendment may be proposed either by the Congress with a §Ytwo-thirds majority vote in both the House of Representatives and the Senate§! or by a constitutional convention called for by two-thirds of the State legislatures. Thus far, the method of amendment via constitutional convention has never been used. A proposed amendment becomes part of the Constitution as soon as it is §Yratified by three-fourths of the States (at this time 36 of 48 States)§!.\n\nWe currently have the support of X/36 state governments.\n\n§YNew England§!:[AMENDMENT_CONNECTICUT_SUPPORT][AMENDMENT_MAINE_SUPPORT][AMENDMENT_MASSACHUSETTS_SUPPORT][AMENDMENT_NEW_HAMPSHIRE_SUPPORT][AMENDMENT_RHODE_ISLAND_SUPPORT][AMENDMENT_VERMONT_SUPPORT]\n\n§YThe East Coast§!:[AMENDMENT_DELAWARE_SUPPORT][AMENDMENT_MARYLAND_SUPPORT][AMENDMENT_NEW_YORK_SUPPORT][AMENDMENT_NEW_JERSEY_SUPPORT][AMENDMENT_PENNSYLVANIA_SUPPORT][AMENDMENT_WEST_VIRGINIA_SUPPORT]\n\n§YThe Deep South§!:[AMENDMENT_ALABAMA_SUPPORT][AMENDMENT_ARKANSAS_SUPPORT][AMENDMENT_FLORIDA_SUPPORT][AMENDMENT_GEORGIA_SUPPORT][AMENDMENT_LOUISIANA_SUPPORT][AMENDMENT_MISSISSIPPI_SUPPORT][AMENDMENT_SOUTH_CAROLINA_SUPPORT]\n\n§YThe Upper South§!:[AMENDMENT_KENTUCKY_SUPPORT][AMENDMENT_NORTH_CAROLINA_SUPPORT][AMENDMENT_VIRGINIA_SUPPORT][AMENDMENT_TENNESSEE_SUPPORT]\n\n§YThe Southwest§!:[AMENDMENT_TEXAS_SUPPORT][AMENDMENT_OKLAHOMA_SUPPORT][AMENDMENT_NEW_MEXICO_SUPPORT][AMENDMENT_ARIZONA_SUPPORT]\n\n§YThe Great Lakes§!:[AMENDMENT_ILLINOIS_SUPPORT][AMENDMENT_INDIANA_SUPPORT][AMENDMENT_MICHIGAN_SUPPORT][AMENDMENT_OHIO_SUPPORT][AMENDMENT_WISCONSIN_SUPPORT]\n\n§YThe Great Plains§!:[AMENDMENT_MINNESOTA_SUPPORT][AMENDMENT_IOWA_SUPPORT][AMENDMENT_KANSAS_SUPPORT][AMENDMENT_MISSOURI_SUPPORT][AMENDMENT_NEBRASKA_SUPPORT][AMENDMENT_NORTH_DAKOTA_SUPPORT][AMENDMENT_SOUTH_DAKOTA_SUPPORT]\n\n§YThe Rockies§!:[AMENDMENT_COLORADO_SUPPORT][AMENDMENT_IDAHO_SUPPORT][AMENDMENT_MONTANA_SUPPORT][AMENDMENT_NEVADA_SUPPORT][AMENDMENT_UTAH_SUPPORT][AMENDMENT_WYOMING_SUPPORT]\n\n§YThe West Coast:§![AMENDMENT_CALIFORNIA_SUPPORT][AMENDMENT_OREGON_SUPPORT][AMENDMENT_WASHINGTON_SUPPORT]\n"

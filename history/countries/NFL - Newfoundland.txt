@@ -1,6 +1,6 @@
 ﻿capital = 331
 
-oob = "NFL"
+oob = "empty"
 
 # Starting tech
 set_technology = {
@@ -52,7 +52,7 @@ add_offsite_building = {
 create_country_leader = {
 	name = "William Coaker"
 	desc = ""
-	picture = "Portrait_NFL_William_Coaker.png"
+	picture = "gfx/leaders/NFL/Portrait_NFL_William_Coaker.png"
 	expire = "1965.1.1"
 	ideology = social_democracy_subtype
 	traits = {

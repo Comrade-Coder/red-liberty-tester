@@ -1562,7 +1562,7 @@ USA_bill_vote = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { bill_id = 21 }
+			check_variable = { bill_id = 21 } # nationalize defense industry
 		}
 		country_event = {
 			id = us_bill.21

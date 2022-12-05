@@ -53,6 +53,12 @@ defined_text = {
 defined_text = {
 	name = GetSubIdeologyAnarchism
 	text = {
+		trigger = {
+			FROM = { has_country_leader_ideology = anarcho_socialism_subtype }
+		}
+		localization_key = anarcho_socialism_subtype
+	}
+	text = {
 		localization_key = insurrectionary_anarchism
 	}
 }
@@ -85,6 +91,18 @@ defined_text = {
 		localization_key = de_leonism_subtype
 	}
 	text = {
+		trigger = {
+			FROM = { has_country_leader_ideology = scientific_socialism_subtype }
+		}
+		localization_key = scientific_socialism_subtype
+	}
+	text = {
+		trigger = {
+			FROM = { has_country_leader_ideology = left_nationalism_subtype }
+		}
+		localization_key = left_nationalism_subtype
+	}
+	text = {
 		localization_key = proletarian_dictatorship
 	}
 }
@@ -93,15 +111,27 @@ defined_text = {
 	name = GetSubIdeologyLibSoc
 	text = {
 		trigger = {
+			FROM = { has_country_leader_ideology = libertarian_socialism_subtype }
+		}
+		localization_key = libertarian_socialism_subtype
+	}
+	text = {
+		trigger = {
 			FROM = { has_country_leader_ideology = christian_socialism_subtype }
 		}
 		localization_key = christian_socialism_subtype
 	}
 	text = {
 		trigger = {
-			FROM = { has_country_leader_ideology = popular_front_subtype }
+			FROM = { has_country_leader_ideology = agrarian_socialism_subtype }
 		}
-		localization_key = popular_front_subtype
+		localization_key = agrarian_socialism_subtype
+	}
+	text = {
+		trigger = {
+			FROM = { has_country_leader_ideology = austromarxism_subtype }
+		}
+		localization_key = austromarxism_subtype
 	}
 	text = {
 		localization_key = libertarian_socialism
@@ -137,9 +167,9 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			FROM = { has_country_leader_ideology = liberal_corporatism_subtype }
+			FROM = { has_country_leader_ideology = liberal_radicalism_subtype }
 		}
-		localization_key = liberal_corporatism_subtype
+		localization_key = liberal_radicalism_subtype
 	}
 	text = {
 		localization_key = progressive_liberalism

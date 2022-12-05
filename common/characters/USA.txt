@@ -18,6 +18,22 @@ characters = {
 		}
 	}
 	
+	USA_elizabeth_flynn = {
+		name = USA_elizabeth_flynn
+		
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/USA/USA_Elizabeth_Flynn.png"
+			}
+		}
+		
+		country_leader = {
+			desc = "POLITICS_ELIZABETH_GURLEY_FLYNN_DESC"
+			ideology = anarcho_socialism_subtype
+			traits = {  }
+		}
+	}
+	
 	USA_charles_ruthenberg = {
 		name = USA_charles_ruthenberg
 		
@@ -175,6 +191,22 @@ characters = {
 		}
 	}
 	
+	USA_alben_william_barkley = {
+		name = USA_alben_william_barkley
+		
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_USA_alben_william_barkley"
+			}
+		}
+		
+		country_leader = {
+			desc = "POLITICS_ALBEN_BARKLEY_DESC"
+			ideology = progressive_liberalism_subtype
+			traits = {  }
+		}
+	}
+	
 	USA_joseph_lister_hill = {
 		name = USA_joseph_lister_hill
 		
@@ -228,7 +260,7 @@ characters = {
 		
 		portraits = {
 			civilian = {
-				#large = "GFX_portrait_USA_william_dudley_pelley"
+				large = "GFX_portrait_USA_william_dudley_pelley"
 			}
 		}
 		
@@ -238,6 +270,47 @@ characters = {
 			traits = {  }
 		}
 	}
+	
+	### VICE PRESIDENTS ###
+	
+	USA_john_nance_garner = {
+		name = USA_john_nance_garner
+		
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/USA/USA_Cactus_Jack.png"
+			}
+		}
+		
+		advisor = {
+			cost = 100
+			
+			slot = head_of_government
+			idea_token = USA_john_nance_garner_hog
+			ledger = civilian
+			
+			cost = 0
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			visible = {
+				
+			}
+			
+			available = {
+				
+			}
+			
+			traits = {
+				hog_smiling_oilman
+			}
+		}
+	}
+	
+	### MINISTERS ###
 	
 	USA_max_shachtman = {
 		name = USA_max_shachtman
@@ -477,40 +550,6 @@ characters = {
 		}
 	}
 	
-	USA_elizabeth_flynn = {
-		name = USA_elizabeth_flynn
-		
-		portraits = {
-			army = {
-				small = "gfx/interface/ministers/USA/USA_Elizabeth_Flynn.png"
-			}
-		}
-		
-		advisor = {
-			cost = 100
-			
-			slot = political_advisor
-			idea_token = USA_elizabeth_flynn
-			ledger = civilian
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-			visible = {
-				
-			}
-			
-			available = {
-				
-			}
-			
-			traits = {
-				
-			}
-		}
-	}
-	
 	USA_john_lewis = {
 		name = USA_john_lewis
 		
@@ -672,7 +711,7 @@ characters = {
 			}
 			
 			available = {
-				
+				has_completed_focus = USA_right_to_learn
 			}
 			
 			traits = {
@@ -938,7 +977,7 @@ characters = {
 			}
 			
 			available = {
-				
+				has_completed_focus = USA_butler_reform_plan
 			}
 			
 			traits = {
@@ -1340,17 +1379,42 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/USA/Portrait_USA_Fox_Conner.png"
+				small = "gfx/interface/ministers/USA/military/USA_Fox_Conner.png"
 			}
 		}
 		
 		corps_commander = {
-			traits = { old_guard politically_connected }
+			traits = {
+				old_guard
+				politically_connected
+				skilled_staffer
+			}
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
 			planning_skill = 3
 			logistics_skill = 2
 			legacy_id = 14
+		}
+		
+		advisor = {
+			cost = 100
+			
+			slot = high_command
+			idea_token = USA_fox_conner_high_command
+			ledger = army
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			available = {
+				
+			}
+			
+			traits = {
+				army_logistics_2
+			}
 		}
 	}
 	
@@ -1360,6 +1424,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/USA/Portrait_USA_Frank_Maxwell_Andrews.png"
+				small = "gfx/interface/ministers/USA/military/USA_Frank_Maxwell_Andrews.png"
 			}
 		}
 		
@@ -1400,6 +1465,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/USA/Portrait_USA_Oscar_Westover.png"
+				small = "gfx/interface/ministers/USA/military/USA_Oscar_Westover.png"
 			}
 		}
 		
@@ -1419,7 +1485,7 @@ characters = {
 			}
 			
 			traits = {
-				air_close_air_support_2
+				air_chief_ground_support_2
 			}
 		}
 		
@@ -1504,6 +1570,10 @@ characters = {
 				original_tag = USA
 			}
 			
+			available = {
+				not_already_hired_except_as = navy_chief
+			}
+			
 			traits = {
 				navy_carrier_2
 			}
@@ -1522,6 +1592,22 @@ characters = {
 			defense_skill = 3
 			maneuvering_skill = 3
 			coordination_skill = 6
+		}
+		
+		advisor = {
+			cost = 100
+			
+			slot = theorist
+			idea_token = USA_ernest_joseph_king_theorist
+			ledger = navy
+			
+			available = {
+				not_already_hired_except_as = theorist
+				has_completed_focus = USA_naval_air
+			}
+			traits = {
+				naval_aviation_pioneer
+			}
 		}
 	}
 	
@@ -1611,7 +1697,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/USA/Portrait_USA_Frank_J_Fletcher.png"
-				#small = "gfx/interface/advisors/USA/USA_frank_jack_fletcher.png"
+				small = "gfx/interface/ministers/USA/military/USA_Frank_Jack_Fletcher.png"
 			}
 		}
 		
@@ -1655,6 +1741,33 @@ characters = {
 			defense_skill = 2
 			maneuvering_skill = 1
 			coordination_skill = 2
+		}
+	}
+	
+	### Theorists ###
+	
+	USA_julius_robert_oppenheimer = {
+		name = USA_julius_robert_oppenheimer
+		
+		portraits = {
+			army = {
+				small = "GFX_idea_robert_oppenheimer"
+			}
+		}
+		
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = robert_oppenheimer
+			ledger = army
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			traits = {
+				nuclear_scientist
+			}
 		}
 	}
 }
