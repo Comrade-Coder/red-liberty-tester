@@ -2,102 +2,25 @@
 
 oob = "empty"
 
-set_research_slots = 3
-# Starting tech
-set_technology = {
-	infantry_weapons = 1
-	infantry_weapons1 = 1
-	tech_support = 1
-	tech_engineers = 1
-	tech_recon = 1
-	tech_mountaineers = 1
-	motorised_infantry = 1
-	gw_artillery = 1
-	interwar_antiair = 1
-	gwtank = 1
-	basic_light_tank = 1
-	improved_light_tank = 1
-	early_fighter = 1
-	naval_bomber1 = 1
-	cv_early_fighter = 1
-	cv_naval_bomber1 = 1
-	early_bomber = 1
-	tactical_bomber1 = 1
-	CAS1 = 1
-	trench_warfare = 1
-	fleet_in_being = 1
-	fuel_silos = 1
-	fuel_refining = 1
-}
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-		set_technology = {
-		early_submarine = 1
-		basic_submarine = 1
-		early_destroyer = 1
-		basic_destroyer = 1
-		early_light_cruiser = 1
-		basic_light_cruiser = 1
-		early_heavy_cruiser = 1
-		basic_heavy_cruiser = 1
-		early_battleship = 1
-		early_battlecruiser = 1
-		basic_battlecruiser = 1
-		early_carrier = 1
-		transport = 1
-	}
-}
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
-		early_ship_hull_cruiser = 1
-		early_ship_hull_heavy = 1
-		basic_ship_hull_heavy = 1
-		early_ship_hull_carrier = 1
-		basic_battery = 1
-		basic_light_battery = 1
-		basic_medium_battery = 1
-		basic_torpedo = 1
-		basic_depth_charges = 1
-		basic_secondary_battery = 1
-		basic_heavy_armor_scheme = 1
-		mtg_transport = 1
-	}
-}
-if = {
-	limit = {
-		has_dlc = "La Resistance"
-	}
-	set_technology = {
-		armored_car1 = 1
-	}
-}
-
-set_convoys = 20
+set_research_slots = 2
 
 set_politics = {
-	ruling_party = proletarian_dictatorship
+	ruling_party = revolutionary_socialism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	insurrectionary_anarchism = 0
-	revolutionary_autocracy = 2
-	proletarian_dictatorship = 4
-	libertarian_socialism = 17
+	anarchism = 0
+	vanguard_socialism = 2
+	revolutionary_socialism = 4
+	democratic_socialism = 17
 	social_democracy = 28
 	progressive_liberalism = 6
-	market_libertarianism = 4
+	liberal_conservatism = 4
 	national_conservatism = 21
 	authoritarian_democracy = 2
-	autocratic_despotism = 2
-	far_right_authoritarianism = 5
+	despotism = 2
+	ultraconservatism = 5
 	fascism = 9
 }

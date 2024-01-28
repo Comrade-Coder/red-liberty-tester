@@ -4,7 +4,7 @@ add_namespace = us_election_trigger
 
 country_event = { # 1936 election trigger
 	id = us_election.1
-	title = "Election Day"
+	title = us_election.1.title
 	desc = us_election.1.desc
 	picture = GFX_report_event_ballot_box
 
@@ -28,7 +28,7 @@ country_event = { # 1936 election trigger
 
 country_event = {
 	id = us_election.2
-	title = "The Results"
+	title = us_election.2.title
 	desc = us_election.2.desc
 	picture = GFX_report_event_white_house
 
@@ -38,6 +38,7 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = us_election_trigger.12 days = 30 }
 			clr_country_flag = USA_presidential_elections
+			set_country_flag = USA_1936_election_over
 		}
 	}
 	
@@ -113,6 +114,18 @@ country_event = {
 	}
 }
 
+country_event = { # currently unused
+	id = us_election.3
+	title = us_election.3.title
+	desc = us_election.3.desc
+
+	is_triggered_only = yes
+	
+	option = {
+		name = us_election.3.a
+	}
+}
+
 country_event = { # house of reps votes
 	id = us_election.4
 	title = "House of Representatives votes on the Presidency"
@@ -131,7 +144,7 @@ country_event = { # house of reps votes
 			id = worldnews.4
 			hours = 6
 		}
-		set_country_flag = USA_thomas_elected
+		set_country_flag = USA_1936_election_socialist_victory
 		remove_ideas = {
 			USA_election_chaos
 		}
@@ -147,7 +160,7 @@ country_event = { # house of reps votes
 			id = worldnews.5
 			hours = 6
 		}
-		set_country_flag = USA_lister_elected
+		set_country_flag = USA_1936_election_democrat_victory
 		remove_ideas = {
 			USA_election_chaos
 		}
@@ -163,7 +176,7 @@ country_event = { # house of reps votes
 			id = worldnews.6
 			hours = 6
 		}
-		set_country_flag = USA_lindy_elected
+		set_country_flag = USA_1936_election_afp_victory
 		remove_ideas = {
 			USA_election_chaos
 		}
@@ -179,9 +192,7 @@ country_event = { # thomas inaug day
 	is_triggered_only = yes
 	
 	immediate = {
-		hidden_effect = {
-			scoped_sound_effect = "USA_oath"
-		}
+		
 	}
 	
 	option = { # 
@@ -191,7 +202,7 @@ country_event = { # thomas inaug day
 		}
 		if = {
 			limit = {
-				has_country_flag = USA_progressive_veep
+				has_country_flag = USA_1936_henry_wallace_hog
 			}
 			add_ideas = {
 				USA_henry_wallace_hog
@@ -199,7 +210,7 @@ country_event = { # thomas inaug day
 		}
 		else_if = {
 			limit = {
-				has_country_flag = USA_radical_veep
+				has_country_flag = USA_1936_earl_browder_hog
 			}
 			add_ideas = {
 				USA_earl_browder_hog
@@ -212,20 +223,19 @@ country_event = { # thomas inaug day
 
 country_event = { # lister inaug day
 	id = us_election.7
-	title = "Inuaguration Day"
+	title = us_election.7.title
 	desc = us_election.7.desc
 
 	is_triggered_only = yes
 	
 	immediate = {
-		hidden_effect = {
-			scoped_sound_effect = "USA_oath"
-		}
+		
 	}
 	
 	option = { # 
 		name = us_election.7.a
 		USA_lister_pres_setup = yes
+		add_ideas = USA_john_nance_garner_hog
 	}
 }
 
@@ -252,7 +262,7 @@ country_event = { # 1940 election trigger
 	
 	immediate = {
 		hidden_effect = {
-			US_hold_presidential_election = yes
+			USA_hold_presidential_election = yes
 			set_country_flag = USA_presidential_conclusion
 		}
 	}
@@ -277,6 +287,7 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = us_election_trigger.12 days = 30 }
 			clr_country_flag = USA_presidential_elections
+			set_country_flag = USA_1940_election_over
 		}
 	}
 	
@@ -284,14 +295,42 @@ country_event = {
 		name = us_election.21.a
 		trigger = {
 			check_variable = { ROOT.socialist_electoral_votes > 290 }
+			has_country_flag = USA_thomas_will_run
+		}
+		country_event = {
+			id = us_election.22
+			days = 116
+		}
+		country_event = {
+			id = worldnews.8
+			hours = 6
 		}
 	}
 	
 	option = { # democrat victory
-		name = us_election.2.b
+		name = us_election.21.b
 		trigger = {
 			check_variable = { ROOT.democrat_electoral_votes > 290 }
 		}
+	}
+}
+
+country_event = { # thomas inaug day 1940
+	id = us_election.22
+	title = us_election.22.title
+	desc = us_election.22.desc
+	picture = GFX_report_event_thomas_cheer
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	
+	option = { # 
+		name = us_election.22.a
+		USA_thomas_third_term_setup = yes
+		add_political_power = 100
 	}
 }
 
@@ -440,8 +479,8 @@ country_event = { #mark states for election
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = USA_ELECTION_OUTCOME
-					option = USA_ELECTION_OUTCOME_DEMOCRAT
+					rule = USA_ELECTION_1936_OUTCOME
+					option = USA_ELECTION_1936_OUTCOME_DEMOCRAT
 				}
 			}
 		}
@@ -465,8 +504,8 @@ country_event = { #mark states for election
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = USA_ELECTION_OUTCOME
-					option = USA_ELECTION_OUTCOME_SOCIALIST
+					rule = USA_ELECTION_1936_OUTCOME
+					option = USA_ELECTION_1936_OUTCOME_SOCIALIST
 				}
 			}
 		}
@@ -478,6 +517,7 @@ country_event = { #hold the election
 	id = us_election_trigger.2
  	title = us_election_trigger.2.title
  	desc = us_election_trigger.2.desc
+	picture = GFX_report_event_ballot_box
 
 	immediate = {
  		hidden_effect = {
@@ -485,6 +525,13 @@ country_event = { #hold the election
 			
 			USA_hold_senate_election = yes
 			USA_recalc_house = yes
+			
+			if = {
+				limit = {
+					check_variable = { bill_id > 0 }
+				}
+				USA_clamp_bill_election = yes
+			}
 		}
 	}
 
@@ -543,6 +590,7 @@ country_event = { #Hold Class II election
 	id = us_election_trigger.4
  	title = us_election_trigger.4.title
  	desc = us_election_trigger.4.desc
+	picture = GFX_report_event_ballot_box
 
 	immediate = {
  		hidden_effect = {
@@ -550,6 +598,13 @@ country_event = { #Hold Class II election
 			
 			USA_hold_senate_election = yes
 			USA_recalc_house = yes
+			
+			if = {
+				limit = {
+					check_variable = { bill_id > 0 }
+				}
+				USA_clamp_bill_election = yes
+			}
 		}
 	}
 
@@ -608,6 +663,7 @@ country_event = { #Hold Class III election
 	id = us_election_trigger.7
  	title = us_election_trigger.7.title
  	desc = us_election_trigger.7.desc
+	picture = GFX_report_event_ballot_box
 
 	immediate = {
  		hidden_effect = {
@@ -615,6 +671,13 @@ country_event = { #Hold Class III election
 			
 			USA_hold_senate_election = yes
 			USA_recalc_house = yes
+			
+			if = {
+				limit = {
+					check_variable = { bill_id > 0 }
+				}
+				USA_clamp_bill_election = yes
+			}
 		}
 	}
 

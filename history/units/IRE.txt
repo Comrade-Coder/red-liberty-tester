@@ -43,10 +43,8 @@ division_template = { # to represent the real cavalry divisions, which were mech
 	regiments = {
 		armored_car = { x = 0 y = 0 }
 		armored_car = { x = 0 y = 1 }
-		light_armor  = { x = 1 y = 0 }
 	}
 }	
-
 
 units = {
 	### Army High Command ###
@@ -90,16 +88,6 @@ units = {
 		start_experience_factor = 0.4
 		start_equipment_factor = 1.0
 
-	}
-}
-
-air_wings = {
-
-	113 = {
-		fighter_equipment_0 = {
-			owner = "IRE"
-			amount = 20
-		}
 	}
 }
 

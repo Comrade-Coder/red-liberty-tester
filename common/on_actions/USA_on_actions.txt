@@ -1,6 +1,15 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			USA = {
+				if = {
+					limit = {
+						is_debug = yes
+					}
+					set_country_flag = USA_state_full_info
+				}
+			}
+			
 			### POLITICAL SETUP ###
 			USA = {
 				add_to_array = { country_info_array = 1 }
@@ -18,7 +27,7 @@ on_actions = {
 					USA_convert_party_pop_percentage = yes
 				}
 			}
-			USA = {
+			USA = { # Congress
 				set_variable = { senators_total = 96 }
 				set_variable = { representatives_total = 483 }
 				USA_congress_quorum = yes
@@ -53,45 +62,56 @@ on_actions = {
 				}
 				USA_calc_congress_control = yes
 			}
-			
-			#USA = {
-			#	USA_calc_poverty_goal = yes
-			#}
+			USA = { # Supreme Court
+				set_variable = { supreme_court_lean = -6 } # LEAN
+				
+				country_event = { # Chief Justice Devanter Dies
+					id = united_states_supreme_court.3
+					days = 1865
+				}
+			}
 			
 			USA = {
 				##### ELECTION EVENTS #####
 			
 				### 1936 ELECTIONS ###
-				country_event = { id = us_election_trigger.3 days = 30 } # SENATE setup - class ii
+				country_event = { id = us_election_trigger.3 days = 30 } # SETUP - class ii
 				country_event = { id = united_states.4 days = 150 } # SPNC
 				country_event = { id = united_states.2 days = 163 } # RNC
 				country_event = { id = united_states.3 days = 176 } # DNC
 				country_event = { id = us_election.1 days = 309 } # ELECTION
 				
 				### 1938 MIDTERM ELECTIONS ###
-				country_event = { id = us_election_trigger.6 days = 760 } # SENATE setup
+				country_event = { id = us_election_trigger.6 days = 760 } # SETUP
 				
 				### 1940 ELECTIONS ###
-				country_event = { id = us_election_trigger.1 days = 1491 } # SENATE setup - class iii
+				country_event = { id = us_election_trigger.1 days = 1491 } # SETUP - class iii
 				country_event = { id = united_states.12 days = 1600 } # thomas choice
 				country_event = { id = united_states.13 days = 1612 } # SPNC
 				country_event = { id = united_states.11 days = 1627 } # DNC
 				country_event = { id = us_election.20 days = 1771 } # ELECTION
 				
 				### 1942 MIDTERM ELECTIONS ###
-				country_event = { id = us_election_trigger.3 days = 2221 } # SENATE setup - class i
+				country_event = { id = us_election_trigger.3 days = 2221 } # SETUP - class i
 				
 				### 1944 ELECTIONS ###
-				country_event = { id = us_election_trigger.6 days = 2952 } # SENATE setup - class ii
+				country_event = { id = us_election_trigger.6 days = 2952 } # SETUP - class ii
 				
 				### 1946 MIDTERM ELECTIONS ###
-				country_event = { id = us_election_trigger.1 days = 3682 } # SENATE setup - class iii
+				country_event = { id = us_election_trigger.1 days = 3682 } # SETUP - class iii
 				
 				### 1948 ELECTIONS ###
-				country_event = { id = us_election_trigger.3 days = 4412 } # SENATE setup - class i
+				country_event = { id = us_election_trigger.3 days = 4412 } # SETUP - class i
 			}
 			
 			USA = {
+				### COTTON STRIKE ###
+				country_event = {
+					id = united_states.7
+					days = 530
+					random_days = 30
+				}
+				
 				### SPA EVENTS ###
 				country_event = {
 					id = united_states_thomas.1
@@ -117,11 +137,33 @@ on_actions = {
 					id = united_states_thomas.23
 					days = 135 # just before primaries
 				}
-				country_event = { # I HATE THE ANTICHRIST
-					id = united_states_insurgency.1
-					days = 510 # around the middle of may 1937
-					days_random = 15
+				
+				### PUERTO RICO ###
+				country_event = { # start of puerto rico event chain
+					id = united_states_thomas.100
+					days = 53
 				}
+				country_event = { # ponce massacre
+					id = united_states_thomas.101
+					days = 445
+				}
+				country_event = { # winships interference
+					id = united_states_thomas.102
+					days = 938
+				}
+				country_event = { # pantin's letter
+					id = united_states_thomas.103
+					days = 947
+				}
+				
+				### INSURGENCY ###
+				#country_event = { # I HATE THE ANTICHRIST
+				#	id = united_states_insurgency.1
+				#	days = 510 # around the middle of may 1937
+				#	random_days = 15
+				#}
+				
+				### MANHATTAN PROJECT ###
 				country_event = { # manhattan project start
 					id = united_states_mproject.1
 					days = 1809 # december 14, 1940
@@ -141,7 +183,7 @@ on_actions = {
 				country_event = { # howie boy endorses thomas
 					id = united_states_flavor.3
 					days = 260
-					days_random = 15
+					random_days = 15
 				}
 				country_event = { # fourth of july
 					id = united_states_flavor.4
@@ -166,14 +208,31 @@ on_actions = {
 				country_event = { # john reed passes away
 					id = united_states_flavor.10
 					days = 851 # may 1, 1938
-					days_random = 50
+					random_days = 50
+				}
+				country_event = { # the pale poison
+					id = united_states_flavor.11
+					days = 900
+					random_days = 30 # early to mid 1938
+				}
+				country_event = {  # charles lindbergh returns
+					id = united_states_flavor.12
+					days = 1100
+					random_days = 30 # late 1938
+				}
+				country_event = {  # formation of the upc
+					id = united_states_flavor.13
+					days = 900
+					random_days = 60 # early to mid 1938
 				}
 			}
 			
-			### produce distribution ###
+			### misc variables ###
 			USA = {
 				set_variable = { USA_produce_units = 3 }
 				set_variable = { USA_produce_decay_rate = 55 }
+				
+				set_variable = { USA_poverty_threshold = 55 }
 			}
 			
 			### DUST BOWL SETUP ###
@@ -202,6 +261,48 @@ on_actions = {
 					modifier = USA_dust_bowl_modifier
 				}
 			}
+			
+			### DRY STATES ###
+			363 = {
+				add_dynamic_modifier = {
+					modifier = USA_dry_state
+				}
+			}
+			368 = {
+				add_dynamic_modifier = {
+					modifier = USA_dry_state
+				}
+			}
+			370 = {
+				add_dynamic_modifier = {
+					modifier = USA_dry_state
+				}
+			}
+			374 = {
+				add_dynamic_modifier = {
+					modifier = USA_dry_state
+				}
+			}
+			377 = {
+				add_dynamic_modifier = {
+					modifier = USA_dry_state
+				}
+			}
+			383 = {
+				add_dynamic_modifier = {
+					modifier = USA_dry_state
+				}
+			}
+			390 = {
+				add_dynamic_modifier = {
+					modifier = USA_dry_state
+				}
+			}
+			832 = {
+				add_dynamic_modifier = {
+					modifier = USA_dry_state
+				}
+			}
 		}
 	}
 	
@@ -219,14 +320,62 @@ on_actions = {
 		}
 	}
 	
-	#on_monthly_USA = { # economy stuff
-	#	effect = {
-	#		add_to_variable = { USA_unemployment = USA_unemployment_change }
-	#		add_to_variable = { USA_poverty = USA_poverty_change }
-	#		add_to_variable = { USA_inflation = USA_inflation_change }
-	#		USA_calc_poverty_goal = yes
-	#	}
-	#}
+	on_weekly_USA = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = USA_insurgency_start
+				}
+				random_list = {
+					75 = {
+						random_owned_controlled_state = {
+							limit = {
+								has_state_flag = USA_active_insurgency
+								infrastructure > 0
+							}
+							damage_building = {
+								type = infrastructure
+								damage = 1
+							}
+						}
+					}
+					25 = {
+						
+					}
+				}
+				random_list = {
+					75 = {
+						random_owned_controlled_state = {
+							limit = {
+								has_state_flag = USA_active_insurgency
+								infrastructure > 0
+							}
+							damage_building = {
+								type = industrial_complex
+								damage = 1
+							}
+						}
+					}
+					25 = {
+						
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					check_variable = { USA.poverty_rate < USA_poverty_threshold }
+				}
+				USA = {
+					subtract_from_variable = { USA_poverty_threshold = 5 }
+					country_event = {
+						id = united_states.15
+						hours = 6
+					}
+				}
+			}
+		}
+	}
 	
 	on_monthly_USA { # update - kwik mafs
 		effect = {
@@ -253,8 +402,49 @@ on_actions = {
 				}
 				USA_mproject_monthly_pulse = yes
 			}
+			
+			### very hacky method to naturally improve the spirit over time ###
+			add_to_variable = { USA_month_counter = 1 }
+			if = {
+				limit = {
+					check_variable = { USA_month_counter = 12 }
+					set_variable = { USA_month_counter = 0 }
+				}
+				if = {
+					limit = {
+						has_country_flag = social_security_passed
+					}
+					improve_great_depression = yes
+				}
+			}
+
+			### Supreme Court Retirements ###
+			random_list = {
+				5 = {
+					country_event = {
+						id = united_states_supreme_court.1
+						random_days = 14
+					}
+					set_country_flag = {
+						flag = USA_justice_retired
+						days = 90
+					}
+				}
+				95 = {
+					
+				}
+			}
 		}
 	}
+	
+	#on_monthly_USA = { # economy stuff
+	#	effect = {
+	#		add_to_variable = { USA_unemployment = USA_unemployment_change }
+	#		add_to_variable = { USA_poverty = USA_poverty_change }
+	#		add_to_variable = { USA_inflation = USA_inflation_change }
+	#		USA_calc_poverty_goal = yes
+	#	}
+	#}
 	
 	# completely deprecated now
 	# moved to countdown decision - moved again to on_actions above

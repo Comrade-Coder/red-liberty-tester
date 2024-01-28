@@ -1,4 +1,5 @@
 add_conflict_effect = {
+	custom_effect_tooltip = foreign_conflict_added
 	if = {
 		limit = { NOT = { is_in_array = { active_conflicts = conflict_id } } }
 		add_to_array = { active_conflicts = conflict_id }
@@ -58,7 +59,7 @@ end_silver_legion_conflict = {
 	set_temp_variable = { conflict_id = 3 }
 	remove_conflict_effect = yes
 	
-	clr_variable = USA_insurgency_strength
+	clear_variable = USA_insurgency_strength
 	remove_ideas = {
 		USA_insurgency_idea
 	}

@@ -24,6 +24,54 @@ ideas = {
 			}
 		}
 		
+		USA_the_tame_army = {
+			picture = generic_army_problems
+			
+			removal_cost = -1 
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			available = {
+				always = yes
+			}
+			
+			allowed = {
+				always = no
+			}
+				
+			modifier = {
+				#modifier_army_sub_unit_infantry_attack_factor  = -0.05
+				#modifier_army_sub_unit_infantry_defence_factor = -0.05
+				conscription_factor = -0.25
+				army_org_factor = -0.1
+				planning_speed = -0.15
+				training_time_factor = 0.5
+			}
+		}
+		
+		USA_jim_crow = {
+			
+			removal_cost = -1 
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			available = {
+				always = yes
+			}
+			
+			allowed = {
+				always = no
+			}
+				
+			modifier = {
+				conscription_factor = -0.15
+			}
+		}
+		
 		USA_ghost_of_monroe = {
 			
 			removal_cost = -1 
@@ -58,15 +106,12 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 
 			modifier = {
-				conscription_factor = 0.15
-				army_org_factor = 0.1
-				planning_speed = 0.15
-				max_planning_factor = 0.15
-				war_support_factor = 0.25
+				amphibious_invasion = 0.1
+				naval_invasion_prep_speed = 0.15
 			}
 	    }
 		
@@ -83,7 +128,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 
 			modifier = {
@@ -107,7 +152,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -117,6 +162,7 @@ ideas = {
 		}
 		
 		USA_the_great_depression_1 = {
+			name = USA_the_great_depression
 			
 			removal_cost = -1 
 			
@@ -129,7 +175,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -143,6 +189,7 @@ ideas = {
 		
 		USA_the_great_depression_2 = {
 			picture = USA_the_great_depression_1
+			name = USA_the_great_depression
 			
 			removal_cost = -1 
 			
@@ -155,7 +202,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -169,6 +216,7 @@ ideas = {
 		
 		USA_the_great_depression_3 = {
 			picture = USA_the_great_depression_1
+			name = USA_the_great_depression
 			
 			removal_cost = -1 
 			
@@ -181,7 +229,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -195,6 +243,7 @@ ideas = {
 		
 		USA_the_great_depression_4 = {
 			picture = USA_the_great_depression_1
+			name = USA_the_great_depression
 			
 			removal_cost = -1 
 			
@@ -207,7 +256,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -221,6 +270,7 @@ ideas = {
 		
 		USA_the_great_depression_5 = {
 			picture = USA_the_great_depression_1
+			name = USA_the_great_depression
 			
 			removal_cost = -1 
 			
@@ -233,7 +283,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -247,6 +297,7 @@ ideas = {
 		
 		USA_the_great_depression_6 = {
 			picture = USA_the_great_depression_1
+			name = USA_the_great_depression
 			
 			removal_cost = -1 
 			
@@ -259,7 +310,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -273,6 +324,7 @@ ideas = {
 		
 		USA_the_great_depression_7 = {
 			picture = USA_the_great_depression_1
+			name = USA_the_great_depression
 			
 			removal_cost = -1 
 			
@@ -285,7 +337,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -299,6 +351,7 @@ ideas = {
 		
 		USA_the_great_depression_8 = {
 			picture = USA_the_great_depression_1
+			name = USA_the_great_depression
 			
 			removal_cost = -1 
 			
@@ -311,7 +364,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -325,6 +378,7 @@ ideas = {
 		
 		USA_the_great_depression_9 = {
 			picture = USA_the_great_depression_1
+			name = USA_the_great_depression
 			
 			removal_cost = -1 
 			
@@ -337,7 +391,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -351,6 +405,7 @@ ideas = {
 		
 		USA_the_great_depression_10 = {
 			picture = USA_the_great_depression_1
+			name = USA_the_great_depression
 			
 			removal_cost = -1 
 			
@@ -363,7 +418,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -372,6 +427,81 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.05
 				production_factory_efficiency_gain_factor = -0.05
 				industrial_capacity_factory = -0.05
+			}
+		}
+		
+		USA_the_new_economy_1 = {
+			name = USA_the_new_economy
+			
+			removal_cost = -1 
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			available = {
+				always = yes
+			}
+			
+			allowed = {
+				always = no
+			}
+				
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		USA_the_new_economy_2 = {
+			picture = USA_the_new_economy_1
+			name = USA_the_new_economy
+			
+			removal_cost = -1 
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			available = {
+				always = yes
+			}
+			
+			allowed = {
+				always = no
+			}
+				
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.075
+			}
+		}
+		
+		USA_the_new_economy_3 = {
+			picture = USA_the_new_economy_1
+			name = USA_the_new_economy
+			
+			removal_cost = -1 
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			available = {
+				always = yes
+			}
+			
+			allowed = {
+				always = no
+			}
+				
+			modifier = {
+				production_speed_buildings_factor = 0.075
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.1
 			}
 		}
 		
@@ -388,7 +518,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -409,7 +539,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -431,7 +561,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -456,7 +586,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -481,7 +611,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -506,7 +636,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -531,7 +661,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -556,7 +686,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -578,7 +708,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -588,6 +718,7 @@ ideas = {
 		}
 		
 		USA_clashes_with_the_courts = {
+			picture = generic_neutrality_drift_bonus
 			
 			removal_cost = -1 
 			
@@ -600,12 +731,12 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
-				political_power_gain = -0.1
-				stability_factor = -0.05
+				political_power_factor = -0.25
+				custom_modifier_tooltip = USA_clashes_with_the_courts_tt
 			}
 		}
 		
@@ -622,7 +753,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -645,7 +776,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -668,7 +799,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -691,7 +822,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -715,7 +846,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -745,7 +876,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -766,7 +897,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -787,7 +918,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -810,7 +941,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -832,7 +963,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -877,7 +1008,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -898,7 +1029,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -919,7 +1050,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -940,7 +1071,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -961,7 +1092,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -983,7 +1114,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -1006,7 +1137,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -1027,7 +1158,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -1049,7 +1180,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -1071,7 +1202,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -1094,7 +1225,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -1118,11 +1249,11 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 			
 			equipment_bonus = {
-				CAS_equipment = {
+				small_plane_cas_airframe = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
@@ -1146,15 +1277,15 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 			
 			equipment_bonus = {
-				tac_bomber_equipment = {
+				medium_plane_airframe = {
 					build_cost_ic = -0.075
 					instant = yes
 				}
-				strat_bomber_equipment = {
+				large_plane_airframe = {
 					build_cost_ic = -0.075
 					instant = yes
 				}
@@ -1180,7 +1311,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -1201,7 +1332,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -1223,7 +1354,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -1248,7 +1379,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -1273,7 +1404,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -1302,7 +1433,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -1329,7 +1460,7 @@ ideas = {
 			}
 			
 			allowed = {
-				original_tag = USA
+				always = no
 			}
 				
 			modifier = {
@@ -1427,6 +1558,7 @@ ideas = {
 				
 			modifier = {
 				sortie_efficiency = 0.1
+				medium_plane_airframe_design_cost_factor = -0.75
 			}
 		}
 		
@@ -1504,8 +1636,6 @@ ideas = {
 		
 		USA_full_ww2_commitment = {
 			
-			removal_cost = -1 
-			
 			allowed_civil_war = {	 
 				always = no
 			}
@@ -1523,6 +1653,44 @@ ideas = {
 				command_power_gain = 0.25
 				conscription_factor = 0.07
 				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		USA_education_act = {
+			
+			allowed_civil_war = {	 
+				always = no
+			}
+			
+			available = {
+				always = yes
+			}
+			
+			allowed = {
+				always = no
+			}
+				
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		
+		USA_voting_rights_act = {
+			
+			allowed_civil_war = {	 
+				always = no
+			}
+			
+			available = {
+				always = yes
+			}
+			
+			allowed = {
+				always = no
+			}
+				
+			modifier = {
+				
 			}
 		}
 	}

@@ -1,4 +1,28 @@
 shared_focus = {
+    id = USA_four_more_years
+	icon = GFX_USA_politicians_should_be_popular
+	
+    x = 8
+	y = 0
+	
+	cost = 5
+    completion_reward = {
+	   hidden_effect = {
+			every_owned_state = {
+				limit = {
+					can_have_elections_in_state = yes
+				}
+				add_to_variable = { socialist_popularity = 0.01 }
+			}
+		}
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
     id = USA_second_bill_of_rights
 	icon = GFX_USA_second_bill_of_rights
 	
@@ -6,14 +30,9 @@ shared_focus = {
 	y = 1
 	
 	cost = 5
-	relative_position_id = USA_of_poverty
-	prerequisite = {
-		focus = USA_of_poverty
-		focus = USA_itll_never_happen_here
-		focus = USA_spqa
-	}
+	relative_position_id = USA_four_more_years
+	prerequisite = { focus = USA_four_more_years }
     completion_reward = {
-       unlock_decision_tooltip = start_USA_second_bill_of_rights
 	   hidden_effect = {
 			every_owned_state = {
 				limit = {
@@ -51,6 +70,8 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_RESEARCH }
 }
 
 shared_focus = {
@@ -71,6 +92,8 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 }
 
 shared_focus = {
@@ -90,6 +113,8 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
@@ -103,13 +128,14 @@ shared_focus = {
 	relative_position_id = USA_assess_school_resources
 	prerequisite = { focus = USA_assess_school_resources }
     completion_reward = {
-        add_political_power = 25
-		add_stability = 0.045
+        add_research_slot = 1
     }
 	
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_RESEARCH }
 }
 
 shared_focus = {
@@ -130,6 +156,8 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 }
 
 shared_focus = {
@@ -143,7 +171,7 @@ shared_focus = {
 	relative_position_id = USA_invest_in_higher_education
 	prerequisite = { focus = USA_invest_in_higher_education }
     completion_reward = {
-        ECON_poverty_change_small = yes
+        improve_safety_net = yes
     }
 	
 	ai_will_do = {
@@ -163,8 +191,7 @@ shared_focus = {
 	prerequisite = { focus = USA_invest_in_higher_education }
 	prerequisite = { focus = USA_compulsory_education }
     completion_reward = {
-        ECON_poverty_change_small = yes 
-		add_stability = 0.03
+        improve_great_depression = yes
 		hidden_effect = {
 			every_owned_state = {
 				limit = {
@@ -212,11 +239,19 @@ shared_focus = {
 	prerequisite = { focus = USA_federal_education_grants }
     completion_reward = {
         unlock_decision_tooltip = start_USA_equal_education_act
+		custom_effect_tooltip = USA_bill_pass_req_tt
+		effect_tooltip = {
+			add_ideas = {
+				USA_education_act
+			}
+		}
     }
 	
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_RESEARCH }
 }
 
 shared_focus = {
@@ -300,10 +335,7 @@ shared_focus = {
 	prerequisite = { focus = USA_workplace_democracy }
 	prerequisite = { focus = USA_ensure_fair_competition }
     completion_reward = {
-        custom_effect_tooltip = USA_bill_pass_req_tt
-		effect_tooltip = {
-			improve_great_depression = yes
-		}
+        improve_great_depression = yes
     }
 	
 	ai_will_do = {
@@ -322,8 +354,7 @@ shared_focus = {
 	relative_position_id = USA_right_to_work
 	prerequisite = { focus = USA_right_to_work }
     completion_reward = {
-      add_stability = 0.07
-	  custom_effect_tooltip = USA_fair_comp_tooltip
+		improve_great_depression = yes
     }
 	
 	ai_will_do = {
@@ -378,6 +409,8 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_USA_CONGRESS }
 }
 
 shared_focus = {
@@ -386,10 +419,6 @@ shared_focus = {
 	
     x = 2
 	y = 1
-	
-	available = {
-		has_idea = USA_safety_net_barebones
-	}
 	
 	cost = 5
 	relative_position_id = USA_second_bill_of_rights
@@ -499,17 +528,30 @@ shared_focus = {
     x = 1
 	y = 1
 	
+	available = {
+		has_idea = USA_safety_net_large
+	}
+	
 	cost = 8
 	relative_position_id = USA_maternity_insurance
 	prerequisite = { focus = USA_maternity_insurance }
 	prerequisite = { focus = USA_look_at_causes }
     completion_reward = {
         unlock_decision_tooltip = start_USA_national_healthcare_act
+		custom_effect_tooltip = USA_bill_pass_req_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = USA_safety_net_large
+				add_idea = USA_safety_net_welfare_state
+			}
+		}
     }
 	
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_USA_CONGRESS }
 }
 
 shared_focus = {
@@ -637,6 +679,8 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_USA_CONGRESS }
 }
 
 shared_focus = {

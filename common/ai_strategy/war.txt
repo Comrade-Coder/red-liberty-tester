@@ -22,6 +22,9 @@ TAG_support_ETH = {
 	allowed = {
 		OR = {
 			original_tag = GER
+			original_tag = ENG
+			original_tag = FRA
+			original_tag = JAP
 		}
 	}
 	enable = {
@@ -44,6 +47,7 @@ TAG_support_CRT = {
 		OR = {
 			original_tag = ITA
 			original_tag = FRA
+			original_tag = POR
 		}
 	}
 	enable = {
@@ -106,31 +110,24 @@ TAG_support_BRA = {
 	}
 }
 
-FRA_crush_germany = {
+TAG_support_RUS = {
 	allowed = {
-		original_tag = FRA
+		OR = {
+			original_tag = JAP
+		}
 	}
 	enable = {
-		has_war_with = GER
+		RUS = {
+			has_war_with = SOV
+		}
+		has_war = no
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = front_unit_request
-		tag = GER
-		value = 40
-	}
-	ai_strategy = {
-		type = front_control
-		tag = GER
-		ordertype = front
-		execution_type = rush
-		manual_attack = yes
-	}
-	ai_strategy = {
-		type = conquer
-		id = "GER"
-		value = 1000
+		type = send_lend_lease_desire
+		id = RUS
+		value = 150
 	}
 }
 
@@ -154,7 +151,7 @@ UOB_hate_BRA = {
 	
 	ai_strategy = {
 		type = conquer
-		id = "BRA"
+		id = BRA
 		value = 1000
 	}
 }
@@ -179,70 +176,127 @@ BRA_hate_UOB = {
 	
 	ai_strategy = {
 		type = conquer
-		id = "UOB"
+		id = UOB
 		value = 1000
 	}
 }
 
-GER_let_allies_handle_russia = {
+TAG_support_AUS = {
 	allowed = {
-		original_tag = GER
+		OR = {
+			original_tag = GER
+			original_tag = ITA
+			original_tag = FRA
+		}
 	}
 	enable = {
-		is_in_faction_with = UKR
-		is_faction_leader = yes
-		FRA = {
-			is_faction_leader = yes
+		AUS = {
+			has_war_with = AHE
 		}
-		NOT = {
-			UKR = {
-				surrender_progress > 0.75
-			}
-		}
+		has_war = no
 	}
 	abort_when_not_enabled = yes
-	
+
 	ai_strategy = {
-		type = front_unit_request
-		tag = SOV
-		value = -250
+		type = send_lend_lease_desire
+		id = AUS
+		value = 150
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = AUS
+		value = 150
 	}
 }
 
-GER_allies_let_germany_handle_france = {
+AUS_focus_on_AHE = {
 	allowed = {
-		OR = {
-			original_tag = POL
-			original_tag = BAL
-			original_tag = LAT
-			original_tag = EST
-			original_tag = BLR
-			original_tag = UKR
-			original_tag = LIT
-			original_tag = CRI
-		}
+		original_tag = AUS
 	}
 	enable = {
-		is_in_faction_with = GER
-		SOV = {
-			exists = yes
-		}
+		has_war_with = AHE
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = front_unit_request
-		tag = RUS
-		value = 250
+		tag = AHE
+		value = 40
 	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = SOV
-		value = 250
+}
+
+MEX_crush_tag = {
+	allowed = {
+		original_tag = MEX
 	}
+	enable = {
+		OR = {
+			has_war_with = CRT
+			has_war_with = CMS
+			has_war_with = MTC
+			has_war_with = FRP
+		}
+	}
+	abort_when_not_enabled = yes
+
 	ai_strategy = {
-		type = front_unit_request
-		tag = FRA
-		value = -250
+		type = front_control
+		tag = CRT
+		tag = CMS
+		tag = MTC
+		tag = FRP
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+}
+
+CRT_crush_TAG = {
+	allowed = {
+		original_tag = CRT
+	}
+	enable = {
+		OR = {
+			has_war_with = MEX
+			has_war_with = CMS
+			has_war_with = MTC
+			has_war_with = FRP
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = MEX
+		tag = CMS
+		tag = MTC
+		tag = FRP
+		execution_type = rush
+		execute_order = yes
+	}
+}
+
+CMS_crush_TAG = {
+	allowed = {
+		original_tag = CMS
+	}
+	enable = {
+		OR = {
+			has_war_with = MEX
+			has_war_with = CRT
+			has_war_with = MTC
+			has_war_with = FRP
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = MEX
+		tag = CRT
+		tag = MTC
+		tag = FRP
+		execution_type = rush
+		execute_order = yes
 	}
 }

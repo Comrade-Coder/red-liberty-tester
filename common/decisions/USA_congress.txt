@@ -21,8 +21,7 @@ USA_congress = {
 		icon = ger_mefo_bills
 		available = {
 			NOT = {
-				has_country_flag = debug_bill_passed
-				has_country_flag = USA_discussing_bill
+				#has_country_flag = debug_bill_passed
 			}
 			is_debug = yes
 		}
@@ -48,8 +47,9 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = social_security_passed
+				has_country_flag = USA_lame_duck_period
 			}
-			has_completed_focus = USA_of_poverty
+			has_completed_focus = USA_social_security_act
 		}
 		
 		visible = {
@@ -58,7 +58,7 @@ USA_congress = {
 				has_country_flag = USA_discussing_bill
 				has_country_flag = social_security_passed
 			}
-			has_completed_focus = USA_the_thomas_admin
+			has_focus_tree = USA_thomas_tree
 		}
 		
 		cost = 0
@@ -77,6 +77,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = ban_kkk_act_passed
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_itll_never_happen_here
 			
@@ -88,7 +89,7 @@ USA_congress = {
 				has_country_flag = USA_discussing_bill
 				has_country_flag = ban_kkk_act_passed
 			}
-			has_completed_focus = USA_the_thomas_admin
+			has_focus_tree = USA_thomas_tree
 		}
 		
 		cost = 0
@@ -111,6 +112,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = voting_rights_act_passed
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_voting_rights_act
 			
@@ -120,6 +122,7 @@ USA_congress = {
 			original_tag = USA
 			NOT = {
 				has_country_flag = USA_discussing_bill
+				has_country_flag = USA_voting_rights_passed
 			}
 		    has_completed_focus = USA_voting_rights_act
 		}
@@ -128,12 +131,14 @@ USA_congress = {
 		
 		complete_effect = {
 			custom_effect_tooltip = USA_bill_pass_req_tt
-			effect_tooltip = {
-				add_ideas = {
-					USA_voting_rights_act
-				}
+			effect_tooltip = {				
+			  custom_effect_tooltip = USA_SPA_better_minority
 			}
 			USA_voting_rights_act_setup = yes
+			add_ideas = {
+					USA_voting_rights_act
+			}
+		   set_country_flag = USA_voting_rights_passed
 		}
 	}
 	
@@ -142,6 +147,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = reorg_act_passed
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_reorg_act
 		}
@@ -152,7 +158,7 @@ USA_congress = {
 				has_country_flag = USA_discussing_bill
 				has_country_flag = reorg_act_passed
 			}
-			has_completed_focus = USA_the_thomas_admin
+			has_focus_tree = USA_thomas_tree
 		}
 		
 		cost = 0
@@ -173,6 +179,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = farm_tenant_act_passed
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_war_on_poverty
 		}
@@ -191,7 +198,7 @@ USA_congress = {
 		complete_effect = {
 			custom_effect_tooltip = USA_bill_pass_req_tt
 			effect_tooltip = {
-				
+				improve_great_depression = yes				
 			}
 			USA_farm_tenant_act_setup = yes
 		}
@@ -202,6 +209,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = court_packing_plan_passed
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_strengthen_executive_branch
 			NOT = {
@@ -215,7 +223,7 @@ USA_congress = {
 				has_country_flag = court_packing_plan_passed
 				has_country_flag = USA_discussing_bill
 			}
-			has_completed_focus = USA_the_thomas_admin
+			has_focus_tree = USA_thomas_tree
 			NOT = {
 				has_completed_focus = USA_accept_the_rulings
 			}
@@ -239,6 +247,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = pension_act_passed
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_war_on_poverty
 		}
@@ -268,6 +277,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = housing_act_passed
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_war_on_poverty
 		}
@@ -297,6 +307,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = union_act_passed
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_strengthen_executive_branch
 		}
@@ -307,7 +318,7 @@ USA_congress = {
 				has_country_flag = union_act_passed
 				has_country_flag = USA_discussing_bill
 			}
-			has_completed_focus = USA_the_thomas_admin
+			has_focus_tree = USA_thomas_tree
 		}
 		
 		cost = 0
@@ -328,6 +339,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = wealth_tax_act_passed
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_paying_for_it_all
 		}
@@ -338,7 +350,7 @@ USA_congress = {
 				has_country_flag = wealth_tax_act_passed
 				has_country_flag = USA_discussing_bill
 			}
-			has_completed_focus = USA_the_thomas_admin
+			has_focus_tree = USA_thomas_tree
 		}
 		
 		cost = 0
@@ -357,6 +369,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = public_contracts_act_passed
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_public_contracts_act
 		}
@@ -383,6 +396,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = equal_education_passed
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_attempt_standardization
 		}
@@ -393,18 +407,15 @@ USA_congress = {
 				has_country_flag = USA_discussing_bill
 				has_country_flag = equal_education_passed
 			}
-			has_completed_focus = USA_attempt_standardization
+			has_completed_focus = USA_second_bill_of_rights
 		}
 		
 		cost = 0
 		
 		complete_effect = {
 			custom_effect_tooltip = USA_bill_pass_req_tt
-			effect_tooltip = {
-				USA_add_equal_education = yes
-				add_ideas = {
-					USA_equal_education_act
-				}
+			add_ideas = {
+				USA_education_act
 			}
 			USA_equal_education_act_setup = yes
 		}
@@ -415,6 +426,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = economic_equality_passed
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_economic_equality_act
 		}
@@ -425,7 +437,7 @@ USA_congress = {
 				has_country_flag = USA_discussing_bill
 				has_country_flag = economic_equality_passed
 			}
-			has_completed_focus = USA_economic_equality_act
+			has_completed_focus = USA_second_bill_of_rights
 		}
 		
 		cost = 0
@@ -433,7 +445,6 @@ USA_congress = {
 		complete_effect = {
 			custom_effect_tooltip = USA_bill_pass_req_tt
 			effect_tooltip = {
-				USA_add_economic_equality = yes
 				add_ideas = {
 					USA_economic_equality_act
 				}
@@ -447,6 +458,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = national_healthcare_passed
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_national_healthcare_act
 		}
@@ -457,8 +469,7 @@ USA_congress = {
 				has_country_flag = USA_discussing_bill
 				has_country_flag = national_healthcare_passed
 			}
-			has_completed_focus = USA_national_healthcare_act
-			always = yes
+			has_completed_focus = USA_second_bill_of_rights
 		}
 		
 		cost = 0
@@ -466,9 +477,9 @@ USA_congress = {
 		complete_effect = {
 			custom_effect_tooltip = USA_bill_pass_req_tt
 			effect_tooltip = {
-				USA_add_national_healthcare = yes
-				add_ideas = {
-					USA_national_healthcare_act
+				swap_ideas = {
+					remove_idea = USA_safety_net_large
+					add_idea = USA_safety_net_welfare_state
 				}
 			}
 			USA_national_healthcare_act_setup = yes
@@ -480,6 +491,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = second_bill_of_rights_passed
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_second_bill_of_rights
 		}
@@ -491,20 +503,18 @@ USA_congress = {
 				has_country_flag = second_bill_of_rights_passed
 			}
 			has_completed_focus = USA_second_bill_of_rights
-			always = yes
+			always = no
 		}
 		
 		cost = 0
 		
 		complete_effect = {
 			custom_effect_tooltip = USA_bill_pass_req_tt
-			effect_tooltip = {
-				USA_add_second_bill_of_rights = yes
-				add_ideas = {
-					USA_second_bill_of_rights
-				}
-			}
 			USA_second_bill_of_rights_setup = yes
+			effect_tooltip = {
+				improve_great_depression = yes
+				ECON_poverty_change_medium = yes
+			}
 		}
 	}
 	
@@ -515,6 +525,7 @@ USA_congress = {
 				686 = {
 					is_core_of = USA
 				}
+				has_country_flag = USA_lame_duck_period
 			}
 			has_country_flag = USA_pr_state_available
 		}
@@ -541,6 +552,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = naval_act_passed
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_the_naval_act
 		}
@@ -572,8 +584,9 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = two_ocean_navy_act_passed
+				has_country_flag = USA_lame_duck_period
 			}
-			has_completed_focus = USA_two_ocean_navy_act
+			has_completed_focus = USA_two_ocean_navy
 		}
 		
 		visible = {
@@ -582,7 +595,7 @@ USA_congress = {
 				has_country_flag = two_ocean_navy_act_passed
 				has_country_flag = USA_discussing_bill
 			}
-			has_completed_focus = USA_two_ocean_navy_act
+			has_completed_focus = USA_two_ocean_navy
 		}
 		
 		cost = 0
@@ -598,6 +611,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = USA_discussing_bill
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_europe_aflame
 		}
@@ -623,6 +637,7 @@ USA_congress = {
 		available = {
 			NOT = {
 				has_country_flag = USA_discussing_bill
+				has_country_flag = USA_lame_duck_period
 			}
 			has_completed_focus = USA_remove_the_profit
 		}
@@ -695,222 +710,200 @@ USA_congress = {
 		}
 	}
 	
+	start_ludlow_amendment = {
+		icon = ger_mefo_bills
+		available = {
+			NOT = {
+				has_country_flag = USA_discussing_bill
+				has_country_flag = USA_lame_duck_period
+			}
+			has_completed_focus = USA_as_the_fathers_intended
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = USA_discussing_bill
+			}
+			has_completed_focus = USA_as_the_fathers_intended
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			USA_ludlow_amendment_setup = yes
+		}
+	}
+	
 	### MINOR LEGISLATION ###
 	
-	start_USA_national_cancer_act = {
-		icon = ger_mefo_bills
-		available = {
-			original_tag = USA
-		}
-		
-		visible = {
-			original_tag = USA
-			date > 1937.1.20
-			NOT = {
-				has_country_flag = USA_discussing_bill
-			}
-		}
-		
-		fire_only_once = yes
-		
-		cost = 25
-		
-		complete_effect = {
-			add_stability = 0.02
-		}
-	}
-	
-	start_USA_natural_gas_act = {
-		icon = ger_mefo_bills
-		available = {
-			original_tag = USA
-		}
-		
-		visible = {
-			original_tag = USA
-			date > 1938.1.15
-			NOT = {
-				has_country_flag = USA_discussing_bill
-			}
-		}
-		
-		fire_only_once = yes
-		
-		cost = 25
-		
-		complete_effect = {
-			add_stability = 0.02
-		}
-	}
-	
-	### EXECUTIVE ORDERS ###
-	
-	USA_executive_order_7806 = { # form the National Public Employment Relations Commission
-		icon = ger_mefo_bills
-		available = {
-			has_completed_focus = USA_strengthen_labor_regs
-		}
-		
-		visible = {
-			original_tag = USA
-			date > 1937.01.01
-			has_completed_focus = USA_strengthen_labor_regs
-			NOT = {
-				has_country_flag = USA_discussing_bill
-			}
-		}
-		
-		fire_only_once = yes
-		
-		cost = 50
-		
-		complete_effect = {
-			
-		}
-	}
-	
-	USA_public_law_163 = { # expand the ccc
-		icon = ger_mefo_bills
-		available = {
-			has_completed_focus = USA_ccc
-		}
-		
-		visible = {
-			original_tag = USA
-			date > 1940.01.01
-			NOT = {
-				has_country_flag = USA_discussing_bill
-			}
-		}
-		
-		fire_only_once = yes
-		
-		cost = 25
-		
-		complete_effect = {
-			
-		}
-	}
-	
-	USA_executive_order_8802 = {
-		icon = ger_mefo_bills
-		available = {
-			has_war = yes
-		}
-		
-		visible = {
-			original_tag = USA
-			NOT = {
-				has_country_flag = USA_discussing_bill
-			}
-		}
-		
-		visible = {
-			date > 1940.01.01
-		}
-		
-		fire_only_once = yes
-		
-		cost = 100
-		
-		complete_effect = {
-			
-		}
-	}
-	
-	USA_executive_order_8807 = {
-		icon = ger_mefo_bills
-		available = {
-			has_war = yes
-		}
-		
-		visible = {
-			original_tag = USA
-		}
-		
-		visible = {
-			date > 1940.01.01
-			NOT = {
-				has_country_flag = USA_discussing_bill
-			}
-		}
-		
-		fire_only_once = yes
-		
-		cost = 100
-		
-		complete_effect = {
-			add_ideas = {
-				USA_osrd
-			}
-		}
-	}
-	
-############## DO NOT MODIFY BELOW THIS LINE ### I'm gonna modify beyond this line if I don't get my 1 million dollars #################################
-	
-	#start_vote = {
+	#start_USA_national_cancer_act = {
 	#	icon = ger_mefo_bills
 	#	available = {
-	#		
+	#		original_tag = USA
 	#	}
 	#	
 	#	visible = {
 	#		original_tag = USA
-	#		has_country_flag = USA_discussing_bill
+	#		date > 1937.1.20
+	#		NOT = {
+	#			has_country_flag = USA_discussing_bill
+	#		}
 	#	}
 	#	
-	#	cost = 0
+	#	fire_only_once = yes
 	#	
-	#	days_remove = 5
+	#	cost = 25
 	#	
 	#	complete_effect = {
-	#		custom_effect_tooltip = start_vote_tt
+	#		add_stability = 0.02
 	#	}
-	#	
-	#	remove_effect = {
-	#		if = {
-	#			limit = {
-	#				OR = {
-	#					check_variable = { senators_support < quorum_medium }
-	#					check_variable = { representatives_support < rep_quorum_medium }
-	#				}
-	#			}
-	#			custom_effect_tooltip = vote_will_fail_tt
-	#		}
-	#		else_if = {
-	#			custom_effect_tooltip = vote_will_pass_tt
-	#		}
-	#	
-	#		USA_bill_vote = yes
-	#	}
-	#	
-	#	priority = 100
 	#}
 	
-	USA_eliminate_payroll_tax = {
+	#start_USA_natural_gas_act = {
+	#	icon = ger_mefo_bills
+	#	available = {
+	#		original_tag = USA
+	#	}
+	#	
+	#	visible = {
+	#		original_tag = USA
+	#		date > 1938.1.15
+	#		NOT = {
+	#			has_country_flag = USA_discussing_bill
+	#		}
+	#	}
+	#	
+	#	fire_only_once = yes
+	#	
+	#	cost = 25
+	#	
+	#	complete_effect = {
+	#		add_stability = 0.02
+	#	}
+	#}
+	
+	### EXECUTIVE ORDERS ###
+	
+	#USA_executive_order_7806 = { # form the National Public Employment Relations Commission
+	#	icon = ger_mefo_bills
+	#	available = {
+	#		has_completed_focus = USA_strengthen_labor_regs
+	#	}
+	#	
+	#	visible = {
+	#		original_tag = USA
+	#		date > 1937.01.01
+	#		has_completed_focus = USA_strengthen_labor_regs
+	#		NOT = {
+	#			has_country_flag = USA_discussing_bill
+	#		}
+	#	}
+	#	
+	#	fire_only_once = yes
+	#	
+	#	cost = 50
+	#	
+	#	complete_effect = {
+	#		
+	#	}
+	#}
+	
+	#USA_public_law_163 = { # expand the ccc
+	#	icon = ger_mefo_bills
+	#	available = {
+	#		has_completed_focus = USA_ccc
+	#	}
+	#	
+	#	visible = {
+	#		original_tag = USA
+	#		date > 1940.01.01
+	#		NOT = {
+	#			has_country_flag = USA_discussing_bill
+	#		}
+	#	}
+	#	
+	#	fire_only_once = yes
+	#	
+	#	cost = 25
+	#	
+	#	complete_effect = {
+	#		
+	#	}
+	#}
+	
+	#USA_executive_order_8802 = {
+	#	icon = ger_mefo_bills
+	#	available = {
+	#		has_war = yes
+	#	}
+	#	
+	#	visible = {
+	#		original_tag = USA
+	#		NOT = {
+	#			has_country_flag = USA_discussing_bill
+	#		}
+	#	}
+	#	
+	#	visible = {
+	#		date > 1940.01.01
+	#	}
+	#	
+	#	fire_only_once = yes
+	#	
+	#	cost = 100
+	#	
+	#	complete_effect = {
+	#		
+	#	}
+	#}
+	
+	#USA_executive_order_8807 = {
+	#	icon = ger_mefo_bills
+	#	available = {
+	#		has_war = yes
+	#	}
+	#	
+	#	visible = {
+	#		original_tag = USA
+	#	}
+	#	
+	#	visible = {
+	#		date > 1940.01.01
+	#		NOT = {
+	#			has_country_flag = USA_discussing_bill
+	#		}
+	#	}
+	#	
+	#	fire_only_once = yes
+	#	
+	#	cost = 100
+	#	
+	#	complete_effect = {
+	#		add_ideas = {
+	#			USA_osrd
+	#		}
+	#	}
+	#}
+	
+############## DO NOT MODIFY BELOW THIS LINE ### I'm gonna modify beyond this line if I don't get my 1 million dollars #################################
+	
+	USA_force_pass_bill_debug = {
 		
 		visible = {
 			AND = {
 				original_tag = USA
-				check_variable = { bill_id = 2 }
-				has_country_flag = USA_special_decisions_enabled
+				check_variable = { bill_id > 0 }
 			}
+			is_debug = yes
         }
-			
-		cost = 50
-		
-		fire_only_once = yes
        		
 		available = {
-			
+			is_debug = yes
 		}
-				
+		
     	complete_effect = {
-			add_to_variable = { republican_supporting_senators = 5 }
-			add_to_variable = { senators_support = 5 }
-			
-			add_to_variable = { democrat_supporting_senators = 4 }
-			add_to_variable = { senators_support = 4 }
+			set_country_flag = bill_passed
+			USA_bill_vote = yes
 		}
 	}
 	
@@ -947,15 +940,28 @@ USA_congress = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = unavaliable_already_negotiated
-				NOT = { has_country_flag = communist_negotiated }
+				NOT = { has_country_flag = communists_negotiated }
 			}
 			custom_trigger_tooltip = {
 				tooltip = communists_fully_support
 				NOT = { check_variable = { USA_communist_bill_support = 1 } }
 			}
 		}
+		
     	complete_effect = {
-			
+			if = {
+				limit = {
+					has_country_flag = USA_bill_house_phase
+				}
+				USA_communist_support_house_eventless = yes
+			}
+			else_if = {
+				limit = {
+					has_country_flag = USA_bill_senate_phase
+				}
+				USA_communist_support_senate_eventless = yes
+				check_if_bill_passed = yes
+			}
 		}
 	}
 	
@@ -991,6 +997,7 @@ USA_congress = {
 				NOT = { check_variable = { USA_socialist_bill_support = 1 } }
 			}
 		}
+		
     	complete_effect = {
 			if = {
 				limit = {
@@ -1040,6 +1047,7 @@ USA_congress = {
 				NOT = { check_variable = { USA_farmer_labor_bill_support = 1 } }
 			}
 		}
+		
     	complete_effect = {
 			
 		}
@@ -1372,5 +1380,29 @@ USA_congress = {
 			add_stability = -0.02
 			add_political_power = -50
 		}
+	}
+	
+	USA_philippines_independence_timer = {
+		
+		available = {
+			has_war_with_major = yes
+		}
+		
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		
+		days_mission_timeout = 3005
+		
+		timeout_effect = {
+			USA = {
+				end_puppet = PHI
+			}
+		}
+		
+		cancel_effect = {
+            set_country_flag = USA_philippines_independence_timer_cancelled
+        }
 	}
 }

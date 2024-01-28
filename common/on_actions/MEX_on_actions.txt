@@ -1,0 +1,71 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			478 = {
+				add_dynamic_modifier = {
+					modifier = MEX_cristero_revolt_heavy
+				}
+			}
+			481 = {
+				add_dynamic_modifier = {
+					modifier = MEX_cristero_revolt_light
+				}
+			}
+			485 = {
+				add_dynamic_modifier = {
+					modifier = MEX_cristero_revolt_light
+				}
+			}
+			899 = {
+				add_dynamic_modifier = {
+					modifier = MEX_cristero_revolt_medium
+				}
+			}
+			905 = {
+				add_dynamic_modifier = {
+					modifier = MEX_cristero_revolt_medium
+				}
+			}
+			906 = {
+				add_dynamic_modifier = {
+					modifier = MEX_cristero_revolt_light
+				}
+			}
+			957 = {
+				add_dynamic_modifier = {
+					modifier = MEX_cristero_revolt_medium
+				}
+			}
+		    480 = {
+				add_dynamic_modifier = {
+					modifier = MEX_camisas_revolt_heavy
+				}
+			}
+			482 = {
+				add_dynamic_modifier = {
+					modifier = MEX_camisas_revolt_medium
+				}
+			}		
+		    479 = {
+				add_dynamic_modifier = {
+					modifier = MEX_cartel_revolt_heavy
+				}
+			}
+            477 = {
+				add_dynamic_modifier = {
+					modifier = MEX_cartel_revolt_medium
+				}
+			}		
+		    484 = {
+				add_dynamic_modifier = {
+					modifier = MEX_communist_revolt_heavy
+				}
+			}
+		    483 = {
+				add_dynamic_modifier = {
+					modifier = MEX_communist_revolt_medium
+				}
+			}
+		}
+	}
+}

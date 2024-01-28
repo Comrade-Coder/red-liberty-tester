@@ -1,20 +1,6 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			every_country = {
-				if = {
-					limit = {
-						NOT = {
-							has_dynamic_modifier = {
-								modifier = ECON_poverty_modifier
-							}
-						}
-					}
-					add_dynamic_modifier = {
-						modifier = ECON_poverty_modifier
-					}
-				}
-			}
 			
 			ARG = {
 				set_variable = { poverty_rate = 40.4 }
@@ -23,6 +9,10 @@ on_actions = {
 			
 			AFG = {
 				set_variable = { poverty_rate = 72.43 }
+			}
+			
+			AHE = {
+				set_variable = { poverty_rate = 37.21 }
 			}
 			
 			AST = {
@@ -43,9 +33,20 @@ on_actions = {
 				set_variable = { poverty_monthly_change = 0.06 }
 			}
 			
+			EGY = {
+				set_variable = { poverty_rate = 87.2 }
+				set_variable = { poverty_monthly_change = 0.03 }
+			}
+			
 			ENG = {
 				set_variable = { poverty_rate = 24.2 }
 				set_variable = { poverty_monthly_change = 0.12 }
+			}
+			
+			ETH = {
+				set_variable = { poverty_rate = 64.2 }
+				set_variable = { poverty_monthly_change = 0.05 }
+				set_country_flag = unindustrialized_nation
 			}
 			
 			FCA = {
@@ -70,6 +71,7 @@ on_actions = {
 			IRE = {
 				set_variable = { poverty_rate = 78.3 }
 				set_variable = { poverty_monthly_change = 0.2 }
+				set_country_flag = semi_industrialized_nation
 			}
 			
 			ITA = {
@@ -109,6 +111,11 @@ on_actions = {
 				set_variable = { poverty_monthly_change = 0.09 }
 			}
 			
+			SPR = {
+				set_variable = { poverty_rate = 73.4)
+				set_variable = { poverty_monthly_change = -0.3 }
+			}
+			
 			SWI = {
 				set_variable = { poverty_rate = 31.73 }
 			}
@@ -133,30 +140,8 @@ on_actions = {
 			}
 			
 			every_country = {
-				if = {
-					limit = {
-						check_variable = { poverty_rate = 0 }
-					}
-					set_variable = { poverty_rate = 45 }
-				}
-				if = {
-					limit = {
-						check_variable = { poverty_monthly_change = 0 }
-					}
-					set_variable = { poverty_monthly_change = 0.09 }
-				}
-			}
-			
-			every_country = {
 				ECON_reload_poverty_effects = yes
 				ECON_calculate_poverty_dampener_effect = yes
-			}
-		}
-	}
-	on_monthly_URG = {
-		effect = {
-			every_country = {
-				ECON_poverty_change_monthly = yes
 			}
 		}
 	}

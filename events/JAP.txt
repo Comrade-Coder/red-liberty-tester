@@ -8,6 +8,8 @@ country_event = { # intro event
 	title = "Tenno Haika..."
 	desc = japan.1.desc
 	
+	immediate = { log = "[GetDateText]: [Root.GetName]: event japan.1 FROM = [From.GetName]" }
+	
 	is_triggered_only = yes
 	
 	fire_only_once = yes
@@ -29,7 +31,7 @@ country_event = { # from japan to china
 	option = {
 		name = japan.2.a
 		add_popularity = {
-			ideology = market_libertarianism
+			ideology = liberal_conservatism
 			popularity = 0.02
 		}
 		add_popularity = {
@@ -53,12 +55,6 @@ country_event = { # inukai dies
 		add_stability = -0.15
 		set_country_flag = inukai_ded
 		kill_country_leader = yes
-		
-		hidden_effect = {
-			JAP_inukai_tsuyoshi = {
-				retire = yes
-			}
-		}
 		
 		add_country_leader_role = {
 			character = JAP_hirohito_showa
@@ -119,7 +115,7 @@ country_event = {
 	option = {
 		name = "Maybe the past didn’t go anywhere..."
 		add_popularity = {
-			ideology = libertarian_socialism
+			ideology = democratic_socialism
 			popularity = -0.02
 		}
 		add_popularity = {
@@ -141,7 +137,7 @@ country_event = {
 	option = {
 		name = "Sounds rosy!"
 		add_popularity = {
-			ideology = market_libertarianism
+			ideology = liberal_conservatism
 			popularity = 0.05
 		}
 	}
@@ -178,6 +174,8 @@ country_event = {
 	title = "And the Winner is..."
 	desc = japan.9.desc
 	
+	immediate = { log = "[GetDateText]: [Root.GetName]: event japan.9 FROM = [From.GetName]" }
+	
 	is_triggered_only = yes
 	
 	fire_only_once = yes
@@ -195,15 +193,15 @@ country_event = {
 			popularity = 0.03
 		}
 		add_popularity = {
-			ideology = market_libertarianism
+			ideology = liberal_conservatism
 			popularity = 0.02
 		}
 		
 		JAP_calc_house = yes
 		
 		clear_all_coalitions = yes
-		set_country_flag = progressive_coalition
-		set_country_flag = market_libertarian_coalition
+		add_proglib_coalition = yes
+		add_libcon_coalition = yes
 		
 		hidden_effect = {
 			JAP_hirohito_showa = {
@@ -228,6 +226,8 @@ country_event = {
 	title = "The Coalition"
 	desc = japan.10.desc
 	
+	immediate = { log = "[GetDateText]: [Root.GetName]: event japan.10 FROM = [From.GetName]" }
+	
 	is_triggered_only = yes
 	
 	fire_only_once = yes
@@ -237,8 +237,7 @@ country_event = {
 		set_country_flag = JAP_status_quo_upheld
 		complete_national_focus = JAP_status_quo
 		
-		set_country_flag = conservative_coalition
-		custom_effect_tooltip = add_conservative_coalition_tt
+		add_natcon_coalition = yes
 		
 		ai_chance = {
 			base = 33
@@ -261,7 +260,7 @@ country_event = {
 			popularity = 0.04
 		}
 		add_popularity = {
-			ideology = libertarian_socialism
+			ideology = democratic_socialism
 			popularity = 0.01
 		}
 		
@@ -273,7 +272,7 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = JAP_POST_INUKAI
+					rule = JAP_POST_INUKAI_OUTCOME
 					option = JAP_POST_INUKAI_STATUS_QUO
 				}
 			}
@@ -285,6 +284,8 @@ country_event = {
 	id = japan.11
 	title = "The July Crisis"
 	desc = japan.11.desc
+	
+	immediate = { log = "[GetDateText]: [Root.GetName]: event japan.11 FROM = [From.GetName]" }
 	
 	is_triggered_only = yes
 	
@@ -304,7 +305,7 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = JAP_POST_INUKAI
+					rule = JAP_POST_INUKAI_OUTCOME
 					option = JAP_POST_INUKAI_KONOE_GOVT
 				}
 			}
@@ -334,6 +335,8 @@ country_event = {
 	title = "A Petition to His Imperial Majesty"
 	desc = japan.12.desc
 	
+	immediate = { log = "[GetDateText]: [Root.GetName]: event japan.12 FROM = [From.GetName]" }
+	
 	is_triggered_only = yes
 	
 	fire_only_once = yes
@@ -346,7 +349,7 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = JAP_POST_INUKAI
+					rule = JAP_POST_INUKAI_OUTCOME
 					option = JAP_POST_INUKAI_KONOE_GOVT
 				}
 			}
@@ -364,7 +367,7 @@ country_event = {
 			modifier = {
 				factor = 100
 				has_game_rule = {
-					rule = JAP_POST_INUKAI
+					rule = JAP_POST_INUKAI_OUTCOME
 					option = JAP_POST_INUKAI_KONOE_GOVT
 				}
 			}
@@ -376,6 +379,8 @@ country_event = {
 	id = japan.13
 	title = "A Petition to His Imperial Majesty"
 	desc = japan.13.desc
+	
+	immediate = { log = "[GetDateText]: [Root.GetName]: event japan.13 FROM = [From.GetName]" }
 	
 	is_triggered_only = yes
 	
@@ -391,6 +396,8 @@ country_event = {
 	id = japan.14
 	title = "A Crisis Averted"
 	desc = japan.14.desc
+	
+	immediate = { log = "[GetDateText]: [Root.GetName]: event japan.14 FROM = [From.GetName]" }
 	
 	is_triggered_only = yes
 	
@@ -411,7 +418,7 @@ country_event = {
 			popularity = 0.01
 		}
 		add_popularity = {
-			ideology = libertarian_socialism
+			ideology = democratic_socialism
 			popularity = 0.01
 		}
 		hidden_effect = {
@@ -427,6 +434,8 @@ country_event = {
 	id = japan.15
 	title = "The Rising Sun"
 	desc = japan.15.desc
+	
+	immediate = { log = "[GetDateText]: [Root.GetName]: event japan.15 FROM = [From.GetName]" }
 	
 	is_triggered_only = yes
 	
@@ -445,7 +454,7 @@ country_event = {
 		add_natcon_coalition = yes
 		add_authdem_coalition = yes
 		add_autdes_coalition = yes
-		add_farauth_coalition = yes
+		add_ultracon_coalition = yes
 		add_fash_coalition = yes
 		
 		#load_focus_tree = JAP_nationalist_tree
@@ -525,8 +534,8 @@ news_event = { # status quo news event
 }
 
 news_event = { # constitutional amendment news event
-	id = japan_news.3.title
-	title = japan_news.3.desc
+	id = japan_news.3
+	title = japan_news.3.title
 	desc = japan_news.3.desc
 	
 	is_triggered_only = yes

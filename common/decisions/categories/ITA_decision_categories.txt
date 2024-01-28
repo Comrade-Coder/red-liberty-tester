@@ -5,6 +5,12 @@ ITA_balance_of_power_category = {
 	}
 }
 
+ITA_army_reform = {
+	allowed = {
+		original_tag = ITA
+	}
+}
+
 ITA_orders_of_the_black_shirts = {
 
 	icon = generic_political_actions
@@ -78,4 +84,19 @@ ITA_buget_managment = {
 		has_completed_focus = ITA_taxes_managment
 		original_tag = ITA
 	}
+}
+
+ITA_italian_great_game_category = {
+	
+	allowed = {
+		original_tag = ITA
+	}
+	
+	visible = {
+		NOT = {
+			has_global_flag = italian_great_game_ended
+		}
+	}
+	
+	visible_when_empty = yes
 }

@@ -23,6 +23,13 @@ USA_balance_of_power_category = {
 	}
 }
 
+USA_lister_bop_category = {
+	
+	allowed = {
+		original_tag = USA
+	}
+}
+
 USA_congress = {
 	icon = usa_congress
 	picture = GFX_decision_USA_electoral_college
@@ -40,6 +47,23 @@ USA_congress = {
 	visible_when_empty = yes
 
 	priority = 100
+}
+
+USA_supreme_court = {
+	icon = usa_congress
+	picture = GFX_decision_USA_supreme_court
+	
+	allowed = {
+		original_tag = USA
+	}
+	
+	visible = {
+		
+	}
+
+	visible_when_empty = yes
+
+	priority = 99
 }
 
 USA_election_season_category = {
@@ -60,6 +84,20 @@ USA_election_season_category = {
 	visible_when_empty = yes
 	
 	priority = 98
+}
+
+USA_election_season_president_category = {
+	icon = usa_congress
+	allowed = {
+		original_tag = USA
+	}
+	
+	visible = {
+		has_country_flag = USA_presidential_elections
+	}
+	visible_when_empty = yes
+	
+	priority = 97
 }
 
 USA_managing_spa = {
@@ -122,17 +160,6 @@ USA_gerrymandering_category = {
 	visible = {
 		always = no
 	}
-}
-
-USA_american_army_category = {
-	icon = usa_congress
-	allowed = {
-		original_tag = USA
-	}
-	visible = {
-		always = no
-	}
-	visible_when_empty = yes
 }
 
 #USA_interest_groups_category = {

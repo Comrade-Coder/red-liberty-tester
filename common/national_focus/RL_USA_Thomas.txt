@@ -1,18 +1,13 @@
 shared_focus = {
     id = USA_the_thomas_admin
 	icon = GFX_USA_the_thomas_admin
+	text_icon = joint_focus_style
 	
     x = 6
 	
 	cost = 2
     completion_reward = {
-		effect_tooltip = {
-			recruit_character = USA_scott_nearing
-			recruit_character = USA_norman_lermond
-			recruit_character = USA_max_hayes
-			recruit_character = USA_harry_hopkins
-			recruit_character = USA_joseph_arthur_padway
-		}
+		custom_effect_tooltip = USA_the_thomas_admin_tt
     }
 	
 	ai_will_do = {
@@ -35,19 +30,22 @@ shared_focus = {
 	prerequisite = { focus = USA_the_thomas_admin }
     completion_reward = {
         add_popularity = {
-			ideology = proletarian_dictatorship
+			ideology = revolutionary_socialism
 			popularity = 0.005
 		}
 		add_popularity = {
-			ideology = libertarian_socialism
+			ideology = democratic_socialism
 			popularity = 0.005
 		}
 		add_political_power = 50
+		custom_effect_tooltip = USA_unity_above_all_else_tt
     }
 	
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
@@ -70,6 +68,7 @@ shared_focus = {
 			popularity = 0.01
 		}
 		add_political_power = -100
+		custom_effect_tooltip = USA_reach_across_tt
     }
 	
 	ai_will_do = {
@@ -92,11 +91,14 @@ shared_focus = {
 	}
     completion_reward = {
         add_political_power = 50
+		custom_effect_tooltip = USA_preparing_our_agenda_tt
     }
 	
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
@@ -139,6 +141,8 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_STABILITY }
 }
 
 shared_focus = {
@@ -349,6 +353,8 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_USA_CONGRESS }
 }
 
 shared_focus = {
@@ -370,6 +376,8 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
@@ -411,7 +419,6 @@ shared_focus = {
 	relative_position_id = USA_of_agriculture
 	prerequisite = { focus = USA_of_agriculture }
     completion_reward = {
-        unlock_decision_category_tooltip = USA_distribute_produce
 		effect_tooltip = {
 			improve_great_depression = yes
 		}
@@ -603,6 +610,8 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_USA_CONGRESS }
 }
 
 shared_focus = {
@@ -616,7 +625,10 @@ shared_focus = {
 	relative_position_id = USA_paying_for_it_all
 	prerequisite = { focus = USA_paying_for_it_all }
     completion_reward = {
-        # add event about local 829
+        country_event = {
+			id = united_states_thomas.22
+			hours = 6
+		}
 		ECON_poverty_change_small = yes
 		hidden_effect = {
 			every_owned_state = {
@@ -684,8 +696,8 @@ shared_focus = {
 	relative_position_id = USA_regulate_stock_markets
 	prerequisite = { focus = USA_regulate_stock_markets }
     completion_reward = {
-		custom_effect_tooltip = USA_bill_over_time_tt
-        unlock_decision_tooltip = USA_executive_order_7806
+		#custom_effect_tooltip = USA_bill_over_time_tt
+        #unlock_decision_tooltip = USA_executive_order_7806
     }
 	
 	ai_will_do = {
@@ -711,6 +723,139 @@ shared_focus = {
 	prerequisite = { focus = USA_federal_aid_commission }
 	prerequisite = { focus = USA_strengthen_labor_regs }
     completion_reward = {
+		country_event = {
+			id = united_states_thomas.32
+			hours = 6
+		}
+    }
+	
+	ai_will_do = {
+		factor = 20
+	}
+	
+	search_filters = { FOCUS_FILTER_USA_CONGRESS }
+}
+
+shared_focus = {
+    id = USA_close_ranks
+	icon = GFX_USA_close_ranks
+	
+    x = -2
+	y = 2
+	
+	available = {
+		NOT = {
+			has_completed_focus = USA_social_security_act
+		}
+	}
+	
+	cost = 4
+	relative_position_id = USA_of_poverty
+	prerequisite = { focus = USA_of_poverty }
+    completion_reward = {
+        custom_effect_tooltip = USA_close_ranks_tt
+		custom_effect_tooltip = USA_bill_additional_effect_tt
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+	
+	search_filters = { FOCUS_FILTER_USA_CONGRESS }
+}
+
+shared_focus = {
+    id = USA_promise_fiscal_restraint
+	icon = GFX_USA_promise_fiscal_restraint
+	
+    x = -1
+	y = 1
+	
+	available = {
+		NOT = {
+			has_completed_focus = USA_social_security_act
+		}
+	}
+	
+	cost = 4
+	relative_position_id = USA_of_poverty
+	prerequisite = { focus = USA_of_poverty }
+    completion_reward = {
+        custom_effect_tooltip = USA_promise_fiscal_restraint_tt
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+	
+	search_filters = { FOCUS_FILTER_USA_CONGRESS }
+}
+
+shared_focus = {
+    id = USA_southern_exceptions
+	icon = GFX_USA_southern_exceptions
+	
+    x = 1
+	y = 1
+	
+	available = {
+		NOT = {
+			has_completed_focus = USA_social_security_act
+		}
+	}
+	
+	cost = 4
+	relative_position_id = USA_of_poverty
+	prerequisite = { focus = USA_of_poverty }
+    completion_reward = {
+        custom_effect_tooltip = USA_southern_exceptions_tt
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+	
+	search_filters = { FOCUS_FILTER_USA_CONGRESS }
+}
+
+shared_focus = {
+    id = USA_hall_of_the_bayou_king
+	icon = GFX_USA_hall_of_the_bayou_king
+	
+    x = 2
+	y = 2
+	
+	available = {
+		NOT = {
+			has_completed_focus = USA_social_security_act
+		}
+	}
+	
+	cost = 4
+	relative_position_id = USA_of_poverty
+	prerequisite = { focus = USA_of_poverty }
+    completion_reward = {
+        custom_effect_tooltip = USA_hall_of_the_bayou_king_tt
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+	
+	search_filters = { FOCUS_FILTER_USA_CONGRESS }
+}
+
+shared_focus = {
+    id = USA_social_security_act
+	icon = GFX_USA_social_security_act
+	
+    x = 0
+	y = 3
+	
+	cost = 5
+	relative_position_id = USA_of_poverty
+	prerequisite = { focus = USA_of_poverty }
+    completion_reward = {
         unlock_decision_tooltip = start_USA_social_security_act
 		custom_effect_tooltip = USA_bill_pass_req_tt
 		effect_tooltip = {
@@ -718,47 +863,35 @@ shared_focus = {
 				USA_safety_net_barebones
 			}
 		}
-    }
-	
-	ai_will_do = {
-		factor = 20
-	}
-}
-
-shared_focus = {
-    id = USA_our_mandate
-	icon = GFX_USA_our_mandate
-	
-    x = 5
-	y = 1
-	
-	cost = 2
-	relative_position_id = USA_preparing_our_agenda
-	prerequisite = {
-		focus = USA_preparing_our_agenda
-	}
-    completion_reward = {
-        #country_event = {
-		#	id = united_states_thomas.9
-		#	days = 1
-		#}
+		if = {
+			limit = {
+				has_completed_focus = USA_close_ranks
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					USA_socialist_unity = 1
+					tooltip = USA_spa_unity_small_gain_tt
+				}
+			}
+		}
     }
 	
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_USA_CONGRESS }
 }
-
 
 shared_focus = {
     id = USA_of_politics
 	icon = GFX_USA_of_politics
 	
-    x = 0
+    x = 5
 	y = 1
 	
 	cost = 5
-	relative_position_id = USA_our_mandate
+	relative_position_id = USA_the_american_crisis
 	prerequisite = { focus = USA_the_american_crisis }
 	prerequisite = { focus = USA_our_mandate }
     completion_reward = {
@@ -809,6 +942,8 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
@@ -834,6 +969,8 @@ shared_focus = {
 	ai_will_do = {
 		factor = 10
 	}
+	
+	search_filters = { FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
@@ -937,6 +1074,13 @@ shared_focus = {
     x = 1
 	y = 1
 	
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = USA_court_tamed_trigger_tt
+			check_variable = { supreme_court_lean > 0 }
+		}
+	}
+	
 	cost = 8
 	relative_position_id = USA_pack_the_court
 	prerequisite = {
@@ -944,20 +1088,23 @@ shared_focus = {
 		focus = USA_accept_the_rulings
 	}
     completion_reward = {
-        if = {
-			limit = {
-				has_country_flag = court_packing_plan_passed
-			}
-			country_event = {
-				id = united_states_thomas.19
-				days = 1
-			}
-		}
-		else = {
-			country_event = {
-				id = united_states_thomas.18
-				days = 1
-			}
+        #if = {
+		#	limit = {
+		#		has_country_flag = court_packing_plan_passed
+		#	}
+		#	country_event = {
+		#		id = united_states_thomas.19
+		#		days = 1
+		#	}
+		#}
+		#else = {
+		#	country_event = {
+		#		id = united_states_thomas.18
+		#		days = 1
+		#	}
+		#}
+		remove_ideas = {
+			USA_clashes_with_the_courts
 		}
     }
 	
@@ -982,6 +1129,44 @@ shared_focus = {
 			id = united_states_thomas.21
 			days = 1
 		}
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = USA_legislative_reorg_act
+	icon = GFX_USA_legislative_reorg_act
+	
+    x = -1
+	y = 1
+	
+	cost = 5
+	relative_position_id = USA_spqa
+	prerequisite = { focus = USA_spqa }
+    completion_reward = {
+        
+    }
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+    id = USA_form_senate_ethics_committee
+	icon = GFX_USA_form_senate_ethics_committee
+	
+    x = 1
+	y = 1
+	
+	cost = 5
+	relative_position_id = USA_spqa
+	prerequisite = { focus = USA_spqa }
+    completion_reward = {
+        
     }
 	
 	ai_will_do = {

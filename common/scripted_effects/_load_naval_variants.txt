@@ -1,0 +1,4 @@
+ITA_load_naval_variants = {
+
+	
+}

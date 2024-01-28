@@ -5,11 +5,15 @@ shared_focus = {
     id = USA_down_mexico_way
 	icon = GFX_USA_down_mexico_way
 	
-    x = 20
-	y = 0
+    x = 24
+	y = 7
 	
 	available = {
 		has_global_flag = MEX_cristero_war_bad
+	}
+	
+	allow_branch = {
+		#has_global_flag = MEX_cristero_war_bad
 	}
 	
 	cost = 3
@@ -23,6 +27,12 @@ shared_focus = {
 	
 	ai_will_do = {
 		factor = 10
+		modifier = {
+			factor = 3
+			MEX = {
+				has_war_with = CRT
+			}
+		}
 	}
 }
 
@@ -34,7 +44,9 @@ shared_focus = {
 	y = 1
 	
 	available = {
-		
+		CRT = {
+			exists = yes
+		}
 	}
 	
 	cost = 3
@@ -92,9 +104,8 @@ shared_focus = {
 	y = 1
 	
 	available = {
-		MXR = {
+		CRT = {
 			exists = yes
-			has_war_with = MEX
 		}
 	}
 	
@@ -125,7 +136,9 @@ shared_focus = {
 	y = 1
 	
 	available = {
-		
+		CRT = {
+			exists = yes
+		}
 	}
 	
 	cost = 3
@@ -185,9 +198,8 @@ shared_focus = {
 	y = 2
 	
 	available = {
-		MXR = {
+		CRT = {
 			exists = yes
-			has_war_with = MEX
 		}
 	}
 	
@@ -211,9 +223,8 @@ shared_focus = {
 	y = 1
 	
 	available = {
-		MXR = {
+		CRT = {
 			exists = yes
-			has_war_with = MEX
 		}
 	}
 	
@@ -223,6 +234,10 @@ shared_focus = {
 	prerequisite = { focus = USA_support_yucatec_indep }
     completion_reward = {
 		# def add an event here
+		swap_ideas = {
+			remove_idea = undisturbed_isolation
+			add_idea = isolation
+		}
     }
 	
 	ai_will_do = {
@@ -236,8 +251,8 @@ shared_focus = {
     id = USA_day_of_infamy
 	icon = GFX_USA_day_of_infamy
 	
-    x = 26
-	y = 0
+    x = 35
+	y = 7
 	
 	available = {
 		USA = {
@@ -245,9 +260,15 @@ shared_focus = {
 		}
 	}
 	
+	allow_branch = {
+		#USA = {
+		#	has_war_with = JAP
+		#}
+	}
+	
 	cost = 3
     completion_reward = {
-	   
+		add_war_support = 0.15
     }
 	
 	ai_will_do = {
@@ -507,11 +528,15 @@ shared_focus = {
     id = USA_europe_aflame
 	icon = GFX_USA_europe_aflame
 	
-    x = 33
-	y = 0
+    x = 42
+	y = 7
 	
 	available = {
-		has_country_flag = USA_europe_aflame_flag
+		has_global_flag = second_great_war_started
+	}
+	
+	allow_branch = {
+		#has_global_flag = second_great_war_started
 	}
 	
 	cost = 5

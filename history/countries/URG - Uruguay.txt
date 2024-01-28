@@ -1,13 +1,6 @@
 ﻿capital = 300
 
 oob = "URG_1936"
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "URG_1936_naval_mtg"
-	else = {
-		set_naval_oob = "URG_1936_naval_legacy"
-	}
-}
 
 # Starting tech
 set_technology = {
@@ -16,13 +9,7 @@ set_technology = {
 	interwar_antiair = 1
 	early_fighter = 1
 }
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_destroyer = 1
-		early_light_cruiser = 1
-	}
-}
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
@@ -31,7 +18,16 @@ if = {
 		basic_battery = 1
 		basic_torpedo = 1
 	}
+	set_naval_oob = "URG_naval_mtg"
+	else = {
+		set_technology = {
+			early_destroyer = 1
+			early_light_cruiser = 1
+		}
+		set_naval_oob = "URG_naval_legacy"
+	}
 }
+
 set_country_flag = monroe_doctrine
 
 set_convoys = 15
@@ -43,61 +39,35 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	insurrectionary_anarchism = 0
-	revolutionary_autocracy = 0
-	proletarian_dictatorship = 0
-	libertarian_socialism = 2
+	anarchism = 0
+	vanguard_socialism = 0
+	revolutionary_socialism = 0
+	democratic_socialism = 2
 	social_democracy = 6
 	progressive_liberalism = 13
-	market_libertarianism = 18
-	national_conservatism = 16
+	liberal_conservatism = 8
+	national_conservatism = 26
 	authoritarian_democracy = 31
-	autocratic_despotism = 14
-	far_right_authoritarianism = 0
+	despotism = 14
+	ultraconservatism = 0
 	fascism = 0
 }
 
-set_country_flag = progressive_coalition
-set_country_flag = authoritarian_coalition
+set_country_flag = national_conservatism_coalition
+set_country_flag = authoritarian_democracy_coalition
 
 add_ideas = {
     URG_two_worlds
 }
 
-create_country_leader = {
-	name = "Gabriel Terra Leivas"
-	desc = ""
-	picture = "gfx/leaders/URG/Portrait_URG_Gabriel_Terra_Leivas.png"
-	expire = "1965.1.1"
-	ideology = authoritarian_democracy_subtype
-	traits = {
-		#
-	}
-}
-
-### VARIANTS ###
-# 1936 Start #
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	### Ship Variants ###
-}
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	# Destroyers #
-	create_equipment_variant = {
-		name = "Uruguay Class"				
-		type = ship_hull_light_1
-		name_group = URG_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
-			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = empty
-		}
-	}
-}
+### LEADERS ###
+recruit_character = URG_maria_collazo
+recruit_character = URG_eugenio_gomez
+recruit_character = URG_jose_lazarraga
+recruit_character = URG_emilio_frugoni
+recruit_character = URG_luis_batlle
+recruit_character = URG_juan_jose_amazega
+recruit_character = URG_martin_martinez
+recruit_character = URG_luis_herrera
+recruit_character = URG_gabriel_terra_leivas
+recruit_character = URG_adolfo_agorio

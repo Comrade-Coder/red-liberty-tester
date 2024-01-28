@@ -5,19 +5,19 @@ country_event = { # debug act
 	
 	# different loc based on if it passes or fails
 	title = {
-		text = us_bill.1.t_passed
+		text = us_bill.1.title_passed
 		trigger = { has_country_flag = bill_passed }
 	}
 	title = { 
-		text = us_bill.1.t_failed
+		text = us_bill.1.title_failed
 		trigger = { NOT = { has_country_flag = bill_passed } }
 	}
 	desc = {
-		text = us_bill.1.d_passed
+		text = us_bill.1.desc_passed
 		trigger = { has_country_flag = bill_passed }
 	}
 	desc = {
-		text = us_bill.1.d_failed
+		text = us_bill.1.desc_failed
 		trigger = { NOT = { has_country_flag = bill_passed } }
 	}
 	
@@ -171,7 +171,7 @@ country_event = { # farm tenant act
 				is_great_plains_state = yes
 			}
 			custom_effect_tooltip = USA_decrease_SPA_popularity_low
-			add_to_variable = { socialist_popularity = 0.03 }
+			add_to_variable = { socialist_popularity = -0.03 }
 		}
 		every_owned_state = {
 			limit = {
@@ -181,7 +181,7 @@ country_event = { # farm tenant act
 				}
 			}
 			custom_effect_tooltip = USA_decrease_SPA_popularity_low
-			add_to_variable = { socialist_popularity = 0.01 }
+			add_to_variable = { socialist_popularity = -0.01 }
 		}
 		
 		USA_bill_clear = yes # ALWAYS DO THIS
@@ -220,9 +220,12 @@ country_event = { # court packing plan
 		trigger = { has_country_flag = bill_passed }
 		set_country_flag = court_packing_plan_passed
 		
-		add_ideas = {
-			USA_stacked_supreme_court
+		add_to_variable = {
+			tooltip = USA_court_lean_more_reformist
+			var = supreme_court_lean
+			value = 6
 		}
+		USA_clamp_supreme_court = yes
 		
 		hidden_effect = {
 			every_owned_state = {
@@ -440,7 +443,7 @@ country_event = { # housing act
 
 country_event = { # wealth tax act
 	id = us_bill.9
-	
+	picture = GFX_report_event_Us_bill_9
 	# different loc based on if it passes or fails
 	title = {
 		text = us_bill.9.title_passed
@@ -558,8 +561,17 @@ country_event = { # voting rights act
 	option = { # bill passes
 		name = us_bill.11.a
 		trigger = { has_country_flag = bill_passed }
-		add_stability = 0.2
 		set_country_flag = voting_rights_act_passed		
+		
+		every_owned_state = {
+			limit = {
+				can_have_elections_in_state = yes
+				is_deep_south_state = yes
+			}
+			custom_effect_tooltip = USA_increase_SPA_popularity_low
+			add_to_variable = { socialist_popularity = 0.03 }
+		}
+		
 		USA_bill_clear = yes # ALWAYS DO THIS
 	}
 	
@@ -682,6 +694,19 @@ country_event = { # equal education act
 	option = { # bill passes
 		name = us_bill.14.a
 		trigger = { has_country_flag = bill_passed }
+		
+		add_ideas = {
+			USA_education_act
+		}
+		every_owned_state = {
+			limit = {
+				can_have_elections_in_state = yes
+				is_urban_state = yes
+			}
+			custom_effect_tooltip = USA_increase_SPA_popularity_low
+			add_to_variable = { socialist_popularity = 0.03 }
+		}
+		
 		USA_bill_clear = yes # ALWAYS DO THIS
 	}
 	
@@ -762,6 +787,9 @@ country_event = { # national healthcare act
 	option = { # bill passes
 		name = us_bill.16.a
 		trigger = { has_country_flag = bill_passed }
+		
+		improve_safety_net = yes
+		
 		USA_bill_clear = yes # ALWAYS DO THIS
 	}
 	

@@ -1,0 +1,56 @@
+characters = {
+
+	SLV_etbin_kristan = {
+		name = SLV_etbin_kristan
+		
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SLV/Portrait_SLV_Etbin_Kristan.png"
+			}
+		}
+		
+		country_leader = {
+			desc = "POLITICS_ETBIN_KRISTAN_DESC"
+			ideology = social_democracy_subtype
+			traits = {
+				
+			}
+		}
+	}
+	
+	SLV_ivan_hribar = {
+		name = SLV_ivan_hribar
+		
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SLV_ivan_hribar"
+			}
+		}
+		
+		country_leader = {
+			desc = "POLITICS_IVAN_HRIBAR_DESC"
+			ideology = national_liberalism_subtype
+			traits = {
+				
+			}
+		}
+	}
+	
+	SLV_anton_korosec = {
+		name = SLV_anton_korosec
+		
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SLV_anton_korosec"
+			}
+		}
+		
+		country_leader = {
+			desc = "POLITICS_ANTON_KOROSEC_DESC"
+			ideology = christian_democracy_subtype
+			traits = {
+				
+			}
+		}
+	}
+}

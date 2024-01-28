@@ -108,12 +108,12 @@ country_event = { # intro event
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_CLIQUE
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_CLIQUE
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_BSS
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_BSS
 					}
 				}
 			}
@@ -143,20 +143,20 @@ country_event = { # intro event
 		    factor = 0
 				OR = {
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_RADICAL
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_RADICAL
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_LIBERAL
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_LIBERAL
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option =RULE_OPTION_KMT_CONGRESS_MODERATE
+						rule = KMT_CONGRESS_OUTCOME
+						option =KMT_CONGRESS_MODERATE
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_CENTRIST
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_CENTRIST
 					}
 				}
 			}
@@ -201,16 +201,16 @@ country_event = { # intro event
 		    factor = 0
 				OR = {
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_CENTRIST
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_CENTRIST
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_CLIQUE
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_CLIQUE
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_BSS
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_BSS
 					}
 				}
 			}
@@ -236,24 +236,24 @@ country_event = { # intro event
 		    factor = 0
 				OR = {
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_RADICAL
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_RADICAL
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_LIBERAL
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_LIBERAL
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_MODERATE
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_MODERATE
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_CLIQUE
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_CLIQUE
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_BSS
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_BSS
 					}
 				}
 			}
@@ -283,20 +283,20 @@ country_event = { # intro event
 		    factor = 0
 				OR = {
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_RADICAL
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_RADICAL
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_LIBERAL
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_LIBERAL
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_MODERATE
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_MODERATE
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_CENTRIST
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_CENTRIST
 					}
 				}
 			}
@@ -338,20 +338,20 @@ country_event = { # intro event
 		    factor = 0
 				OR = {
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_RADICAL
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_RADICAL
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_LIBERAL
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_LIBERAL
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_CLIQUE
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_CLIQUE
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_BSS
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_BSS
 					}
 				}
 			}
@@ -389,12 +389,12 @@ country_event = { # intro event
 		    factor = 0
 				OR = {
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_MODERATE
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_MODERATE
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_CENTRIST
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_CENTRIST
 					}
 				}
 			}
@@ -437,20 +437,20 @@ country_event = { # intro event
 		    factor = 0
 				OR = {
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_MODERATE
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_MODERATE
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_CENTRIST
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_CENTRIST
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_CLIQUE
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_CLIQUE
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_BSS
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_BSS
 					}
 				}
 			}
@@ -479,20 +479,20 @@ country_event = { # intro event
 		    factor = 0
 				OR = {
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_RADICAL
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_RADICAL
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_LIBERAL
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_LIBERAL
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_CLIQUE
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_CLIQUE
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_BSS
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_BSS
 					}
 				}
 			}
@@ -522,20 +522,20 @@ country_event = { # intro event
 		    factor = 0
 				OR = {
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_RADICAL
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_RADICAL
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_LIBERAL
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_LIBERAL
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_MODERATE
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_MODERATE
 					}
 					has_game_rule = {
-						rule = KMT_congress_outcome
-						option = RULE_OPTION_KMT_CONGRESS_CENTRIST
+						rule = KMT_CONGRESS_OUTCOME
+						option = KMT_CONGRESS_CENTRIST
 					}
 				}
 			}
@@ -545,8 +545,8 @@ country_event = { # intro event
 
 country_event = {
 	id = kuomintang_congress.200
-	hidden = {
 	title = "Electing a Chairman"
+	desc = kuomintang_congress.200.desc
 	
 	is_triggered_only = yes
 	
@@ -616,7 +616,6 @@ country_event = {
 				days = 1
 			}
 		}
-	}
 	}
 }
 
@@ -725,11 +724,11 @@ country_event = {
 			popularity = 0.05
 		}
 		add_popularity = {
-			ideology = autocratic_despotism
+			ideology = despotism
 			popularity = 0.05
 		}
 		add_popularity = {
-			ideology = far_right_authoritarianism
+			ideology = ultraconservatism
 			popularity = 0.03
 		}
 		add_popularity = {

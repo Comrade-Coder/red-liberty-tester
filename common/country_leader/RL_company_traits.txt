@@ -1,6 +1,6 @@
 leader_traits = {
 	
-	### manufacturer ###
+### TANK DESIGNER ###
 	
 	tank_designer_light_tanks = {
 		experience_gain_army = 0.01
@@ -59,6 +59,8 @@ leader_traits = {
 		}
 	}
 	
+### NAVAL DESIGNER ###
+	
 	ship_designer_govt_shipyard = {
 		experience_gain_navy = 0.01
 		equipment_bonus = {
@@ -67,14 +69,6 @@ leader_traits = {
 				build_cost_ic = -0.05
 			}
 			submarine = {
-				instant = yes
-				build_cost_ic = -0.05
-			}
-			heavy_cruiser = {
-				instant = yes
-				build_cost_ic = -0.05
-			}
-			light_cruiser = {
 				instant = yes
 				build_cost_ic = -0.05
 			}
@@ -97,22 +91,12 @@ leader_traits = {
 				build_cost_ic = -0.05
 				hg_attack = 0.05
 			}
-			light_cruiser = {
-				instant = yes
-				build_cost_ic = -0.05
-				hg_attack = 0.05
-			}
 		}
 	}
 	
 	ship_designer_heavy_shipyard = {
 		experience_gain_navy = 0.01
 		equipment_bonus = {
-			heavy_cruiser = {
-				instant = yes
-				build_cost_ic = -0.05
-				hg_attack = 0.05
-			}
 			capital_ship = {
 				instant = yes
 				build_cost_ic = -0.05
@@ -125,6 +109,8 @@ leader_traits = {
 			}
 		}
 	}
+	
+### MATERIEL DESIGNER ###
 	
 	material_designer_mass_production = {
 		experience_gain_army = 0.01
@@ -143,6 +129,26 @@ leader_traits = {
 			infantry_equipment = {
 				instant = yes
 				build_cost_ic = -0.075
+			}
+		}
+	}
+	
+	material_designer_producer_offense = {
+		experience_gain_army = 0.01
+		equipment_bonus = {
+			infantry_equipment = {
+				soft_attack = 0.05
+				breakthrough = 0.05
+			}
+		}
+	}
+	
+	material_designer_producer_defense = {
+		experience_gain_army = 0.01
+		equipment_bonus = {
+			infantry_equipment = {
+				soft_attack = 0.05
+				defense = 0.05
 			}
 		}
 	}
@@ -167,7 +173,61 @@ leader_traits = {
 		
 	}
 	
-	train_designer_govt_railway = {
+	artillery_designer_offense = {
+		equipment_bonus = {
+			artillery_equipment = {
+				soft_attack = 0.05
+			}
+			rocket_artillery_equipment = {
+				soft_attack = 0.05
+			}
+			anti_tank_equipment = {
+				hard_attack = 0.05
+			}
+			anti_air_equipment = {
+				air_attack = 0.05
+				hard_attack = 0.05
+			}
+		}
+	}
+	
+	artillery_designer_defense = {
+		equipment_bonus = {
+			artillery_equipment = {
+				defense = 0.05
+			}
+			rocket_artillery_equipment = {
+				defense = 0.05
+			}
+			anti_tank_equipment = {
+				defense = 0.05
+			}
+			anti_air_equipment = {
+				defense = 0.05
+			}
+		}
+	}
+	
+### INDUSTRIAL CONCERN ###
+
+	industrial_manufacturer = {
+		
+	}
+	
+	chemical_producer = {
+		
+	}
+	
+	industrial_concern_railroad_company = {
+		production_speed_infrastructure_factor = 0.05
+		production_speed_rail_way_factor = 0.1
+	}
+	
+	industrial_concern_oil_concern = {
+	
+	}
+	
+	industrial_concern_electronics_manufacturer = {
 		
 	}
 }
